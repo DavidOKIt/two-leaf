@@ -1,0 +1,16 @@
+@use "colors";
+@use "fonts";
+@use "spacer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-copper-hover-30);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
