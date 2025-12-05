@@ -1,0 +1,94 @@
+.UtilityLink {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  text-decoration: none;
+
+  &-primary {
+    color: var(--color-matcha-default);
+
+    &:hover {
+      color: var(--color-matcha-hover);
+    }
+    &:active {
+      color: var(--color-matcha-pressed);
+    }
+  }
+
+  &-secondary {
+    color: var(--color-copper-default);
+
+    &:hover {
+      color: var(--color-copper-hover);
+    }
+    &:active {
+      color: var(--color-copper-pressed);
+    }
+  }
+
+  &-tertiary {
+    color: var(--color-ash-default);
+
+    &:hover {
+      color: var(--color-ash-hover);
+    }
+    &:active {
+      color: var(--color-ash-pressed);
+    }
+  }
+
+  &_label {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.InlineLink {
+  text-decoration: none;
+
+  &-primary {
+    color: var(--color-matcha-default);
+
+    &:hover {
+      color: var(--color-matcha-hover);
+      text-decoration: underline;
+    }
+    &:active {
+      color: var(--color-matcha-pressed);
+      text-decoration: underline;
+    }
+  }
+
+  &-secondary {
+    color: var(--color-copper-default);
+
+    &:hover {
+      color: var(--color-copper-hover);
+      text-decoration: underline;
+    }
+    &:active {
+      color: var(--color-copper-pressed);
+      text-decoration: underline;
+    }
+  }
+
+  &-tertiary {
+    color: var(--color-ash-default);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-ash-hover);
+      text-decoration: underline;
+    }
+    &:active {
+      color: var(--color-ash-pressed);
+      text-decoration: underline;
+    }
+  }
+}

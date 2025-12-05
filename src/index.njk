@@ -2,34 +2,48 @@
 heading: "Welcome to Two Leaf"
 ---
 
+{%- from "./components/Atoms/Icon/Icon.njk" import IconEmbedded -%}
+{%- from "./components/Atoms/Button/Button.njk" import Button -%}
+{%- from "./components/Atoms/Link/Link.njk" import UtilityLink -%}
+{%- from "./components/Atoms/Link/Link.njk" import InlineLink -%}
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Two Leaf - A modern web project">
-        <title>Two Leaf</title>
-        <link rel="stylesheet" href="./assets/styles/main.css">
-        <link rel="preload" href="./assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/fonts/montserrat_variable_italic.woff2" as="font" type="font/woff2" crossorigin>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Two Leaf - A modern web project">
+    <title>Two Leaf</title>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="preload" href="./assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
 
-        {# <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-300.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
+    {# <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-300.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-400italic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-500.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-500italic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-700italic.woff2" as="font" type="font/woff2" crossorigin> #}
-    </head>
-    <body>
-        <h1 class="bold">{{heading}}</h1>
-        <p>{{content | safe}}</p>
+    #}
 
-        <p class="light">Probe Text</p>
-        <p class="medium">Probe Text</p>
+  </head>
+  <body>
+    <h1 class="bold">{{heading}}</h1>
+    <p>{{content | safe}}</p>
 
-        {# <p class="-weightThin ">Probe Text</p>
-        <p class="-weightRegular -italic">Probe Text</p> #}
-    </body>
+    <p class="light">Probe Text</p>
+    <p class="medium">Probe Text 2</p>
+    {{ UtilityLink ('Learn More', 'primary', '-sizeXS', 'light') }}
+    {{ UtilityLink ('Learn More', 'secondary', '-sizeS', 'regular') }}
+    {{ UtilityLink ('Learn More', 'primary', '-sizeS', 'medium', showIconRight =true, IconContentRight = 'Home') }}
+
+    <p class="regular">Testen wir den {{ InlineLink ('Ich bin ein Inline Link', 'secondary', '-sizeS', 'regular') }} dadadaa</p>
+
+    {{ IconEmbedded ('Home-filled') }}
+    {{ IconEmbedded ('Cart', 'white') }}
+    {{ IconEmbedded ('Chevron-up') }}
+
+    {{ Button('Click', 'small', 'primary', 'outline') }}
+    {{ Button('Cancel', 'small', 'tertiary') }}
+    {{ Button('Submit', 'regular', 'secondary', showIconLeft = true, IconContentLeft = 'Chevron-left', showIconRight = true, IconContentRight = 'Home-filled') }}
+    {{ Button('Cancel', 'large', 'tertiary') }}
+    {{ Button ('', 'regular', 'primary', showIconLeft = true, IconContentLeft = 'Home')}}
+  </body>
 </html>

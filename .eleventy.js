@@ -3,6 +3,7 @@ const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addTemplateFormats("scss");
+	eleventyConfig.addPassthroughCopy("src/assets/fonts");
 	eleventyConfig.addExtension("scss", {
 		outputFileExtension: "css",
 
@@ -32,7 +33,6 @@ module.exports = function(eleventyConfig) {
 		},
 	});  
 
-	eleventyConfig.addPassthroughCopy("src/assets/fonts2");
 
     return {
         dir: {
