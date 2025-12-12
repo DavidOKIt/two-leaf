@@ -13,6 +13,27 @@
   font-display: swap;
 }
 
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("../fonts2/montserrat-v31-latin-300.woff2") format("woff2");
+//   font-weight: 300;
+// }
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("../fonts2/montserrat-v31-latin-400.woff2") format("woff2");
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("../fonts2/montserrat-v31-latin-500.woff2") format("woff2");
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("../fonts2/montserrat-v31-latin-700.woff2") format("woff2");
+//   font-weight: 700;
+// }
+
 .light {
   font-weight: 300;
 }
@@ -35,7 +56,7 @@
 .-sizeM {
   font-size: var(--font-size-16);
 }
-.sizeL {
+.-sizeL {
   font-size: var(--font-size-20);
 }
 .-sizeXL {
@@ -44,39 +65,3 @@
 .-sizeXXL {
   font-size: var(--font-size-32);
 }
-
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("../fonts2/montserrat-v31-latin-300.woff2") format("woff2");
-//   font-weight: 300;
-// }
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("../fonts2/montserrat-v31-latin-400.woff2") format("woff2");
-//   font-weight: 400;
-// }
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("../fonts2/montserrat-v31-latin-500.woff2") format("woff2");
-//   font-weight: 500;
-// }
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("../fonts2/montserrat-v31-latin-700.woff2") format("woff2");
-//   font-weight: 700;
-// }
-
-// .-weight {
-//   &Light {
-//     font-weight: 300;
-//   }
-//   &Regular {
-//     font-weight: 400;
-//   }
-//   &Medium {
-//     font-weight: 500;
-//   }
-//   &Bold {
-//     font-weight: 700;
-//   }
-// }

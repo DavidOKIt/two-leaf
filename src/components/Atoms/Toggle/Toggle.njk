@@ -1,0 +1,9 @@
+{% macro Toggle (ID, Name, Value, Label)%}
+    <div class="ToggleContainer">
+        <label class="Toggle">
+            <input type="checkbox" id="{{ ID }}" name="{{ Name }}" value="{{ Value }}">
+            <span class="slider"></span>
+        </label>
+        <label for="{{ ID }}" class="-sizeS regular">{{Label}}</label>
+    </div>
+    {%endmacro%}

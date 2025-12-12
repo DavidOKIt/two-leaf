@@ -1,0 +1,199 @@
+.ToggleContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.Toggle {
+  width: 48px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-copper-default);
+  border-radius: 12px;
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: 12px;
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .slider {
+    position: relative;
+    display: block;
+    height: 100%;
+    inset: 0;
+    border-radius: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background-color: var(--color-copper-default);
+      border-radius: 50%;
+      transition: transform 0.2s ease-out;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-copper-hover);
+    background-color: var(--color-copper-hover-30);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  &:hover .slider::before {
+    background-color: var(--color-copper-hover);
+  }
+
+  &:active {
+    border-color: var(--color-copper-pressed);
+    background-color: var(--color-copper-pressed-30);
+    transition: background-color border-color 0.2s ease-out;
+  }
+  &:active .slider::before {
+    background-color: var(--color-copper-pressed);
+  }
+
+  input:checked + .slider {
+    opacity: 1;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(23px);
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-copper-default);
+  }
+
+  &:has(input:checked):hover {
+    cursor: pointer;
+    background-color: var(--color-copper-hover);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  &:has(input:checked):active {
+    cursor: pointer;
+    background-color: var(--color-copper-pressed);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}
+
+.ToggleError {
+  width: 48px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-error-default);
+  border-radius: 12px;
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: 12px;
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .slider {
+    position: relative;
+    display: block;
+    height: 100%;
+    inset: 0;
+    border-radius: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background-color: var(--color-error-default);
+      border-radius: 50%;
+      transition: transform 0.2s ease-out;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-error-hover);
+    background-color: var(--color-error-hover-30);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  &:hover .slider::before {
+    background-color: var(--color-error-hover);
+  }
+
+  &:active {
+    border-color: var(--color-error-pressed);
+    background-color: var(--color-error-pressed-30);
+    transition: background-color border-color 0.2s ease-out;
+  }
+  &:active .slider::before {
+    background-color: var(--color-error-pressed);
+  }
+
+  input:checked + .slider {
+    opacity: 1;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(23px);
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-error-default);
+  }
+
+  &:has(input:checked):hover {
+    cursor: pointer;
+    background-color: var(--color-error-hover);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  &:has(input:checked):active {
+    cursor: pointer;
+    background-color: var(--color-error-pressed);
+    transition: background-color border-color 0.2s ease-out;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}

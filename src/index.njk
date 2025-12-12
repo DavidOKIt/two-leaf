@@ -6,6 +6,12 @@ heading: "Welcome to Two Leaf"
 {%- from "./components/Atoms/Button/Button.njk" import Button -%}
 {%- from "./components/Atoms/Link/Link.njk" import UtilityLink -%}
 {%- from "./components/Atoms/Link/Link.njk" import InlineLink -%}
+{%- from "./components/Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
+{%- from "./components/Atoms/Heading/Heading.njk" import Heading -%}
+{%- from "./components/Atoms/Radio/Radio.njk" import Radio -%}
+{%- from "./components/Atoms/Checkbox/Checkbox.njk" import Checkbox -%}
+{%- from "./components/Atoms/Toggle/Toggle.njk" import Toggle -%}
+{%- from "./components/Atoms/Ranger/Ranger.njk" import Ranger -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +28,11 @@ heading: "Welcome to Two Leaf"
         <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-500.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="./assets/fonts2/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     #}
-
   </head>
   <body>
     <h1 class="bold">{{heading}}</h1>
-    <p>{{content | safe}}</p>
+    {{ Ranger("preis", 100, 1, 200, "Preis", '€') }}
+    {{ Ranger("time", 4, 1, 8, "Ziehzeit", 'min') }}
 
     <p class="light">Probe Text</p>
     <p class="medium">Probe Text 2</p>
@@ -35,6 +41,23 @@ heading: "Welcome to Two Leaf"
     {{ UtilityLink ('Learn More', 'primary', '-sizeS', 'medium', showIconRight =true, IconContentRight = 'Home') }}
 
     <p class="regular">Testen wir den {{ InlineLink ('Ich bin ein Inline Link', 'secondary', '-sizeS', 'regular') }} dadadaa</p>
+
+    {{ Paragraph ('-sizeS', 'regular', 'Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular.') }}
+
+    {{ Radio ('radio01', 'Test', 'radio01', 'Option 1') }}
+    {{ Radio ('radio02', 'Test', 'radio02', 'Option 2') }}
+    {{ Checkbox ('checkbox01', 'Test', 'checkbox01', 'Checkbox 1' ) }}
+    <br>
+    {{ Toggle ('checkbox02', 'Test', 'checkbox02', 'Checkbox 2' ) }}
+
+    {{ Heading ('h1', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
+    {{ Heading ('h2', '-sizeL', 'medium', 'black', 'Im a Heading') }}
+    {{ Heading ('h3', '-sizeM', 'regular', 'black', 'Im a Heading') }}
+    {{ Heading ('h4', '-sizeS', 'light', 'black', 'Im a Heading') }}
+    {{ Heading ('h5', '-sizeXS', 'regular', 'black', 'Im a Heading') }}
+
+    {{ Heading ('h6', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
+    {{ Heading ('h1', '-sizeL', 'medium', 'white', 'Im a Heading') }}
 
     {{ IconEmbedded ('Home-filled') }}
     {{ IconEmbedded ('Cart', 'white') }}
@@ -45,5 +68,8 @@ heading: "Welcome to Two Leaf"
     {{ Button('Submit', 'regular', 'secondary', showIconLeft = true, IconContentLeft = 'Chevron-left', showIconRight = true, IconContentRight = 'Home-filled') }}
     {{ Button('Cancel', 'large', 'tertiary') }}
     {{ Button ('', 'regular', 'primary', showIconLeft = true, IconContentLeft = 'Home')}}
+
+    {# Scripts #}
+    <script src="/components/Atoms/Ranger/Ranger.js"></script>
   </body>
 </html>

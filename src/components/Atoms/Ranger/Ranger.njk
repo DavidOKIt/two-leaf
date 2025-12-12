@@ -1,0 +1,12 @@
+{% macro Ranger(ID, Value, Min, Max, LabelLeft, Unit) %}
+    <div class="RangerContainer">
+        <div class="RangerLabels">
+            <label class="-sizeS medium" for="{{ ID }}">{{ LabelLeft }}</label>
+            <label class="-sizeS regular" id="{{ ID }}-value" for="{{ ID }}">
+                {{ Value}}
+                {{ Unit }}
+            </label>
+        </div>
+        <input type="range" class="Ranger" id="{{ ID }}" value="{{ Value}}" min="{{ Min }}" max="{{ Max }}" data-unit="{{ Unit}}">
+    </div>
+    {%endmacro%}

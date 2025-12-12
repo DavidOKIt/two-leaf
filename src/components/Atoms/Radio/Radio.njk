@@ -1,0 +1,9 @@
+{% macro Radio (ID, Name, Value, Label)%}
+    <div class="RadioContainer">
+        <label class="Radio">
+            <input type="radio" id="{{ ID }}" name="{{ Name }}" value="{{ Value }}">
+            <span class="checkmark"></span>
+        </label>
+        <label for="{{ ID }}" class="-sizeS regular">{{Label}}</label>
+    </div>
+    {%endmacro%}

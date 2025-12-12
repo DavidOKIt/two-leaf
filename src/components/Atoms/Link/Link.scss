@@ -8,6 +8,18 @@
 
   text-decoration: none;
 
+  &:focus-visible {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+  &:active:focus-visible {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
   &-primary {
     color: var(--color-matcha-default);
 
@@ -51,6 +63,18 @@
 
 .InlineLink {
   text-decoration: none;
+
+  &:focus-visible {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+  &:active:focus-visible {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 
   &-primary {
     color: var(--color-matcha-default);

@@ -14,6 +14,7 @@
 
   &:focus-visible {
     outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
   }
   &:active:focus-visible {
     outline: none;
