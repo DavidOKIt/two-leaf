@@ -13,21 +13,23 @@
 
     text-decoration: none;
     color: var(--color-black);
-  }
 
-  &_IconDefault {
-    display: block;
+    .MenuItem_IconDefault {
+      display: block;
+    }
 
-    &-off {
+    .MenuItem_IconHover {
       display: none;
     }
-  }
 
-  &_IconHover {
-    display: none;
+    &:hover {
+      .MenuItem_IconDefault {
+        display: none;
+      }
 
-    &-on {
-      display: block;
+      .MenuItem_IconHover {
+        display: block;
+      }
     }
   }
 }
