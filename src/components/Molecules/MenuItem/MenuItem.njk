@@ -1,0 +1,14 @@
+{%- from "../TextIcon/TextIcon.njk" import TextIcon -%}
+{%- from "src/components/Atoms/Icon/Icon.njk" import IconEmbedded -%}
+
+{% macro MenuItem(Items)%}
+    <div class="MenuItem">
+        {% for Item in Items.Settings %}
+            <a href="#" class="MenuItem_Container medium">
+                {{ TextIcon(Item.Text, Item.Icon, Item.Size, Item.Weight) }}
+                <span class="MenuItem_IconDefault">{{ IconEmbedded('Chevron-right') }}</span>
+                <span class="MenuItem_IconHover">{{ IconEmbedded('Chevrons-right') }}</span>
+            </a>
+        {% endfor %}
+    </div>
+{% endmacro %}

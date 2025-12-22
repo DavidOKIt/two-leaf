@@ -1,0 +1,8 @@
+{%-from "src/components/Atoms/Icon/Icon.njk" import IconEmbedded -%}
+
+{% macro TextIcon(Text, Icon, Size, Weight) %}
+    <div class="TextIcon {{ Size }} {{ Weight }}">
+        {{ IconEmbedded(Icon) }}
+        {{ Text }}
+    </div>
+{% endmacro %}

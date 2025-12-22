@@ -1,0 +1,33 @@
+.MenuItem {
+  &_Wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-8) 0px;
+
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  &_IconDefault {
+    display: block;
+
+    &-off {
+      display: none;
+    }
+  }
+
+  &_IconHover {
+    display: none;
+
+    &-on {
+      display: block;
+    }
+  }
+}

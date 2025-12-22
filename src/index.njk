@@ -26,6 +26,8 @@
 {%- from "./components/Molecules/IconGroup/IconGroup.njk" import IconGroup -%}
 {%- from "./components/Molecules/ButtonGroup/ButtonGroup.njk" import ButtonGroup -%}
 {%- from "./components/Molecules/Rating/Rating.njk" import UneditableRating, EditableRating -%}
+{%- from "./components/Molecules/TextIcon/TextIcon.njk" import TextIcon -%}
+{%- from "./components/Molecules/MenuItem/MenuItem.njk" import MenuItem -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +59,7 @@
     <br>
     {{ Textarea('textarea01', 'description', 'Enter your description here...', LabelTop = true, 'Description') }}
     <br>
+    <br>
     {{ Dropdown ('dropdown01', 'options',{ DropdownItems: [
         { value: 'option1', label: 'Option 1' },
         { value: 'option2', label: 'Option 2' },
@@ -77,6 +80,14 @@
           { Label: 'Button 1', Size: 'small', Style: 'primary', Outline: '', showIconLeft: true, IconContentLeft: 'Error' },
           { Label: 'Button 2', Size: 'small', Style: 'secondary', Outline: 'outline', showIconLeft: false, showIconRight: true, IconContentRight: 'Cart' },
           { Label: 'Button 3', Size: 'small', Style: 'tertiary', Outline: '', showIconLeft: true, IconContentLeft: 'Chevron-left', showIconRight: true, IconContentRight: 'Chevron-up' }
+      ]}) }}
+      {{ TextIcon('Sample Text', 'Home' , '-sizeS', 'medium') }}
+      {{ MenuItem( { Settings: [
+      { Text: 'Dashboard', Icon: 'Home', Size: '-sizeS', Weight: 'medium' },
+      { Text: 'Profile', Icon: 'Profile', Size: '-sizeS', Weight: 'medium' },
+      { Text: 'Settings', Icon: 'Settings', Size: '-sizeS', Weight: 'medium' },
+      { Text: 'Messages', Icon: 'Chat', Size: '-sizeS', Weight: 'medium' },
+      { Text: 'Notifications', Icon: 'Bell', Size: '-sizeS', Weight: 'medium' }
       ]}) }}
       {{ Divider('secondary') }}
     </div>
@@ -125,5 +136,6 @@
     <script src="/components/Atoms/Textarea/Textarea.js"></script>
     <script src="/components/Atoms/Dropdown/Dropdown.js"></script>
     <script src="/components/Atoms/Chip/Chip.js"></script>
+    <script src="/components/Molecules/MenuItem/MenuItem.js"></script>
   </body>
 </html>
