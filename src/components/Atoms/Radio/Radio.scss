@@ -1,0 +1,153 @@
+.RadioContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.Radio {
+  width: 24px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-copper-default);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: 12px;
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .checkmark {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-copper-hover);
+    background-color: var(--color-copper-hover-30);
+  }
+
+  &:active {
+    border-color: var(--color-copper-pressed);
+    background-color: var(--color-copper-pressed-30);
+  }
+
+  input:checked + .checkmark {
+    opacity: 1;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-copper-default);
+  }
+
+  &:has(input:checked):hover {
+    cursor: pointer;
+    background-color: var(--color-copper-hover);
+  }
+
+  &:has(input:checked):active {
+    cursor: pointer;
+    background-color: var(--color-copper-pressed);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}
+
+.RadioError {
+  width: 24px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-error-default);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: 12px;
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .checkmark {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-error-hover);
+    background-color: var(--color-error-hover-30);
+  }
+
+  &:active {
+    border-color: var(--color-error-pressed);
+    background-color: var(--color-error-pressed-30);
+  }
+
+  input:checked + .checkmark {
+    opacity: 1;
+  }
+
+  :has(input:checked) {
+    opacity: 1;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-error-default);
+  }
+
+  &:has(input:checked):hover {
+    cursor: pointer;
+    background-color: var(--color-error-hover);
+  }
+
+  &:has(input:checked):active {
+    cursor: pointer;
+    background-color: var(--color-error-pressed);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}

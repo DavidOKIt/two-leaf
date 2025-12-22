@@ -1,0 +1,3 @@
+{% macro Image(src, alt, size, fit, loadinglazy) %}
+    <img src="{{ src }}" alt="{{ alt }}" class="Image Image-{{ size }} Image-{{ fit }}" {% if loadinglazy %}loading="lazy"{% endif %}/>
+{% endmacro %}

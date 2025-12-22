@@ -1,0 +1,98 @@
+.Chip {
+  width: auto;
+  height: auto;
+  padding: var(--space-8) var(--space-20);
+  border: none;
+  background-color: var(--color-grey-default);
+  color: var(--color-white);
+  border-radius: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+
+  &:focus-visible {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: 20px;
+  }
+
+  &:active:focus-visible {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: var(--color-grey-hover);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: var(--color-ash-default);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &-checked {
+    &-primary {
+      background-color: var(--color-matcha-default);
+
+      &:hover {
+        background-color: var(--color-matcha-hover);
+      }
+
+      &:active {
+        background-color: var(--color-matcha-pressed);
+      }
+    }
+
+    &-secondary {
+      background-color: var(--color-copper-default);
+
+      &:hover {
+        background-color: var(--color-copper-hover);
+      }
+
+      &:active {
+        background-color: var(--color-copper-pressed);
+      }
+    }
+
+    &-tertiary {
+      background-color: var(--color-ash-default);
+
+      &:hover {
+        background-color: var(--color-ash-hover);
+      }
+
+      &:active {
+        background-color: var(--color-ash-pressed);
+      }
+    }
+  }
+
+  &_Label {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_Icon {
+    display: block;
+
+    &-off {
+      display: none;
+    }
+  }
+
+  &_IconChecked {
+    display: none;
+
+    &-on {
+      display: block;
+    }
+  }
+}

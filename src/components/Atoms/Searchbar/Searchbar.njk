@@ -1,0 +1,17 @@
+{%-from "../Icon/Icon.njk" import IconEmbedded -%}
+
+{% macro Searchbar(Placeholder, LabelTop = false, LabelTopContent) %}
+    <div class="FocusWrapper">
+        <div class ="SearchbarWrapper">
+            <div class="SearchbarContainer">
+                <div class="LabelContainer">
+                    {% if LabelTop %}
+                        <label class="-sizeXS regular">{{ LabelTopContent }}</label>
+                    {% endif %}
+                    <input type="search" class="Searchbar" placeholder="{{ Placeholder }}"/>
+                </div>
+            </div>
+            <button class="SearchButton">{{ IconEmbedded('Search') }}</button>
+        </div>
+    </div>
+{% endmacro %}

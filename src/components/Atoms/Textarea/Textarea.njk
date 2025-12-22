@@ -1,0 +1,8 @@
+{% macro Textarea(ID, Name, Placeholder, LabelTop = false, LabelTopContent) %}
+    <div class="TextareaContainer">
+        {% if LabelTop%}
+            <label for="{{ ID }}">{{ LabelTopContent }}</label>
+        {% endif %}
+        <textarea class="Textarea"name="{{ Name }}" id="{{ ID }}" placeholder="{{ Placeholder }}"></textarea>
+    </div>
+{% endmacro %}

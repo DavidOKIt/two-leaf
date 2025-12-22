@@ -1,0 +1,25 @@
+{
+  "name": "two-leaf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --watch --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://david.obenaus@bitbucket.org/kittelberger-media-solutions/two-leaf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://bitbucket.org/kittelberger-media-solutions/two-leaf/issues"
+  },
+  "homepage": "https://bitbucket.org/kittelberger-media-solutions/two-leaf#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "sass": "^1.94.2"
+  }
+}

@@ -1,0 +1,9 @@
+{%-from "src/components/Atoms/Icon/Icon.njk" import IconEmbedded -%}
+
+{% macro IconGroup(Icons) %}
+    <div class="IconGroup">
+        {% for Icon in Icons %}
+            <span>{{ IconEmbedded(Icon) }}</span>
+        {% endfor %}
+    </div>
+{% endmacro %}

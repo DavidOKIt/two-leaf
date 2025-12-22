@@ -1,0 +1,19 @@
+.Divider {
+  border: none;
+  width: auto;
+  height: 1px;
+  margin: var(--space-16) 0;
+  background-color: var(--color-black);
+
+  &-primary {
+    background-color: var(--color-matcha-default);
+  }
+
+  &-secondary {
+    background-color: var(--color-copper-default);
+  }
+
+  &-tertiary {
+    background-color: var(--color-ash-default);
+  }
+}

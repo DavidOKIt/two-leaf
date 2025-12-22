@@ -1,0 +1,106 @@
+.Dropdown {
+  position: relative;
+  width: 328px;
+
+  font-family: inherit;
+  color: var(--color-black);
+
+  &_Trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    height: 48px;
+    border: var(--border-normal) solid var(--color-copper-default);
+    border-radius: var(--border-radius-normal) var(--border-radius-normal) 0 0;
+    background-color: var(--color-white);
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var(--color-copper-hover-30);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: var(--color-copper-pressed-30);
+    }
+
+    &:focus-visible {
+      outline: var(--border-focus) solid var(--color-focus);
+      border-radius: var(--border-radius-normal);
+    }
+
+    &:active:focus-visible {
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &_Menu {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    background: white;
+    border: var(--border-normal) solid var(--color-copper-default);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius-normal) var(--border-radius-normal);
+  }
+
+  &_Item {
+    border: none;
+    height: 40px;
+    padding: var(--space-10) var(--space-12);
+
+    &:hover {
+      background-color: var(--color-copper-hover-30);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: var(--color-copper-pressed-30);
+    }
+
+    &:focus-visible {
+      outline: var(--border-focus) solid var(--color-focus);
+      border-radius: var(--border-radius-normal);
+    }
+
+    &:active:focus-visible {
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &_Icon {
+    &-up {
+      display: none;
+    }
+    &-down {
+      display: block;
+    }
+  }
+
+  &[open] &_Icon {
+    &-up {
+      display: block;
+    }
+    &-down {
+      display: none;
+    }
+  }
+}

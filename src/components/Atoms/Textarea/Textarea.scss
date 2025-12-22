@@ -1,0 +1,75 @@
+.TextareaContainer {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.Textarea {
+  display: flex;
+  width: 308px;
+  height: 120px;
+  padding: var(--space-8);
+  border: var(--border-normal) solid var(--color-copper-default);
+  border-radius: var(--border-radius-normal);
+
+  font-family: inherit;
+  color: var(--color-black);
+
+  &::placeholder {
+    color: var(--color-black-40);
+  }
+
+  &:hover {
+    border-color: var(--color-copper-hover);
+    background-color: var(--color-copper-hover-30);
+  }
+
+  &:focus {
+    background-color: var(--color-copper-active);
+    outline: var(--border-focus) solid var(--color-focus);
+  }
+
+  &.mouse-focus:focus-within {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.TextareaError {
+  display: flex;
+  width: 308px;
+  height: 120px;
+  padding: var(--space-8);
+  border: var(--border-normal) solid var(--color-error-default);
+  border-radius: var(--border-radius-normal);
+
+  font-family: Montserrat;
+  color: var(--color-black);
+
+  &::placeholder {
+    color: var(--color-black-40);
+  }
+
+  &:hover {
+    border-color: var(--color-error-hover);
+    background-color: var(--color-error-hover-30);
+  }
+
+  &:focus {
+    background-color: var(--color-error-light-30);
+    outline: var(--border-focus) solid var(--color-focus);
+  }
+
+  &.mouse-focus:focus-within {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

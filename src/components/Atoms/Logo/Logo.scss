@@ -1,0 +1,33 @@
+.Logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+  &:active:focus-visible {
+    outline: none;
+  }
+
+  &_svg {
+    width: 182px;
+    height: 27px;
+
+    &-small {
+      width: 91px;
+      height: 13px;
+    }
+
+    &-large {
+      width: 364px;
+      height: 54px;
+    }
+  }
+}

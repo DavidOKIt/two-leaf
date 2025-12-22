@@ -1,0 +1,12 @@
+.UneditableRating {
+  align-items: center;
+  display: flex;
+  gap: var(--space-4);
+
+  &_Stars {
+    display: flex;
+
+    color: var(--color-yellow);
+    gap: 0px;
+  }
+}

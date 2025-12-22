@@ -1,0 +1,18 @@
+{%- from "../Icon/Icon.njk"import IconEmbedded -%}
+
+{% macro Dropdown(Label, Name, Dropdown) %}
+    <details class="Dropdown">
+        <summary class="Dropdown_Trigger">
+            <span class="Dropdown_Label">{{ Label }}</span>
+            <span class="Dropdown_Icon-down">{{ IconEmbedded('Chevron-down') }}</span>
+            <span class="Dropdown_Icon-up">{{ IconEmbedded('Chevron-up') }}</span>
+
+        </summary>
+        <ul class="Dropdown_Menu">
+            {% for Option in Dropdown.DropdownItems %}
+                <li tabindex="0" class="Dropdown_Item" data-value="{{ Option.value }}">{{ Option.label }}</li>
+            {% endfor %}
+        </ul>
+    </details>
+    <input type="hidden" name="{{ Name }}" class="Dropdown_Input">
+{% endmacro %}

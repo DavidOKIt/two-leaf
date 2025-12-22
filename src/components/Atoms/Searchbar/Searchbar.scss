@@ -1,0 +1,105 @@
+.FocusWrapper {
+  display: inline-flex;
+  width: auto;
+
+  &:focus-within {
+    background-color: var(--color-copper-active);
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+
+  &.mouse-focus:focus-within {
+    outline: none;
+  }
+}
+
+.SearchbarWrapper {
+  display: inline-flex;
+  width: auto;
+  border: var(--border-normal) solid var(--color-copper-default);
+  outline-offset: -2px;
+  border-radius: var(--border-radius-normal);
+
+  &:hover {
+    border-color: var(--color-copper-hover);
+  }
+}
+
+.SearchbarContainer {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 280px;
+  height: 48px;
+  background-color: var(--color-white);
+  gap: 0px;
+  padding: 7.5px 12px;
+  cursor: text;
+
+  border: var(--border-normal) transparent;
+
+  &:hover {
+    background-color: var(--color-copper-hover-30);
+  }
+
+  &:focus-within {
+    background-color: var(--color-copper-active);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.Searchbar {
+  width: 100%;
+  height: 21px;
+  appearance: none;
+  border: none;
+  background: transparent;
+
+  font-family: inherit;
+  color: var(--color-black);
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: var(--color-black-40);
+  }
+}
+
+.LabelContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 268px;
+}
+
+.SearchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: var(--border-normal) transparent;
+  background: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-copper-hover-30);
+  }
+
+  &:active {
+    background-color: var(--color-copper-pressed-30);
+  }
+}

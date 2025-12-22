@@ -1,0 +1,25 @@
+{%- from "../Icon/Icon.njk"import IconEmbedded -%}
+
+{% macro Chip(Label, Style, IconLeft = false, IconContentLeft, IconRight = false, IconContentRight, IconHeart = false, IconCheck = false)%}
+    <div class="Chip Chip-{{ Style }}" tabindex="0" role="button" aria-label="{{ Label }}">
+        {% if IconLeft %}
+            <span class="Chip_Icon">{{ IconEmbedded([IconContentLeft])}}</span>
+        {% endif %}
+
+        <span class="Chip_Label">{{ Label }}</span>
+
+        {% if IconRight %}
+            {{ IconEmbedded([IconContentRight])}}
+        {% endif %}
+
+        {% if IconHeart %}
+            <span class="Chip_Icon">{{ IconEmbedded('Heart') }}</span>
+            <span class="Chip_IconChecked">{{ IconEmbedded('Heart-filled') }}</span>
+        {% endif %}
+
+        {% if IconCheck %}
+            <span class="Chip_Icon">{{ IconEmbedded('Add') }}</span>
+            <span class="Chip_IconChecked">{{ IconEmbedded('Checkmark') }}</span>
+        {% endif %}
+    </div>
+{% endmacro %}

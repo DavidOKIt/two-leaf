@@ -1,0 +1,9 @@
+{%-from "src/components/Atoms/Button/Button.njk" import Button -%}
+
+{% macro ButtonGroup(Buttons) %}
+    <div class="ButtonGroup">
+        {% for Btn in Buttons.Settings %}
+            {{ Button(Btn.Label, Btn.Size, Btn.Style, Btn.Outline, Btn.showIconLeft, Btn.IconContentLeft, Btn.showIconRight, Btn.IconContentRight) }}
+        {% endfor %}
+    </div>
+{% endmacro %}

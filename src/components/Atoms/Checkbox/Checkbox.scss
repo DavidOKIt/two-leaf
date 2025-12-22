@@ -1,0 +1,143 @@
+.CheckboxContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.Checkbox {
+  width: 24px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-copper-default);
+  border-radius: var(--border-radius-normal);
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .checkmark {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: var(--color-white);
+    mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20aria-label%3D%22Icon%22%20role%3D%22img%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M15.8536%206.14645C16.0488%206.34171%2016.0488%206.65829%2015.8536%206.85355L8.85355%2013.8536C8.65829%2014.0488%208.34171%2014.0488%208.14645%2013.8536L4.14645%209.85355C3.95118%209.65829%203.95118%209.34171%204.14645%209.14645C4.34171%208.95118%204.65829%208.95118%204.85355%209.14645L8.5%2012.7929L15.1464%206.14645C15.3417%205.95118%2015.6583%205.95118%2015.8536%206.14645Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+    mask-repeat: no-repeat;
+    mask-position: -2px -2.5px;
+    mask-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-copper-hover);
+    background-color: var(--color-copper-hover-30);
+  }
+
+  &:active {
+    border-color: var(--color-copper-pressed);
+    background-color: var(--color-copper-pressed-30);
+  }
+
+  input:checked + .checkmark {
+    opacity: 1;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-copper-default);
+
+    &:hover {
+      background-color: var(--color-copper-hover);
+    }
+
+    &:active {
+      background-color: var(--color-copper-pressed);
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}
+
+.CheckboxError {
+  width: 24px;
+  height: 24px;
+  border: var(--border-normal) solid var(--color-error-default);
+  border-radius: var(--border-radius-normal);
+
+  &:has(input:focus-visible) {
+    outline: var(--border-focus) solid var(--color-focus);
+    border-radius: var(--border-radius-normal);
+  }
+
+  &:has(input:focus-visible):active {
+    outline: none;
+  }
+
+  .checkmark {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: var(--color-white);
+    mask-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20aria-label%3D%22Icon%22%20role%3D%22img%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M15.8536%206.14645C16.0488%206.34171%2016.0488%206.65829%2015.8536%206.85355L8.85355%2013.8536C8.65829%2014.0488%208.34171%2014.0488%208.14645%2013.8536L4.14645%209.85355C3.95118%209.65829%203.95118%209.34171%204.14645%209.14645C4.34171%208.95118%204.65829%208.95118%204.85355%209.14645L8.5%2012.7929L15.1464%206.14645C15.3417%205.95118%2015.6583%205.95118%2015.8536%206.14645Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+    mask-repeat: no-repeat;
+    mask-position: -2px -2.5px;
+    mask-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--color-error-hover);
+    background-color: var(--color-error-hover-30);
+  }
+
+  &:active {
+    border-color: var(--color-error-pressed);
+    background-color: var(--color-error-pressed-30);
+  }
+
+  input:checked + .checkmark {
+    opacity: 1;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-error-default);
+
+    &:hover {
+      background-color: var(--color-error-hover);
+    }
+
+    &:active {
+      background-color: var(--color-error-pressed);
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}

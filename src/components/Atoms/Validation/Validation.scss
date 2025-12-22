@@ -1,0 +1,31 @@
+.Validation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: auto;
+  height: auto;
+
+  &-Info {
+    color: var(--color-black);
+  }
+
+  &-Success {
+    color: var(--color-green);
+  }
+
+  &-Warning {
+    color: var(--color-yellow);
+  }
+
+  &-Error {
+    color: var(--color-red);
+  }
+
+  &_Label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+  }
+}

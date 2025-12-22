@@ -1,0 +1,21 @@
+{%-from "../Icon/Icon.njk" import IconEmbedded -%}
+{%-from "../Validation/Validation.njk" import Validation -%}
+
+{% macro Inputfield(Type, Placeholder, LabelTop = false, LabelTopContent, IconRight = false, IconRightContent, hasValidation = false, ValidationContent) %}
+    <div class ="InputfieldWrapper">
+        <div class="InputfieldContainer">
+            <div class="LabelContainer">
+                {% if LabelTop %}
+                    <label class="-sizeXS regular">{{ LabelTopContent }}</label>
+                {% endif %}
+                <input type="{{ Type }}" class="Inputfield" placeholder="{{ Placeholder }}"/>
+            </div>
+            {% if IconRight %}
+                {{ IconEmbedded([IconRightContent])}}
+            {% endif %}
+        </div>
+        {% if hasValidation %}
+            {{ Validation(ValidationContent.type, ValidationContent.label) }}
+        {% endif %}
+    </div>
+{% endmacro %}

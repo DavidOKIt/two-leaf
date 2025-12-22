@@ -1,0 +1,16 @@
+{%- from "../Icon/Icon.njk" import IconEmbedded -%}
+
+{% macro Validation(Type, Label) %}
+    {% set icons = {
+        Info: 'Info',
+        Success: 'Success',
+        Error: 'Error',
+        Warning: 'Warning'
+    }
+ %}
+
+    <div class="Validation">
+        <span class="Validation-{{ Type }}">{{ IconEmbedded (icons[Type]) }}</span>
+        <span class="Validation_Label Validation-{{ Type }}">{{ Label }}</span>
+    </div>
+{% endmacro %}

@@ -1,0 +1,45 @@
+// Variables
+@use "colors";
+@use "fonts";
+@use "var";
+
+// Atoms
+@use "../../components/Atoms/Icon/Icon.scss";
+@use "../../components/Atoms/Button/Button.scss";
+@use "../../components/Atoms/Link/Link.scss";
+@use "../../components/Atoms/Paragraph/Paragraph.scss";
+@use "../../components/Atoms/Heading/Heading.scss";
+@use "../../components/Atoms/Radio/Radio.scss";
+@use "../../components/Atoms/Checkbox/Checkbox.scss";
+@use "../../components/Atoms/Toggle/Toggle.scss";
+@use "../../components/Atoms/Ranger/Ranger.scss";
+@use "../../components/Atoms/Inputfield/Inputfield.scss";
+@use "../../components/Atoms/Textarea/Textarea.scss";
+@use "../../components/Atoms/Dropdown/Dropdown.scss";
+@use "../../components/Atoms/Image/Image.scss";
+@use "../../components/Atoms/Chip/Chip.scss";
+@use "../../components/Atoms/Divider/Divider.scss";
+@use "../../components/Atoms/Logo/Logo.scss";
+@use "../../components/Atoms/Validation/Validation.scss";
+@use "../../components/Atoms/Searchbar/Searchbar.scss";
+
+// Molecules
+@use "../../components/Molecules/IconGroup/IconGroup.scss";
+@use "../../components/Molecules/ButtonGroup/ButtonGroup.scss";
+@use "../../components/Molecules/Rating/Rating.scss";
+
+* {
+  padding: 0;
+  // margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bgwhite);
+  font-family: Montserrat, sans-serif;
+  font-size: var(--font-size-14);
+}
+
+.testdiv {
+  width: 450px;
+}
