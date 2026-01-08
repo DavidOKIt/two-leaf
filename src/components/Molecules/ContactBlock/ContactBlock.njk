@@ -1,0 +1,31 @@
+{%-from "src/Components/Atoms/Link/Link.njk" import InlineLink-%}
+
+{% macro ContactBlock() %}
+    <div class="ContactBlock">
+        <div class="ContactBlock_HeadingLeft bold">
+            <span>Unternhemen</span>
+        </div>
+        <div class="ContactBlock_HeadingRight bold">
+            <span>Kontakt</span>
+        </div>
+        <div class="ContactBlock_ContentLeft">
+            <span>Two Leaf GmbH</span>
+            <span>Teeweg 12</span>
+            <span>80331 München</span>
+            <span>Deutschland</span>
+        </div>
+        <div class="ContactBlock_ContentRight">
+            <span>kontakt@twoleaf.de</span>
+            <span>+49 (0)89 123 456 78</span>
+            <span>80331 München</span>
+            <span>Deutschland</span>
+        </div>
+        <div class="ContactBlock_Links">
+            {{ InlineLink('Impressum', 'primary', '-sizeS', 'medium' )}}
+            {{ InlineLink('Datenschutz', 'primary', '-sizeS', 'medium' )}}
+            {{ InlineLink('AGB', 'primary', '-sizeS', 'medium' )}}
+            {{ InlineLink('Cookie-Einstellungen', 'primary', '-sizeS', 'medium' )}}
+        </div>
+    </div>
+
+{% endmacro %}

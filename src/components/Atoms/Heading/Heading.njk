@@ -1,5 +1,5 @@
 {% macro Heading (Tag, Size, Weight, Color, Content)%}
     <{{ Tag }} class="Heading {{ Size }} {{ Weight }} Heading-{{ Color }}">
-        {{ Content }}
+        {{ Content | safe }}
     </{{ Tag }}>
 {% endmacro %}

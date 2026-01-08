@@ -1,0 +1,38 @@
+.ContactBlock {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-template-rows: auto 3fr;
+  padding: var(--space-16) 0px;
+  gap: var(--space-16);
+
+  &_HeadingLeft {
+    display: flex;
+    grid-area: 1 / 1 / 1 / 1;
+  }
+
+  &_HeadingRight {
+    display: flex;
+    grid-area: 1 / 2 / 1 / 2;
+  }
+
+  &_ContentLeft {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    grid-area: 2 / 1 / 2 / 1;
+  }
+
+  &_ContentRight {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    grid-area: 2 / 2 / 2 / 2;
+  }
+
+  &_Links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    grid-area: 3 / 1 / 3 / 2;
+  }
+}

@@ -1,5 +1,17 @@
+.ImageContainer {
+  position: relative;
+  margin: 0px;
+}
+
 .Image {
   border-radius: var(--border-radius-normal);
+
+  &_Label {
+    position: absolute;
+    bottom: var(--space-16);
+    left: var(--space-16);
+    color: var(--color-white);
+  }
 
   &-FullScreen {
     aspect-ratio: 9 / 16;
@@ -18,8 +30,16 @@
     aspect-ratio: 5 / 4;
   }
 
-  &-ProductPicture {
+  &-GalleryImage {
     aspect-ratio: 1 / 1;
+  }
+
+  &-GalleryImage-vertical {
+    aspect-ratio: 39 / 82;
+  }
+
+  &-GalleryImage-horizontal {
+    aspect-ratio: 82 / 39;
   }
 
   &-contain {

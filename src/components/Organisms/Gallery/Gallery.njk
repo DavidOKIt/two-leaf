@@ -1,0 +1,19 @@
+{%- from "src/components/Atoms/Image/Image.njk" import Image %}
+
+{% macro Gallery() %}
+    <div class="Gallery">
+        <div class="Gallery_Container -sizeXL bold"> Hallo Halllo</div>
+        <div class="Gallery_Container">{{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-horizontal', 'cover', figcaption=true, label='Label', loadinglazy=true) }}</div>
+        <div class="Gallery_Container">
+            <div class="Gallery_innerContainer">
+                <div class="Gallery-left">
+                    <div>{{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage', 'cover', figcaption=true, label='Label', loadinglazy=true) }}</div>
+                    <div>{{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage', 'cover', figcaption=true, label='Label', loadinglazy=true) }}</div>
+                </div>
+                <div class="Gallery-right">{{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-vertical', 'cover', figcaption=true, label='Label', loadinglazy=true) }}</div>
+            </div>
+        </div>
+        <div class="Gallery_Container">{{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-horizontal', 'cover', figcaption=true, label='Label', loadinglazy=true) }}</div>
+    </div>
+
+{% endmacro %}

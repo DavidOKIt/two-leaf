@@ -1,3 +1,8 @@
-{% macro Image(src, alt, size, fit, loadinglazy) %}
-    <img src="{{ src }}" alt="{{ alt }}" class="Image Image-{{ size }} Image-{{ fit }}" {% if loadinglazy %}loading="lazy"{% endif %}/>
+{% macro Image(src, alt, size, fit, figcaption = false, label, loadinglazy) %}
+    <figure class="ImageContainer">
+        <img src="{{ src }}" alt="{{ alt }}" class="Image Image-{{ size }} Image-{{ fit }}"{% if loadinglazy %}loading="lazy"{% endif %}/>
+        {% if figcaption%}
+            <figcaption class="Image_Label -sizeXL bold">{{ label }}</figcaption>
+        {% endif %}
+    </figure>
 {% endmacro %}

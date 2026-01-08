@@ -1,0 +1,35 @@
+{%- from "src/components/Atoms/Heading/Heading.njk" import Heading -%}
+{%- from "src/components/Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
+{%- from "src/components/Atoms/Image/Image.njk" import Image -%}
+{%- from "src/components/Atoms/Button/Button.njk" import Button -%}
+
+{% macro StaticBanner (BannerImage, BannerButton=false, ButtonContent, Position, HeadingContent, ParagraphContent)%}
+
+    {% if BannerButton %}
+        {% set Position = null %}
+    {% endif %}
+
+    <div class="StaticBanner">
+        {{ Image (BannerImage, 'Static Banner Image', 'FullScreen', 'cover', figcaption=false, loadinglazy=true) }}
+        <div class="StaticBanner_ContentWrapper StaticBanner_ContentWrapper-{{ Position }}">
+            <div class="StaticBanner_Content">
+                {{ Heading ('h2', '-sizeXXL', 'bold', 'white', HeadingContent) }}
+                {{ Paragraph ('-sizeS', 'medium', ParagraphContent) }}
+            </div>
+            {% if BannerButton %}
+                <div class="StaticBanner_ButtonContainer">
+                    {{ Button (
+                        Label = BannerButton.Label or 'ENTDECKEN',
+                        Size = BannerButton.Size or 'regular',
+                        Style = BannerButton.Style or 'secondary',
+                        Outline = BannerButton.Outline or null,
+                        showIconLeft = BannerButton.showIconLeft or false,
+                        IconContentLeft = BannerButton.IconContentLeft or null,
+                        showIconRight = BannerButton.showIconRight or false,
+                        IconContentRight = BannerButton.IconContentRight or null
+                        ) }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

@@ -30,13 +30,16 @@
 @use "../../components/Molecules/TextIcon/TextIcon.scss";
 @use "../../components/Molecules/MenuItem/MenuItem.scss";
 @use "../../components/Molecules/DownloadField/DownloadField.scss";
+@use "../../components/Molecules/ContactBlock/ContactBlock.scss";
+@use "../../components/Molecules/StaticBanner/StaticBanner.scss";
 
 // Organisms
 @use "../../components/Organisms/Slider/Slider.scss";
+@use "../../components/Organisms/Gallery/Gallery.scss";
 
 * {
   padding: 0;
-  // margin: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -52,4 +55,13 @@ body {
 .testdiv2 {
   width: 360px;
   height: 616px;
+}
+.testdiv3 {
+  width: 360px;
+  height: 616px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

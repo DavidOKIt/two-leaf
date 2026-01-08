@@ -29,41 +29,47 @@
 {%- from "./components/Molecules/TextIcon/TextIcon.njk" import TextIcon -%}
 {%- from "./components/Molecules/MenuItem/MenuItem.njk" import MenuItem -%}
 {%- from "./components/Molecules/DownloadField/DownloadField.njk" import Downloadfield -%}
+{%- from "./components/Molecules/ContactBlock/ContactBlock.njk" import ContactBlock%}
+{%- from "./components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner -%}
+
+{# Organisms  #}
+{# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
+{%- from "./components/Organisms/Gallery/Gallery.njk" import Gallery -%}
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Two Leaf - A modern web project">
-    <title>Two Leaf</title>
-    <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="preload" href="./assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Swiper CSS aus dem Internet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Two Leaf - A modern web project">
+        <title>Two Leaf</title>
+        <link rel="stylesheet" href="./assets/styles/main.css">
+        <link rel="preload" href="./assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- Swiper CSS aus dem Internet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
 
-  <body>
-    {{ Logo ("/", "small") }}
-    {{ Logo ("/") }}
-    {{ Logo ("/", "large") }}
-    {{ Ranger("preis", 100, 1, 200, "Preis", '€') }}
-    {{ Ranger("time", 4, 1, 8, "Ziehzeit", 'min') }}
-    {{ Validation('Info', 'This is a success message') }}
-    {{ Validation('Success', 'This is a success message') }}
-    {{ Validation('Error', 'This is a success message') }}
-    {{ Validation('Warning', 'This is a success message') }}
+    <body>
+        {{ Logo ("/", "small") }}
+        {{ Logo ("/") }}
+        {{ Logo ("/", "large") }}
+        {{ Ranger("preis", 100, 1, 200, "Preis", '€') }}
+        {{ Ranger("time", 4, 1, 8, "Ziehzeit", 'min') }}
+        {{ Validation('Info', 'This is a success message') }}
+        {{ Validation('Success', 'This is a success message') }}
+        {{ Validation('Error', 'This is a success message') }}
+        {{ Validation('Warning', 'This is a success message') }}
 
-    <form action="">
-      {{ Inputfield('text', 'Name', LabelTop = true, 'Hello', IconRight = true, IconRightContent = 'Search', hasValidation = true, ValidationContent = { type: 'Warning', label: 'This is an info message' }) }}
-      {{ Inputfield('text', 'Name', LabelTop = false, 'Hello', IconRight = true, IconRightContent = 'Search', hasValidation = true, ValidationContent = { type: 'Error', label: 'Fehlerhafte Eingabe' }) }}
-      {{ Searchbar('Search...', LabelTop = true, 'Search for items') }}
-    </form>
-    <br>
-    {{ Textarea('textarea01', 'description', 'Enter your description here...', LabelTop = true, 'Description') }}
-    <br>
-    <br>
-    {{ Dropdown ('dropdown01', 'options',{ DropdownItems: [
+        <form action="">
+            {{ Inputfield('text', 'Name', LabelTop = true, 'Hello', IconRight = true, IconRightContent = 'Search', hasValidation = true, ValidationContent = { type: 'Warning', label: 'This is an info message' }) }}
+            {{ Inputfield('text', 'Name', LabelTop = false, 'Hello', IconRight = true, IconRightContent = 'Search', hasValidation = true, ValidationContent = { type: 'Error', label: 'Fehlerhafte Eingabe' }) }}
+            {{ Searchbar('Search...', LabelTop = true, 'Search for items') }}
+        </form>
+        <br>
+        {{ Textarea('textarea01', 'description', 'Enter your description here...', LabelTop = true, 'Description') }}
+        <br>
+        <br>
+        {{ Dropdown ('dropdown01', 'options',{ DropdownItems: [
         { value: 'option1', label: 'Option 1' },
         { value: 'option2', label: 'Option 2' },
         { value: 'option3', label: 'Option 3' },
@@ -71,113 +77,122 @@
         { value: 'option5', label: 'Option 5' },
         { value: 'option6', label: 'Option 6' }
     ]}) }}
-    <br>
-    <div class="testdiv">
-      {{ Chip('Label', 'secondary', IconLeft = false, IconRight = false, IconHeart = false, IconCheck = true) }}
-      {{ Button('Click Me', 'regular', 'primary')}}
-      {{ UneditableRating("Sample Label", FilledStars = 3) }}
-      {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error', 'Error', 'Error', 'Error','Error', 'Error', 'Error', 'Error','Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error']) }}
-      {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error']) }}
-      {{ ButtonGroup( { Settings: [
+        <br>
+        <div class="testdiv">
+            {{ Chip('Label', 'secondary', IconLeft = false, IconRight = false, IconHeart = false, IconCheck = true) }}
+            {{ Button('Click Me', 'regular', 'primary')}}
+            {{ UneditableRating("Sample Label", FilledStars = 3) }}
+            {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error', 'Error', 'Error', 'Error','Error', 'Error', 'Error', 'Error','Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error']) }}
+            {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error']) }}
+            {{ ButtonGroup( { Settings: [
           { Label: 'Button 1', Size: 'small', Style: 'primary', Outline: '', showIconLeft: true, IconContentLeft: 'Error', showIconRight: true, IconContentRight: 'Cart' },
           { Label: 'Button 1', Size: 'small', Style: 'primary', Outline: '', showIconLeft: true, IconContentLeft: 'Error' },
           { Label: 'Button 2', Size: 'small', Style: 'secondary', Outline: 'outline', showIconLeft: false, showIconRight: true, IconContentRight: 'Cart' },
           { Label: 'Button 3', Size: 'small', Style: 'tertiary', Outline: '', showIconLeft: true, IconContentLeft: 'Chevron-left', showIconRight: true, IconContentRight: 'Chevron-up' }
       ]}) }}
-      {{ MenuItem( { Settings: [
+            {{ EditableRating("Sample Label", TotalStars = 5) }}
+            {{ MenuItem( { Settings: [
       { Text: 'Dashboard', Icon: 'Home', Size: '-sizeS', Weight: 'medium' },
       { Text: 'Profile', Icon: 'Profile', Size: '-sizeS', Weight: 'medium' },
       { Text: 'Settings', Icon: 'Settings', Size: '-sizeS', Weight: 'medium' },
       { Text: 'Messages', Icon: 'Chat', Size: '-sizeS', Weight: 'medium' },
       { Text: 'Notifications', Icon: 'Bell', Size: '-sizeS', Weight: 'medium' }
       ]}) }}
-      <br>
-      <br>
-      {{ Downloadfield('Download Item', 'PDF, 4.5MB') }}
-      {{ Divider('secondary') }}
-    </div>
-    {{ Image('./assets/img/ProductImage1.jpg', 'Sample Image', 'ProductCard', 'cover', true) }}
-    <p class="light">Probe Text</p>
-    <p class="medium">Probe Text 2</p>
-    {{ UtilityLink ('Learn More', 'primary', '-sizeXS', 'light') }}
-    {{ UtilityLink ('Learn More', 'secondary', '-sizeS', 'regular') }}
-    {{ UtilityLink ('Learn More', 'primary', '-sizeS', 'medium', showIconRight =true, IconContentRight = 'Home') }}
+            <br>
+            <br>
+            {{ Downloadfield('Download Item', 'PDF, 4.5MB') }}
+            {{ Divider('secondary') }}
+        </div>
+        <div class="testdiv3">
+            {{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-horizontal', 'cover', figcaption=true, label='Label', loadinglazy=true) }}
+        </div>
+        <div>
+            {{ Gallery() }}
+        </div>
+        <p class="light">Probe Text</p>
+        <p class="medium">Probe Text 2</p>
+        {{ UtilityLink ('Learn More', 'primary', '-sizeXS', 'light') }}
+        {{ UtilityLink ('Learn More', 'secondary', '-sizeS', 'regular') }}
+        {{ UtilityLink ('Learn More', 'primary', '-sizeS', 'medium', showIconRight =true, IconContentRight = 'Home') }}
 
-    <p class="regular">Testen wir den {{ InlineLink ('Ich bin ein Inline Link', 'secondary', '-sizeS', 'regular') }} dadadaa</p>
+        <p class="regular">Testen wir den {{ InlineLink ('Ich bin ein Inline Link', 'secondary', '-sizeS', 'regular') }} dadadaa</p>
 
-    {{ Paragraph ('-sizeS', 'regular', 'Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular.') }}
+        {{ Paragraph ('-sizeS', 'regular', 'Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular. Dies ist ein Paragraph mit der Größe S und Gewicht regular.') }}
 
-    {{ Radio ('radio01', 'Test', 'radio01', 'Option 1') }}
-    {{ Radio ('radio02', 'Test', 'radio02', 'Option 2') }}
-    {{ Checkbox ('checkbox01', 'Test', 'checkbox01', 'Checkbox 1' ) }}
+        {{ Radio ('radio01', 'Test', 'radio01', 'Option 1') }}
+        {{ Radio ('radio02', 'Test', 'radio02', 'Option 2') }}
+        {{ Checkbox ('checkbox01', 'Test', 'checkbox01', 'Checkbox 1' ) }}
 
-    <br>
+        <br>
 
-    {{ Toggle ('checkbox02', 'Test', 'checkbox02', 'Checkbox 2' ) }}
+        {{ Toggle ('checkbox02', 'Test', 'checkbox02', 'Checkbox 2' ) }}
+        {{ ContactBlock() }}
+        {{ Heading ('h1', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
+        {{ Heading ('h2', '-sizeL', 'medium', 'black', 'Im a Heading') }}
+        {{ Heading ('h3', '-sizeM', 'regular', 'black', 'Im a Heading') }}
+        {{ Heading ('h4', '-sizeS', 'light', 'black', 'Im a Heading') }}
+        {{ Heading ('h5', '-sizeXS', 'regular', 'black', 'Im a Heading') }}
 
-    {{ Heading ('h1', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
-    {{ Heading ('h2', '-sizeL', 'medium', 'black', 'Im a Heading') }}
-    {{ Heading ('h3', '-sizeM', 'regular', 'black', 'Im a Heading') }}
-    {{ Heading ('h4', '-sizeS', 'light', 'black', 'Im a Heading') }}
-    {{ Heading ('h5', '-sizeXS', 'regular', 'black', 'Im a Heading') }}
+        {{ Heading ('h6', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
+        {{ Heading ('h1', '-sizeL', 'medium', 'white', 'Im a Heading') }}
 
-    {{ Heading ('h6', '-sizeXL', 'bold', 'black', 'Im a Heading') }}
-    {{ Heading ('h1', '-sizeL', 'medium', 'white', 'Im a Heading') }}
+        {{ IconEmbedded ('Home-filled') }}
+        {{ IconEmbedded ('Cart', 'white') }}
+        {{ IconEmbedded ('Chevron-up') }}
 
-    {{ IconEmbedded ('Home-filled') }}
-    {{ IconEmbedded ('Cart', 'white') }}
-    {{ IconEmbedded ('Chevron-up') }}
+        {{ Button('Click', 'small', 'primary', 'outline') }}
+        {{ Button('Cancel', 'small', 'tertiary') }}
+        {{ Button('Submit', 'regular', 'secondary', showIconLeft = true, IconContentLeft = 'Chevron-left', showIconRight = true, IconContentRight = 'Home-filled') }}
+        {{ Button('Cancel', 'large', 'tertiary') }}
+        {{ Button ('', 'regular', 'primary', showIconLeft = true, IconContentLeft = 'Home')}}
 
-    {{ Button('Click', 'small', 'primary', 'outline') }}
-    {{ Button('Cancel', 'small', 'tertiary') }}
-    {{ Button('Submit', 'regular', 'secondary', showIconLeft = true, IconContentLeft = 'Chevron-left', showIconRight = true, IconContentRight = 'Home-filled') }}
-    {{ Button('Cancel', 'large', 'tertiary') }}
-    {{ Button ('', 'regular', 'primary', showIconLeft = true, IconContentLeft = 'Home')}}
-
-    <div class="testdiv2">
-      <div class="swiper swiper--navigation">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+        <div class="testdiv2">
+            <div class="swiper swiper--navigation">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
     ...
   </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="testdiv2">
-      <div class="swiper swiper--pagination">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+        <div class="testdiv2">
+            <div class="swiper swiper--pagination">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
     ...
   </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-      </div>
-    </div>
+            </div>
+        </div>
+        <div class="testdiv3">
+            {{ StaticBanner( BannerButton = {}, ButtonContent = 'ENTDECKEN', Position = 'bottom', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', BannerImage = './assets/img/SliderImage2.jpg', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
+        </div>
+        {# Scripts #}
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    {# Scripts #}
-    <script src="/components/Atoms/Ranger/Ranger.js"></script>
-    <script src="/components/Atoms/Inputfield/Inputfield.js"></script>
-    <script src="/components/Atoms/Searchbar/Searchbar.js"></script>
-    <script src="/components/Atoms/Textarea/Textarea.js"></script>
-    <script src="/components/Atoms/Dropdown/Dropdown.js"></script>
-    <script src="/components/Atoms/Chip/Chip.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/components/Organisms/Slider/Slider.js"></script>
-  </body>
+        <script src="/components/Atoms/Ranger/Ranger.js"></script>
+        <script src="/components/Atoms/Inputfield/Inputfield.js"></script>
+        <script src="/components/Atoms/Searchbar/Searchbar.js"></script>
+        <script src="/components/Atoms/Textarea/Textarea.js"></script>
+        <script src="/components/Atoms/Dropdown/Dropdown.js"></script>
+        <script src="/components/Atoms/Chip/Chip.js"></script>
+        <script src="/components/Organisms/Slider/Slider.js"></script>
+    </body>
 </html>
