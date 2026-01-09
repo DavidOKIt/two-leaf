@@ -1,7 +1,5 @@
 .Logo {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   outline: transparent;
 
   &:hover {
@@ -17,12 +15,14 @@
   }
 
   &_svg {
-    width: 182px;
-    height: 27px;
-
     &-small {
       width: 91px;
       height: 13px;
+    }
+
+    &-header {
+      width: 168px;
+      height: 29px;
     }
 
     &-large {

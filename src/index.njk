@@ -31,10 +31,12 @@
 {%- from "./components/Molecules/DownloadField/DownloadField.njk" import Downloadfield -%}
 {%- from "./components/Molecules/ContactBlock/ContactBlock.njk" import ContactBlock%}
 {%- from "./components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner -%}
+{%- from "./components/Molecules/Breadcrumb/Breadcrumb.njk" import Breadcrumb -%}
 
 {# Organisms  #}
 {# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
 {%- from "./components/Organisms/Gallery/Gallery.njk" import Gallery -%}
+{%- from "./components/Organisms/Header/Header.njk" import Header, TopButton -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,11 +52,24 @@
     </head>
 
     <body>
+        {{ Header (Nav = true, Items = [ 
+        { Label: 'Home', Target: '/' }, 
+        { Label: 'Section', Target: '/section' }, 
+        { Label: 'Current Page', Target: '#' }
+         ] ) }}
         {{ Logo ("/", "small") }}
-        {{ Logo ("/") }}
+        {{ Logo ("/", "header") }}
         {{ Logo ("/", "large") }}
         {{ Ranger("preis", 100, 1, 200, "Preis", '€') }}
         {{ Ranger("time", 4, 1, 8, "Ziehzeit", 'min') }}
+
+        {{ Breadcrumb( [ 
+        { Label: 'Home', Target: '#' }, 
+        { Label: 'Category', Target: '#' }, 
+        { Label: 'Subcategory', Target: '#' }, 
+        { Label: 'Current Page', Target: '#' },
+        { Label: 'Current ', Target: '#' }
+         ] ) }}
         {{ Validation('Info', 'This is a success message') }}
         {{ Validation('Success', 'This is a success message') }}
         {{ Validation('Error', 'This is a success message') }}

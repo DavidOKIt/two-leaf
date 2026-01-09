@@ -32,21 +32,26 @@
 @use "../../components/Molecules/DownloadField/DownloadField.scss";
 @use "../../components/Molecules/ContactBlock/ContactBlock.scss";
 @use "../../components/Molecules/StaticBanner/StaticBanner.scss";
+@use "../../components/Molecules/Breadcrumb/Breadcrumb.scss";
 
 // Organisms
 @use "../../components/Organisms/Slider/Slider.scss";
 @use "../../components/Organisms/Gallery/Gallery.scss";
+@use "../../components/Organisms/Header/Header.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  // outline: 1px solid red !important;
 }
 
 body {
   background-color: var(--color-bgwhite);
   font-family: Montserrat, sans-serif;
   font-size: var(--font-size-14);
+  width: 100%;
+  min-width: 360px;
 }
 
 .testdiv {
@@ -64,4 +69,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -1,7 +1,7 @@
 {%- from "../Icon/Icon.njk"import IconEmbedded -%}
 
-{% macro UtilityLink(Label, Style, Size, Weight, showIconLeft = false, IconContentLeft, showIconRight = false, IconContentRight) %}
-    <a href="#" class="UtilityLink UtilityLink-{{ Style }} {{ Size }} {{ Weight }}" >
+{% macro UtilityLink(Label, Style, Size, Weight, showIconLeft = false, IconContentLeft, showIconRight = false, IconContentRight, Target = "#") %}
+    <a href="{{ Target }}" class="UtilityLink UtilityLink-{{ Style }} {{ Size }} {{ Weight }}" >
 
         {% if showIconLeft %}
             {{ IconEmbedded([IconContentLeft])}}
@@ -16,8 +16,8 @@
     </a>
 {% endmacro %}
 
-{% macro InlineLink(Label, Style, Size, Weight) %}
-    <a href="#" class="InlineLink InlineLink-{{ Style }} {{ Size }} {{ Weight }}" >
+{% macro InlineLink(Label, Style, Size, Weight, Target = "#") %}
+    <a href="{{ Target }}" class="InlineLink InlineLink-{{ Style }} {{ Size }} {{ Weight }}" >
         {{ Label }}
     </a>
 {% endmacro %}
