@@ -1,0 +1,24 @@
+.List {
+  display: flex;
+  line-height: 1.5;
+  list-style-position: inside;
+
+  &_Checklist {
+    list-style-type: none;
+  }
+
+  &_ChecklistItem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-8);
+  }
+
+  &_CheckboxItem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding: var(--space-2) 0;
+  }
+}
