@@ -2,7 +2,7 @@
 {%- from "../../Atoms/Checkbox/Checkbox.njk" import Checkbox -%}
 
 {% macro List(ListType, CheckList = false, CheckboxList = false, Items) %}
-    <div class ="List ">
+    <div class="List ">
         <{{ ListType }} class="{% if CheckList == true %}List_Checklist{% endif %} {% if CheckboxList == true %}List_Checklist{% endif %}" >
             {% for Item in Items %}
 
