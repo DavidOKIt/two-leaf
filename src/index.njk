@@ -32,6 +32,7 @@
 {%- from "./components/Molecules/ContactBlock/ContactBlock.njk" import ContactBlock%}
 {%- from "./components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner -%}
 {%- from "./components/Molecules/Breadcrumb/Breadcrumb.njk" import Breadcrumb -%}
+{%- from "./components/Molecules/ProductTile/ProductTile.njk" import ProductTile -%}
 
 {# Organisms  #}
 {# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
@@ -99,12 +100,15 @@
       {{ UneditableRating("Sample Label", FilledStars = 3) }}
       {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error', 'Error', 'Error', 'Error','Error', 'Error', 'Error', 'Error','Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error' , 'Error']) }}
       {{ IconGroup(['Home-filled', 'Cart', 'Chevron-up', 'Error']) }}
-      {{ ButtonGroup( { Settings: [
-          { Label: 'Button 1', Size: 'small', Style: 'primary', Outline: '', showIconLeft: true, IconContentLeft: 'Error', showIconRight: true, IconContentRight: 'Cart' },
-          { Label: 'Button 1', Size: 'small', Style: 'primary', Outline: '', showIconLeft: true, IconContentLeft: 'Error' },
-          { Label: 'Button 2', Size: 'small', Style: 'secondary', Outline: 'outline', showIconLeft: false, showIconRight: true, IconContentRight: 'Cart' },
-          { Label: 'Button 3', Size: 'small', Style: 'tertiary', Outline: '', showIconLeft: true, IconContentLeft: 'Chevron-left', showIconRight: true, IconContentRight: 'Chevron-up' }
-      ]}) }}
+      {% call ButtonGroup() %}
+      {{ Button('Button', 'small', 'primary', showIconRight=true, IconContentRight='Chevron-right', showIconLeft=true, IconContentLeft='Home')}}
+      {{ Button('Hallo', 'regular', 'primary', showIconRight=true, IconContentRight='Chevron-right')}}
+      {{ Button('Hallo', 'large', 'secondary', showIconLeft=true, IconContentLeft='Home', showIconRight=true, IconContentRight='Chevron-right')}}
+      {% endcall %}
+      {{ Button()}}
+      {{ UtilityLink() }}
+      {{ InlineLink () }}
+
       {{ EditableRating("Sample Label", TotalStars = 5) }}
       {{ MenuItem( { Settings: [
       { Text: 'Dashboard', Icon: 'Home', Size: '-sizeS', Weight: 'medium' },
@@ -121,6 +125,7 @@
     <div class="testdiv3">
       {{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-horizontal', 'cover', figcaption=true, label='Label', loadinglazy=true) }}
     </div>
+
     <div>
       {{ Gallery(Images = {
         Image1: { src: './assets/img/SliderImage3.jpg', alt: 'Alt text 1', label: 'Label1'},
@@ -204,7 +209,15 @@
       </div>
     </div>
     <div class="testdiv3">
-      {{ StaticBanner( BannerButton = {}, ButtonContent = 'ENTDECKEN', Position = 'bottom', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', BannerImage = './assets/img/SliderImage2.jpg', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
+      {{ StaticBanner( BannerButton = {
+        Label: 'ButtonContent',
+        Size: 'small',
+        Style: 'secondary',
+        showIconLeft: true,
+        IconContentLeft: 'Home',
+        showIconRight: false,
+        IconContentRight: null
+      }, ButtonContent = 'ENTDECKEN', Position = 'bottom', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', BannerImage = './assets/img/SliderImage2.jpg', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
     </div>
     {# Scripts #}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

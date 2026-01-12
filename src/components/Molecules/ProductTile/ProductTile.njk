@@ -1,0 +1,49 @@
+{%- from "../../Atoms/Button/Button.njk" import Button -%}
+{%- from "../../Atoms/Link/Link.njk" import UtilityLink -%}
+{%- from "../../Atoms/Image/Image.njk" import Image -%}
+{%- from "../../Atoms/Heading/Heading.njk" import Heading -%}
+{%- from "../../Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
+
+{% macro ProductTile(TileButton, TileLinkOn = false, TileLink, TileImageOn = true, TileImage, HeadingContent, ParagraphContent) %}
+    <div class="ProductTile">
+        <div class="ProductTile_Container">
+
+            {% if TileImageOn %}
+                {{ Image (
+                    src = TileImage.src or '../assets/img/ProductImage2.jpg',
+                    alt = TileImage.alt or 'ProductImage',
+                    size = 'ProductCard',
+                    fit = TileImage.fit or 'cover',
+                    loadinglazy = TileImage.loadinglazy or true
+                ) }}
+            {% endif %}
+
+            {{ Heading ('h3', '-sizeXL', 'bold', 'black', HeadingContent or 'PRODUCT NAME') }}
+            {{ Paragraph ('-sizeS', 'regular', ParagraphContent or 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.') }}
+
+            {% if TileLinkOn %}
+                {{ UtilityLink (
+                    Label = TileLink.Label or 'Link Label',
+                    Style = TileLink.Style or 'secondary',
+                    Size = TileLink.Size or '-sizeS',
+                    Weight = TileLink.Weight or 'bold',
+                    showIconLeft = TileLink.showIconLeft or false,
+                    IconContentLeft = TileLink.IconContentLeft,
+                    showIconRight = TileLink.showIconRight or true,
+                    IconContentRight = TileLink.IconContentRight or 'Chevron-right',
+                    Target = TileLink.Target or '#'
+                )}}
+            {% endif %}
+        </div>
+        {{ Button (
+            Label = TileButton.Label or 'ENTDECKEN',
+            Size = TileButton.Size or 'regular',
+            Style = TileButton.Style or 'secondary',
+            Outline = TileButton.Outline or null,
+            showIconLeft = TileButton.showIconLeft or false,
+            IconContentLeft = TileButton.IconContentLeft or null,
+            showIconRight = TileButton.showIconRight or false,
+            IconContentRight = TileButton.IconContentRight or null
+        ) }}
+    </div>
+{% endmacro %}

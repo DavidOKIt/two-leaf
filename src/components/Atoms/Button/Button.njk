@@ -2,8 +2,26 @@
 
 {% macro Button(Label, Size, Style, Outline, showIconLeft = false, IconContentLeft, showIconRight = false, IconContentRight) %}
   {% set IconOnly = showIconLeft and not Label and not showIconRight %}
-  <button type="button" class="Button Button-{{ Size }} Button-{{ Style }} {{ Outline}} {% if IconOnly %} Button-onlyIcon{% endif %} medium">
+  {% set default = {
+    Label: 'Label',
+    Size: 'regular',
+    Style: 'secondary',
+    Outline: null,
+    showIconLeft: false,
+    IconContentLeft: null,
+    showIconRight: false,
+    IconContentRight: null
+  }%}
+  {% set Label = Label or default.Label %}
+  {% set Size = Size or default.Size %}
+  {% set Style = Style or default.Style %}
+  {% set Outline = Outline or default.Outline %}
+  {% set showIconLeft = showIconLeft or default.showIconLeft %}
+  {% set IconContentLeft = IconContentLeft or default.IconContentLeft %}
+  {% set showIconRight = showIconRight or default.showIconRight %}
+  {% set IconContentRight = IconContentRight or default.IconContentRight %}
 
+  <button type="button" class="Button Button-{{ Size }} Button-{{ Style }} {{ Outline}} {% if IconOnly %} Button-onlyIcon{% endif %} medium">
     {% if showIconLeft %}
       {{ IconEmbedded(IconContentLeft)}}
     {% endif %}

@@ -1,12 +1,7 @@
 .ButtonGroup {
-  // display: inline-flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: flex-start;
-
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   gap: var(--space-4);

@@ -1,6 +1,26 @@
 {%- from "../Icon/Icon.njk"import IconEmbedded -%}
 
 {% macro UtilityLink(Label, Style, Size, Weight, showIconLeft = false, IconContentLeft, showIconRight = false, IconContentRight, Target = "#") %}
+    {% set default = {
+    Label: 'Link Label',
+    Style: 'secondary',
+    Size: '-sizeS',
+    Weight: 'medium',
+    showIconLeft: false,
+    IconContentLeft: null,
+    showIconRight: false,
+    IconContentRight: null,
+    Target: '#'
+}%}
+    {% set Label = Label or default.Label %}
+    {% set Style = Style or default.Style %}
+    {% set Size = Size or default.Size %}
+    {% set Weight = Weight or default.Weight %}
+    {% set showIconLeft = showIconLeft or default.showIconLeft %}
+    {% set IconContentLeft = IconContentLeft or default.IconContentLeft %}
+    {% set showIconRight = showIconRight or default.showIconRight %}
+    {% set IconContentRight = IconContentRight or default.IconContentRight %}
+    {% set Target = Target or default.Target %}
     <a href="{{ Target }}" class="UtilityLink UtilityLink-{{ Style }} {{ Size }} {{ Weight }}" >
 
         {% if showIconLeft %}
