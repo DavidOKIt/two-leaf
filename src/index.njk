@@ -38,6 +38,7 @@
 {# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
 {%- from "./components/Organisms/Gallery/Gallery.njk" import Gallery -%}
 {%- from "./components/Organisms/Header/Header.njk" import Header, TopButton -%}
+{%- from "./components/Organisms/AppNav/AppNav.njk" import AppNav -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -121,6 +122,7 @@
       <br>
       {{ Downloadfield('Download Item', 'PDF, 4.5MB') }}
       {{ Divider('secondary') }}
+      {{ ProductTile()}}
     </div>
     <div class="testdiv3">
       {{ Image ('./assets/img/GalleryImage.png', 'Sample Image', 'GalleryImage-horizontal', 'cover', figcaption=true, label='Label', loadinglazy=true) }}
@@ -219,6 +221,7 @@
         IconContentRight: null
       }, ButtonContent = 'ENTDECKEN', Position = 'bottom', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', BannerImage = './assets/img/SliderImage2.jpg', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
     </div>
+    {{ AppNav() }}
     {# Scripts #}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -229,5 +232,6 @@
     <script src="/components/Atoms/Dropdown/Dropdown.js"></script>
     <script src="/components/Atoms/Chip/Chip.js"></script>
     <script src="/components/Organisms/Slider/Slider.js"></script>
+    <script src="/components/Organisms/AppNav/AppNav.js"></script>
   </body>
 </html>

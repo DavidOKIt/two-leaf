@@ -1,0 +1,58 @@
+.AppNav {
+  display: flex;
+  width: 100%;
+  height: 104px;
+  padding-bottom: 48px;
+  background-color: var(--color-darkwood);
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+
+  &_Container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_Button {
+    display: flex;
+    width: auto;
+    height: auto;
+    color: var(--color-white);
+    padding: 13px 30px;
+
+    &:focus-visible {
+      border: var(--border-focus) solid var(--color-focus);
+      border-radius: var(--border-radius-normal);
+      outline: none;
+    }
+
+    &:active:focus-visible {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &_Icon {
+    display: block;
+
+    &-off {
+      display: none;
+    }
+  }
+
+  &_IconClicked {
+    display: none;
+
+    &-on {
+      display: block;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
