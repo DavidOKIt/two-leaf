@@ -33,6 +33,7 @@
 {%- from "./components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner -%}
 {%- from "./components/Molecules/Breadcrumb/Breadcrumb.njk" import Breadcrumb -%}
 {%- from "./components/Molecules/ProductTile/ProductTile.njk" import ProductTile -%}
+{%- from "./components/Molecules/Table/Table.njk" import Table -%}
 
 {# Organisms  #}
 {# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
@@ -120,6 +121,13 @@
       <br>
       <br>
       {{ Downloadfield('Download Item', 'PDF, 4.5MB') }}
+      {{ Table(HeadRows =[  { Cells: ['Head1', 'Head2', 'Head3'] }
+      ], BodyRows = [ 
+        { Cells: ['Row1Cell1', 'Row1Cell2', 'Row1Cell3']}, 
+        { Cells: ['Row2Cell1', 'Row2Cell2', 'Row2Cell3']}, 
+        { Cells: ['Row3Cell1', 'Row3Cell2', 'Row3Cell3']}
+      ]) }}
+
       {{ Divider('secondary') }}
     </div>
     <div class="testdiv3">

@@ -1,0 +1,22 @@
+{% macro Table(HeadRows, BodyRows) %}
+    <table class="Table">
+        <thead>
+            {% for HeadRow in HeadRows %}
+                <tr>
+                    {% for Cell in HeadRow.Cells %}
+                        <th>{{ Cell }}</th>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </thead>
+        <tbody>
+            {% for BodyRow in BodyRows %}
+                <tr>
+                    {% for Cell in BodyRow.Cells %}
+                        <td>{{ Cell }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}
