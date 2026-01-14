@@ -1,0 +1,29 @@
+{%- from "../../Atoms/Icon/Icon.njk" import IconEmbedded -%}
+{%- from "../../Atoms/Checkbox/Checkbox.njk" import Checkbox -%}
+
+{% macro List(ListType, CheckList = false, CheckboxList = false, Items) %}
+    <div class="List ">
+        <{{ ListType }} class="{% if CheckList == true %}List_Checklist{% endif %} {% if CheckboxList == true %}List_Checklist{% endif %}" >
+            {% for Item in Items %}
+
+                {% if CheckList == true %}
+                    <span class="List_ChecklistItem">
+                        {{ IconEmbedded ('Checkmark')}}
+                        <li>{{ Item }}</li>
+                    </span>
+                {% endif %}
+
+                {% if CheckboxList == true %}
+                    <span class="List_CheckboxItem">
+                        {{ Checkbox () }}
+                        <li>{{ Item }}</li>
+                    </span>
+                {% endif %}
+
+                {% if CheckList == false and CheckboxList == false %}
+                    <li>{{ Item }}</li>
+                {% endif %}
+            {% endfor %}
+        </{{ ListType }}>
+    </div>
+{% endmacro %}

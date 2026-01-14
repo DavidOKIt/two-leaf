@@ -33,6 +33,7 @@
 {%- from "./components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner -%}
 {%- from "./components/Molecules/Breadcrumb/Breadcrumb.njk" import Breadcrumb -%}
 {%- from "./components/Molecules/ProductTile/ProductTile.njk" import ProductTile -%}
+{%- from "./components/Molecules/List/List.njk" import List -%}
 
 {# Organisms  #}
 {# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
@@ -121,6 +122,34 @@
       <br>
       <br>
       {{ Downloadfield('Download Item', 'PDF, 4.5MB') }}
+      {{ List ('ul', Items = [
+        'Item 1',
+        'Item 2',
+        'Item 3',
+        'Item 4',
+        'Item 5'
+      ]) }}
+      {{ List ('ol', Items = [
+        'Item',
+        'Item',
+        'Item',
+        'Item',
+        'Item'
+      ]) }}
+      {{ List ('ul', CheckList = true, Items = [
+        'Item',
+        'Item',
+        'Item',
+        'Item',
+        'Item'
+      ]) }}
+      {{ List ('ul', CheckboxList = true, Items = [
+        'Item',
+        'Item',
+        'Item',
+        'Item',
+        'Item'
+      ]) }}
       {{ Divider('secondary') }}
       {{ ProductTile()}}
     </div>
