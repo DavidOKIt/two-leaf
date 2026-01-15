@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto 2fr;
   grid-template-rows: auto 3fr;
-  padding: var(--space-16) 0px;
   gap: var(--space-16);
 
   &_HeadingLeft {

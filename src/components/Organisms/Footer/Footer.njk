@@ -6,16 +6,66 @@
 {%- from "../../Molecules/ContactBlock/ContactBlock.njk" import ContactBlock %}
 {%- from "../../Atoms/Icon/Icon.njk" import IconEmbedded %}
 
-{% macro Footer(Contents) %}
+{% macro Footer(Contents = null) %}
     <div class="Footer">
-        {% for Content in Contents %}
-            <details>
+        {% if Contents%}
+            {% for Content in Contents %}
+                <details class="Footer_Details">
+                    <summary class="Footer_Summary medium">
+                        {{ Content.Heading }}
+                        {{ FooterButton() }}
+                    </summary>
+                    <div class="Footer_Content">
+                        {{ Content.Detail | safe }}
+                    </div>
+                </details>
+            {% endfor %}
+        {% else %}
+            <details class="Footer_Details">
                 <summary class="Footer_Summary">
-                    {{ Content.Heading }}
-                    {{ IconEmbedded('Chevron-down', Size='small', '') }}
+                    {{ Heading(Tag = 'h3', Content = 'UNTERNEHMEN', Weight = 'medium', Size = '-sizeS')}}
+                    {{ FooterButton() }}
                 </summary>
-                {{ Content.Detail }}
+                <div class="Footer_Content">
+                    {{ Paragraph( Size = '-sizeS', Content = 'Über Two Leaf <br> Jobs <br> Team <br> Kooperationen <br> Umweltschutz') }}
+                </div>
             </details>
-        {% endfor %}
+            <details class="Footer_Details">
+                <summary class="Footer_Summary medium">
+                    {{ Heading(Tag = 'h3', Content = 'BUSINESS', Weight = 'medium', Size = '-sizeS')}}
+                    {{ FooterButton() }}
+                </summary>
+                <div class="Footer_Content">
+                    {{ Paragraph( Size = '-sizeS', Content = 'Business Lösungen <br> Kontakt-Formular <br> Personalisierung') }}
+                </div>
+            </details>
+            <details class="Footer_Details">
+                <summary class="Footer_Summary medium">
+                    {{ Heading(Tag = 'h3', Content = 'KONTAKT', Weight = 'medium', Size = '-sizeS')}}
+                    {{ FooterButton() }}
+                </summary>
+                <div class="Footer_Content">
+                    {{ ContactBlock() }}
+                </div>
+            </details>
+            <details class="Footer_Details">
+                <summary class="Footer_Summary medium">
+                    {{ Heading(Tag = 'h3', Content = 'VERBINDEN', Weight = 'medium', Size = '-sizeS')}}
+                    {{ FooterButton() }}
+                </summary>
+                <div class="Footer_Content">
+                    <div class="Footer_VerbindenWrapper">
+                        {{ Paragraph(Content = 'Socials') }}
+                        {{ IconGroup( Icons = [ 'Instagram', 'Youtube', 'Discord', 'Facebook', 'TikTok', 'Twitch', 'Reddit']) }}
+                        {{ Inputfield (Type = 'email', Placeholder = 'E-Mail-Adresse', LabelTop = true, LabelTopContent = 'Newsletter') }}
+                    </div>
+                </div>
+            </details>
+        {% endif %}
     </div>
+{% endmacro %}
+
+{% macro FooterButton() %}
+    <span class="Summary_IconDefault">{{ IconEmbedded('Chevron-down', Size='regular') }}</span>
+    <span class="Summary_IconHover">{{ IconEmbedded('Chevrons-down', Size='regular') }}</span>
 {% endmacro %}
