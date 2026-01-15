@@ -4,4 +4,18 @@
 {%- from "../../Molecules/IconGroup/IconGroup.njk" import IconGroup %}
 {%- from "../../Atoms/Inputfield/Inputfield.njk" import Inputfield %}
 {%- from "../../Molecules/ContactBlock/ContactBlock.njk" import ContactBlock %}
-{%- from "../../Organisms/Header/Header.njk" import TopButton %}
+{%- from "../../Atoms/Icon/Icon.njk" import IconEmbedded %}
+
+{% macro Footer(Contents) %}
+    <div class="Footer">
+        {% for Content in Contents %}
+            <details>
+                <summary class="Footer_Summary">
+                    {{ Content.Heading }}
+                    {{ IconEmbedded('Chevron-down', Size='small', '') }}
+                </summary>
+                {{ Content.Detail }}
+            </details>
+        {% endfor %}
+    </div>
+{% endmacro %}
