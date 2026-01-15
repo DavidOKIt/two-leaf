@@ -1,0 +1,11 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+
+  &_Summary {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

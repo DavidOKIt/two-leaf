@@ -41,6 +41,7 @@ hnejhnertjnhe
 {%- from "./components/Organisms/Gallery/Gallery.njk" import Gallery -%}
 {%- from "./components/Organisms/Header/Header.njk" import Header, TopButton -%}
 {%- from "./components/Organisms/AppNav/AppNav.njk" import AppNav -%}
+{%- from "./components/Organisms/Footer/Footer.njk" import Footer -%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +70,11 @@ hnejhnertjnhe
     {{ IconEmbedded ('Chevron-up', Size ='small') }}
     {{ IconEmbedded ('Chevron-up', 'black') }}
 
+    <details>
+      <summary>Mehr Filteroptionen</summary>
+      {{ Ranger("gewicht", 50, 10, 100, "Gewicht", 'g') }}
+      {{ Ranger("menge", 250, 50, 500, "Menge", 'ml') }}
+    </details>
     {{ Breadcrumb( [ 
         { Label: 'Home', Target: '#' }, 
         { Label: 'Category', Target: '#' }, 
@@ -86,6 +92,7 @@ hnejhnertjnhe
       {{ Inputfield('text', 'Name', LabelTop = false, 'Hello', IconRight = true, IconRightContent = 'Search', hasValidation = true, ValidationContent = { type: 'Error', label: 'Fehlerhafte Eingabe' }) }}
       {{ Searchbar('Search...', LabelTop = true, 'Search for items') }}
     </form>
+    {{ Footer([ { Heading: "Heading 1", Detail: "Detail 1" }, { Heading: "Heading 2", Detail: "Detail 2" } ]) }}
     <br>
     {{ Textarea('textarea01', 'description', 'Enter your description here...', LabelTop = true, 'Description') }}
     <br>
