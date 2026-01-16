@@ -37,7 +37,7 @@
 {%- from "./components/Molecules/List/List.njk" import List -%}
 
 {# Organisms  #}
-{# {%- from "./components/Organisms/Slider/Slider.njk" import Slider -%} #}
+{%- from "./components/Organisms/Slider/Slider.njk" import Slider -%}
 {%- from "./components/Organisms/Gallery/Gallery.njk" import Gallery -%}
 {%- from "./components/Organisms/Header/Header.njk" import Header, TopButton -%}
 {%- from "./components/Organisms/AppNav/AppNav.njk" import AppNav -%}
@@ -57,11 +57,11 @@
   </head>
 
   <body>
-    {{ Header (Nav = true, Items = [ 
+    {# {{ Header (Nav = true, Items = [ 
         { Label: 'Home', Target: '/' }, 
         { Label: 'Section', Target: '/section' }, 
         { Label: 'Current Page', Target: '#' }
-         ] ) }}
+         ] ) }} #}
     {{ Logo ("/", "small") }}
     {{ Logo ("/", "header") }}
     {{ Logo ("/", "large") }}
@@ -228,55 +228,33 @@
     {{ Button('Submit', 'regular', 'secondary', showIconLeft = true, IconContentLeft = 'Chevron-left', showIconRight = true, IconContentRight = 'Home-filled') }}
     {{ Button('Cancel', 'large', 'tertiary') }}
     {{ Button ('', 'regular', 'primary', showIconLeft = true, IconContentLeft = 'Home')}}
-
+    <br>
+    {% set Slide1 %}
+    {{ StaticBanner ( BannerImage = './assets/img/SliderImage3.jpg', Position = 'center', HeadingContent = 'EXCLUSIVE OFFERS <br> JUST FOR YOU', ParagraphContent = 'Sign up for our newsletter and get exclusive discounts and updates.') }}
+    {% endset %}
+    {% set Slide2 %}
+    {{ ProductTile (
+        TileButton = { Label: 'SHOP NOW', Size: 'regular', Style: 'primary' },
+        TileLinkOn = true,
+        TileLink = { Label: 'View Details', Style: 'secondary', Size: '-sizeS', Weight: 'bold', showIconRight: true, IconContentRight: 'Chevron-right', Target: '#' },
+        TileImageOn = true,
+        TileImage = { src: './assets/img/ProductImage1.jpg', alt: 'Product Image', fit: 'cover', loadinglazy: true },
+        HeadingContent = 'Stylish Modern Chair',
+        ParagraphContent = 'Experience comfort and style with our modern chair, perfect for any living space.'
+    ) }}
+    {% endset %}
     <div class="testdiv2">
-      <div class="swiper swiper--navigation">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-      </div>
-    </div>
-
-    <div class="testdiv2">
-      <div class="swiper swiper--pagination">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-      </div>
+      {{ Slider(SliderType = "HeroSlider", HeroSlides = [Slide1, Slide1]) }}
     </div>
     <div class="testdiv3">
-      {{ StaticBanner( BannerButton = {
-        Label: 'ButtonContent',
-        Size: 'small',
-        Style: 'secondary',
-        showIconLeft: true,
-        IconContentLeft: 'Home',
-        showIconRight: false,
-        IconContentRight: null
-      }, ButtonContent = 'ENTDECKEN', Position = 'bottom', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', BannerImage = './assets/img/SliderImage2.jpg', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
+      {{ StaticBanner ( BannerImage = './assets/img/SliderImage.jpg', Position = 'center', HeadingContent = 'DISCOVER OUR NEW COLLECTION', ParagraphContent = 'Explore the latest trends and styles in our new collection. Shop now and elevate your wardrobe.') }}
     </div>
-    {{ AppNav() }}
+    <br>
+    <br>
+    <br>
+    {# {{ AppNav() }} #}
     {# Scripts #}
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="/components/Atoms/Ranger/Ranger.js"></script>

@@ -5,6 +5,7 @@
   &_Image {
     width: 100%;
     height: auto;
+    display: block;
   }
 
   &_ContentWrapper {
@@ -16,6 +17,7 @@
     padding: 50px var(--space-16);
     width: 100%;
     height: 100%;
+    pointer-events: none;
 
     &-center {
       justify-content: center;

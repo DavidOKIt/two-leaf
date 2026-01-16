@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.swiper--navigation', {
     loop: true,
+    autoHeight: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -8,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
     new Swiper('.swiper--pagination', {
-    loop: true,
+      loop: true,
+      autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
