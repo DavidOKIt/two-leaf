@@ -1,0 +1,32 @@
+{%- from "../../Molecules/ProductTile/ProductTile.njk" import ProductTile %}
+{%- from "../../Molecules/StaticBanner/StaticBanner.njk" import StaticBanner %}
+
+{% macro Slider(SliderType, HeroSlides, ProductSlides) %}
+    {# Hero Slider #}
+    {% if SliderType == "HeroSlider" %}
+        <div class="swiper swiper--navigation">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                {% for Slide in HeroSlides %}
+                    <div class="swiper-slide">{{ Slide | safe }}</div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    {% endif %}
+    {# Product Slider #}
+    {% if SliderType == "ProductSlider" %}
+        <div class="SliderWrapper">
+            <div class="swiper swiper--pagination">
+                <div class="swiper-wrapper">
+                    {% for Slide in ProductSlides %}
+                        <div class="swiper-slide">{{ Slide | safe }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    {% endif %}
+{% endmacro %}

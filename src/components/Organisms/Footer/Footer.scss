@@ -1,6 +1,7 @@
 .Footer {
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bgfooter);
 
   &_Details {
     &[open] {
