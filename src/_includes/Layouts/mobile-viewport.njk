@@ -1,0 +1,38 @@
+{%- from '_includes/components/Organisms/Header/Header.njk' import Header %}
+{%- from '_includes/components/Organisms/AppNav/AppNav.njk' import AppNav %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Two Leaf - A modern web project">
+        <title>{{ title | default('Two Leaf') }}</title>
+
+        {# Styles #}
+        <link rel="stylesheet" href="/assets/styles/main.css">
+        <link rel="preload" href="/assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
+
+        {# Swiper #}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
+    <body>
+        <div class="mobile-viewport">
+            {{ Header(Nav=showBreadcrumbs, Items=breadcrumbs) }}
+            {{ content | safe }}
+            {{ AppNav() }}
+        </div>
+        {# Externe Scripts #}
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        {# Interne Scripts #}
+        <script src="/_includes/components/Atoms/Ranger/Ranger.js"></script>
+        <script src="/_includes/components/Atoms/Inputfield/Inputfield.js"></script>
+        <script src="/_includes/components/Atoms/Searchbar/Searchbar.js"></script>
+        <script src="/_includes/components/Atoms/Textarea/Textarea.js"></script>
+        <script src="/_includes/components/Atoms/Dropdown/Dropdown.js"></script>
+        <script src="/_includes/components/Atoms/Chip/Chip.js"></script>
+        <script src="/_includes/components/Organisms/Slider/Slider.js"></script>
+        <script src="/_includes/components/Organisms/AppNav/AppNav.js"></script>
+    </body>
+</html>

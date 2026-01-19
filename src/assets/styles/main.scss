@@ -1,74 +1,62 @@
 // Variables
-@use "colors";
-@use "fonts";
-@use "var";
+@use "vars/colors";
+@use "vars/fonts";
+@use "vars/var";
+
+// Layouts
+@use "layouts/mobile-viewport.scss";
 
 // Atoms
-@use "../../components/Atoms/Icon/Icon.scss";
-@use "../../components/Atoms/Button/Button.scss";
-@use "../../components/Atoms/Link/Link.scss";
-@use "../../components/Atoms/Paragraph/Paragraph.scss";
-@use "../../components/Atoms/Heading/Heading.scss";
-@use "../../components/Atoms/Radio/Radio.scss";
-@use "../../components/Atoms/Checkbox/Checkbox.scss";
-@use "../../components/Atoms/Toggle/Toggle.scss";
-@use "../../components/Atoms/Ranger/Ranger.scss";
-@use "../../components/Atoms/Inputfield/Inputfield.scss";
-@use "../../components/Atoms/Textarea/Textarea.scss";
-@use "../../components/Atoms/Dropdown/Dropdown.scss";
-@use "../../components/Atoms/Image/Image.scss";
-@use "../../components/Atoms/Chip/Chip.scss";
-@use "../../components/Atoms/Divider/Divider.scss";
-@use "../../components/Atoms/Logo/Logo.scss";
-@use "../../components/Atoms/Validation/Validation.scss";
-@use "../../components/Atoms/Searchbar/Searchbar.scss";
+@use "../../_includes/components/Atoms/Icon/Icon.scss";
+@use "../../_includes/components/Atoms/Button/Button.scss";
+@use "../../_includes/components/Atoms/Link/Link.scss";
+@use "../../_includes/components/Atoms/Paragraph/Paragraph.scss";
+@use "../../_includes/components/Atoms/Heading/Heading.scss";
+@use "../../_includes/components/Atoms/Radio/Radio.scss";
+@use "../../_includes/components/Atoms/Checkbox/Checkbox.scss";
+@use "../../_includes/components/Atoms/Toggle/Toggle.scss";
+@use "../../_includes/components/Atoms/Ranger/Ranger.scss";
+@use "../../_includes/components/Atoms/Inputfield/Inputfield.scss";
+@use "../../_includes/components/Atoms/Textarea/Textarea.scss";
+@use "../../_includes/components/Atoms/Dropdown/Dropdown.scss";
+@use "../../_includes/components/Atoms/Image/Image.scss";
+@use "../../_includes/components/Atoms/Chip/Chip.scss";
+@use "../../_includes/components/Atoms/Divider/Divider.scss";
+@use "../../_includes/components/Atoms/Logo/Logo.scss";
+@use "../../_includes/components/Atoms/Validation/Validation.scss";
+@use "../../_includes/components/Atoms/Searchbar/Searchbar.scss";
 
 // Molecules
-@use "../../components/Molecules/IconGroup/IconGroup.scss";
-@use "../../components/Molecules/ButtonGroup/ButtonGroup.scss";
-@use "../../components/Molecules/Rating/Rating.scss";
-@use "../../components/Molecules/TextIcon/TextIcon.scss";
-@use "../../components/Molecules/MenuItem/MenuItem.scss";
-@use "../../components/Molecules/DownloadField/DownloadField.scss";
-@use "../../components/Molecules/ContactBlock/ContactBlock.scss";
-@use "../../components/Molecules/StaticBanner/StaticBanner.scss";
-@use "../../components/Molecules/Breadcrumb/Breadcrumb.scss";
-@use "../../components/Molecules/ProductTile/ProductTile.scss";
-@use "../../components/Molecules/Table/Table.scss";
-@use "../../components/Molecules/List/List.scss";
+@use "../../_includes/components/Molecules/IconGroup/IconGroup.scss";
+@use "../../_includes/components/Molecules/ButtonGroup/ButtonGroup.scss";
+@use "../../_includes/components/Molecules/Rating/Rating.scss";
+@use "../../_includes/components/Molecules/TextIcon/TextIcon.scss";
+@use "../../_includes/components/Molecules/MenuItem/MenuItem.scss";
+@use "../../_includes/components/Molecules/DownloadField/DownloadField.scss";
+@use "../../_includes/components/Molecules/ContactBlock/ContactBlock.scss";
+@use "../../_includes/components/Molecules/StaticBanner/StaticBanner.scss";
+@use "../../_includes/components/Molecules/Breadcrumb/Breadcrumb.scss";
+@use "../../_includes/components/Molecules/ProductTile/ProductTile.scss";
+@use "../../_includes/components/Molecules/Table/Table.scss";
+@use "../../_includes/components/Molecules/List/List.scss";
 
 // Organisms
-@use "../../components/Organisms/Slider/Slider.scss";
-@use "../../components/Organisms/Gallery/Gallery.scss";
-@use "../../components/Organisms/Header/Header.scss";
-@use "../../components/Organisms/AppNav/AppNav.scss";
-@use "../../components/Organisms/Footer/Footer.scss";
+@use "../../_includes/components/Organisms/Slider/Slider.scss";
+@use "../../_includes/components/Organisms/Gallery/Gallery.scss";
+@use "../../_includes/components/Organisms/Header/Header.scss";
+@use "../../_includes/components/Organisms/AppNav/AppNav.scss";
+@use "../../_includes/components/Organisms/Footer/Footer.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // outline: 1px solid red !important;
 }
 
 body {
   background-color: var(--color-bgwhite);
   font-family: Montserrat, sans-serif;
   font-size: var(--font-size-14);
-  width: 100%;
-  min-width: 360px;
-}
-
-.testdiv {
-  width: 450px;
-}
-.testdiv2 {
-  width: 328px;
-  height: 600px;
-}
-.testdiv3 {
-  width: 360px;
-  height: 616px;
 }
 
 img {
@@ -78,4 +66,10 @@ img {
 
 html {
   scroll-behavior: smooth;
+}
+
+.mobile-flexbox {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-16);
 }
