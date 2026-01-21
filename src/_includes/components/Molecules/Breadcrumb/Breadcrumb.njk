@@ -9,7 +9,14 @@
                     {% if loop.last %}
                         <span class="Breadcrumb_Item medium">{{ Item.Label }}</span>
                     {% else %}
-                        {{ UtilityLink(Item.Label, 'secondary', '-sizeS', 'medium', showIconLeft = false, showIconRight = false, Item.Target ) }}
+                        {{ UtilityLink(
+                            Label = Item.Label, 
+                            Style = 'secondary', 
+                            Size = '-sizeS', 
+                            Weight = 'medium', 
+                            href = Item.Target,
+                            showIconRight = null
+) }}
                         {{ IconEmbedded('Chevron-right', 'regular') }}
                     {% endif %}
                 </li>

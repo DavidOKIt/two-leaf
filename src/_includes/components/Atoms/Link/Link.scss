@@ -10,12 +10,9 @@
     outline: var(--border-focus) solid var(--color-focus);
     border-radius: var(--border-radius-normal);
   }
+
   &:active:focus-visible {
     outline: none;
-  }
-  &:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
   }
 
   &-primary {
@@ -24,6 +21,7 @@
     &:hover {
       color: var(--color-matcha-hover);
     }
+
     &:active {
       color: var(--color-matcha-pressed);
     }
@@ -35,6 +33,7 @@
     &:hover {
       color: var(--color-copper-hover);
     }
+
     &:active {
       color: var(--color-copper-pressed);
     }
@@ -46,6 +45,7 @@
     &:hover {
       color: var(--color-ash-hover);
     }
+
     &:active {
       color: var(--color-ash-pressed);
     }
@@ -60,6 +60,7 @@
 }
 
 .InlineLink {
+  display: inline-flex;
   text-decoration: none;
 
   &:focus-visible {
@@ -69,10 +70,6 @@
   &:active:focus-visible {
     outline: none;
   }
-  &:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
 
   &-primary {
     color: var(--color-matcha-default);
@@ -81,6 +78,7 @@
       color: var(--color-matcha-hover);
       text-decoration: underline;
     }
+
     &:active {
       color: var(--color-matcha-pressed);
       text-decoration: underline;
@@ -94,6 +92,7 @@
       color: var(--color-copper-hover);
       text-decoration: underline;
     }
+
     &:active {
       color: var(--color-copper-pressed);
       text-decoration: underline;
@@ -108,6 +107,7 @@
       color: var(--color-ash-hover);
       text-decoration: underline;
     }
+
     &:active {
       color: var(--color-ash-pressed);
       text-decoration: underline;

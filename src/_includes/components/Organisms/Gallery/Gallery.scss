@@ -44,8 +44,9 @@
 
   &_Item {
     position: relative;
-    // aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+    border-radius: var(--border-radius-normal);
   }
 
   &_Label {

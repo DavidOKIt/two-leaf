@@ -1,4 +1,11 @@
 .profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-16);
+  text-align: center;
+  height: calc(100vh - 208px);
+
   &_buttons {
     display: flex;
   }

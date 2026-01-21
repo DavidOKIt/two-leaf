@@ -1,0 +1,24 @@
+---
+layout: Layouts/responsive.njk
+title: Two Leaf 
+permalink: /profile-register/
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Profil
+      Target: /profile/
+    - Label: Registrieren
+---
+
+{%- from '_includes/components/Atoms/Button/Button.njk' import Button %}
+{%- from '_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
+{%- from '_includes/components/Atoms/Link/Link.njk' import UtilityLink, InlineLink %}
+
+<div class="profile">
+  <div class="profile_buttons">
+    {{ Button (fullWidth = true, Label = 'Einloggen') }}
+  </div>
+  {{ Paragraph(Content = 'Noch kein Konto?', Weight = 'medium') }}
+  {{ Button (href = '/profile-register/', fullWidth = true, Label = ' Registrieren', Outline = true, Style = 'tertiary', Outline = true) }}
+  {{ UtilityLink() }}
+  {{ InlineLink() }}
+</div>
