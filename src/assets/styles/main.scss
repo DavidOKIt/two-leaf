@@ -4,7 +4,7 @@
 @use "vars/var";
 
 // Layouts
-@use "layouts/mobile-viewport.scss";
+@use "layouts/responsive.scss";
 
 // Pages
 @use "pages/home.scss";
@@ -60,7 +60,6 @@
 }
 
 body {
-  background-color: var(--color-bggrey);
   font-family: Montserrat, sans-serif;
   font-size: var(--font-size-14);
 }

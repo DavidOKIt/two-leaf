@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
     <body>
-        <div class="mobile-viewport">
+        <div class="responsive-viewport">
             {{ Header(Nav=showBreadcrumbs, Items=breadcrumbs) }}
             <main class="{% if noPadding %}no-padding{% endif %}">
                 {{ content | safe }}

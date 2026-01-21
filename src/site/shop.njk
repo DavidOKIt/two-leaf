@@ -1,5 +1,5 @@
 ---
-layout: Layouts/mobile-viewport.njk
+layout: Layouts/responsive.njk
 title: Two Leaf 
 permalink: /shop/
 showBreadcrumbs: true
@@ -12,19 +12,21 @@ breadcrumbs:
 {%- from '_includes/components/Atoms/Searchbar/Searchbar.njk' import Searchbar %}
 {%- from '_includes/components/Organisms/Gallery/Gallery.njk' import GalleryGrid %}
 
-<div class="content-spacing">
+<div class="shop">
     {{ Searchbar() }}
     {{ Button(fullWidth = true, Label = 'FILTER', showIconRight = true, IconContentRight = 'Filter', href = '/filter', disabled = false) }}
     {{ GalleryGrid(items = [
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"},
-    {src: "../assets/img/ProductImage2.jpg", label: "Label"}
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"},
+    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label"}
 ]) }}
 </div>

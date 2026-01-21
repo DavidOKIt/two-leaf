@@ -1,5 +1,5 @@
 ---
-layout: Layouts/mobile-viewport.njk
+layout: Layouts/responsive.njk
 title: Two Leaf 
 permalink: /cart/
 showBreadcrumbs: true
@@ -10,7 +10,7 @@ breadcrumbs:
 
 {%- from '_includes/components/Atoms/Button/Button.njk' import Button %}
 {%- from '_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
-<div class="cart-head">
+<div class="cart">
     {{ Button(fullWidth = true, Label = 'CHECKOUT', showIconRight = true, IconContentRight = 'Payment', disabled = true) }}
     <div class="cart_price">
         {{ Paragraph( Content = 'Zwischensumme', Size = '-sizeS', Weight = 'medium' ) }}

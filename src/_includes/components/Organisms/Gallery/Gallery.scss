@@ -44,15 +44,14 @@
 
   &_Item {
     position: relative;
-    aspect-ratio: 1 / 1;
+    // aspect-ratio: 1 / 1;
     overflow: hidden;
-    object-position: 30% 70%;
   }
 
   &_Label {
     position: absolute;
-    bottom: var(--space-16);
-    left: var(--space-16);
+    bottom: var(--space-10);
+    left: var(--space-10);
     color: var(--color-white);
   }
 }
