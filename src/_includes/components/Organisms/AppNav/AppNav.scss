@@ -26,6 +26,7 @@
       border: var(--border-focus) solid var(--color-focus);
       border-radius: var(--border-radius-normal);
       outline: none;
+      outline-offset: -3px;
     }
 
     &:active:focus-visible {

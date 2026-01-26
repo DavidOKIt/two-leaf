@@ -1,16 +1,16 @@
 // Variables
-@use "vars/colors";
-@use "vars/fonts";
-@use "vars/var";
+@use "../styles/vars/colors";
+@use "../styles/vars/fonts";
+@use "../styles/vars/var";
 
 // Layouts
-@use "layouts/responsive.scss";
+@use "../styles/layouts/responsive.scss";
 
 // Pages
-@use "pages/home.scss";
-@use "pages/shop.scss";
-@use "pages/cart.scss";
-@use "pages/profile.scss";
+@use "../styles/pages/home.scss";
+@use "../styles/pages/shop.scss";
+@use "../styles/pages/cart.scss";
+@use "../styles/pages/profile.scss";
 
 // Atoms
 @use "../../_includes/components/Atoms/Icon/Icon.scss";
@@ -72,10 +72,4 @@ img {
 
 html {
   scroll-behavior: smooth;
-}
-
-.testdiv {
-  display: flex;
-  // width: 2000px;
-  height: 800px;
 }

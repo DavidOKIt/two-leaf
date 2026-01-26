@@ -1,5 +1,5 @@
-{%- from '_includes/components/Organisms/Header/Header.njk' import Header %}
-{%- from '_includes/components/Organisms/AppNav/AppNav.njk' import AppNav %}
+{%- from '../../_includes/components/Organisms/Header/Header.njk' import Header %}
+{%- from '../../_includes/components/Organisms/AppNav/AppNav.njk' import AppNav %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +11,11 @@
         <link rel="icon" type="image/x-icon" sizes="32x32" href="../../assets/img/LogoLeafs.svg"/>
 
         {# Styles #}
-        <link rel="stylesheet" href="/assets/styles/main.css">
-        <link rel="preload" href="/assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="./assets/styles/main.css">
+        <link rel="preload" href="./assets/fonts/montserrat_variable.woff2" as="font" type="font/woff2" crossorigin>
 
         {# Swiper #}
-        <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css"/>
     </head>
     <body>
         <div class="responsive-viewport">
@@ -26,16 +26,16 @@
             {{ AppNav(TargetHome='/', TargetSearch = '/shop/', TargetCart = '/cart/', TargetProfile = '/profile/') }}
         </div>
         {# Externe Scripts #}
-        <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
         {# Interne Scripts #}
-        <script src="/_includes/components/Atoms/Ranger/Ranger.js"></script>
-        <script src="/_includes/components/Atoms/Inputfield/Inputfield.js"></script>
-        <script src="/_includes/components/Atoms/Searchbar/Searchbar.js"></script>
-        <script src="/_includes/components/Atoms/Textarea/Textarea.js"></script>
-        <script src="/_includes/components/Atoms/Dropdown/Dropdown.js"></script>
-        <script src="/_includes/components/Atoms/Chip/Chip.js"></script>
-        <script src="/_includes/components/Organisms/Slider/Slider.js"></script>
-        <script src="/_includes/components/Organisms/AppNav/AppNav.js"></script>
+        <script src="../components/Atoms/Ranger/Ranger.js"></script>
+        <script src="../components/Atoms/Inputfield/Inputfield.js"></script>
+        <script src="../components/Atoms/Searchbar/Searchbar.js"></script>
+        <script src="../components/Atoms/Textarea/Textarea.js"></script>
+        <script src="../components/Atoms/Dropdown/Dropdown.js"></script>
+        <script src="../components/Atoms/Chip/Chip.js"></script>
+        <script src="../components/Organisms/Slider/Slider.js"></script>
+        <script src="../components/Organisms/AppNav/AppNav.js"></script>
     </body>
 </html>

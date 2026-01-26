@@ -2,13 +2,6 @@ const path = require("node:path");
 const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
-	// Nunjucks Pfade konfigurieren - Absoluten Pfad zum src Ordner verwenden
-	eleventyConfig.amendLibrary("njk", nunjucksLib => {
-		nunjucksLib.loaders[0].searchPaths = [
-			path.join(__dirname, "."),
-			path.join(__dirname, "src")
-		];
-	});
 
 	eleventyConfig.addTemplateFormats("scss");
   	eleventyConfig.addWatchTarget('./src/_includes/components/**/**/*');

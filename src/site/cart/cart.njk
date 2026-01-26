@@ -8,8 +8,8 @@ breadcrumbs:
       Target: /cart/
 ---
 
-{%- from '_includes/components/Atoms/Button/Button.njk' import Button %}
-{%- from '_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
+{%- from '../../_includes/components/Atoms/Button/Button.njk' import Button %}
+{%- from '../../_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
 <div class="cart">
     {{ Button(href = '/cart-checkout/', fullWidth = true, Label = 'CHECKOUT', showIconRight = true, IconContentRight = 'Payment', disabled = false) }}
     <div class="cart_price">

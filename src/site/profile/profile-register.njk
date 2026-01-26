@@ -9,12 +9,11 @@ breadcrumbs:
     - Label: Registrieren
 ---
 
-{%- from '_includes/components/Atoms/Button/Button.njk' import Button %}
-{%- from '_includes/components/Atoms/Heading/Heading.njk' import Heading %}
-{%- from '_includes/components/Atoms/Inputfield/Inputfield.njk' import Inputfield %}
-{%- from '_includes/components/Atoms/Checkbox/Checkbox.njk' import Checkbox %}
-{%- from '_includes/components/Atoms/Dropdown/Dropdown.njk' import Dropdown %}
-
+{%- from '../../_includes/components/Atoms/Button/Button.njk' import Button %}
+{%- from '../../_includes/components/Atoms/Heading/Heading.njk' import Heading %}
+{%- from '../../_includes/components/Atoms/Inputfield/Inputfield.njk' import Inputfield %}
+{%- from '../../_includes/components/Atoms/Checkbox/Checkbox.njk' import Checkbox %}
+{%- from '../../_includes/components/Atoms/Dropdown/Dropdown.njk' import Dropdown %}
 <div class="profile-register">
   <div class="profile-register_content">
     {{ Heading (Tag = 'h1', Size = '-sizeL', Weight = 'bold', Content = 'Benutzerkonto anlegen') }}
