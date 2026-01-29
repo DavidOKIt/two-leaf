@@ -8,12 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-    new Swiper('.swiper--pagination', {
-      loop: true,
-      autoHeight: true,
+  new Swiper('.swiper--pagination', {
+    loop: true,
+    autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-    });
+    slidesPerView: 1,
+    spaceBetween: 16,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
+  });
 });

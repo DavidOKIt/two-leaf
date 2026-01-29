@@ -18,6 +18,12 @@
   max-height: 800px;
 }
 
+.swiper-slide.swiper-slide-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // ===================
 // NAVIGATION SLIDER
 // ===================
@@ -69,6 +75,7 @@
 // ===================
 .SliderWrapper {
   display: flex;
+  max-height: calc(100vh - 168px);
   flex-direction: column;
   gap: var(--space-16);
   padding: 0 var(--space-16);

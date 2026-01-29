@@ -1,6 +1,6 @@
 .Button {
   width: auto;
-  max-width: 328px;
+  // max-width: 328px;
   height: auto;
   padding: 12px 12px;
   border: var(--border-normal) solid transparent;
@@ -9,6 +9,7 @@
   font-size: var(--font-size-14);
   pointer-events: auto;
   text-decoration: none;
+  align-self: flex-start;
 
   display: flex;
   align-items: center;

@@ -2,7 +2,6 @@
   &_FocusWrapper {
     display: flex;
     width: auto;
-    max-width: 328px;
 
     &:focus-within {
       background-color: var(--color-copper-active);
@@ -23,7 +22,6 @@
   &_Wrapper {
     display: flex;
     width: 100%;
-    max-width: 328px;
     border: var(--border-normal) solid var(--color-copper-default);
     outline-offset: -2px;
     border-radius: var(--border-radius-normal);

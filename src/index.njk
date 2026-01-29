@@ -72,12 +72,20 @@ noPadding: true
     </div>
     {{ Slider ( SliderType = 'ProductSlider', ProductSlides = [ProductSlide1, ProductSlide2, ProductSlide3, ProductSlide4, ProductSlide5]) }}
     {{ Gallery(Images = {
-        Image1: { src: '/assets/img/SliderImage3.jpg', alt: 'Alt text 1', label: 'Teezubehör'},
-        Image2: { src: '/assets/img/GalleryImage2.png', alt: 'Alt text 2', label: 'Tassen'},
-        Image3: { src: '/assets/img/ProductImage1.jpg', alt: 'Alt text 3', label: 'Gongfu Cha'},
-        Image4: { src: '/assets/img/SliderImage.jpg', alt: 'Alt text 4', label: 'Bio-Teefelder'},
-        Image5: { src: '/assets/img/GalleryImage.png', alt: 'Alt text 5', label: 'Japanische Keramik'}
-      }, HeadingContent = "TWO LEAF<br>ART GALLERY", ParagraphContent = "JOURNY OF DISCOVERY") }}
+        Image1: { src: '/assets/img/GalleryImage2.png'},
+        Image2: { src: '/assets/img/ProductImage1.jpg'},
+        Image3: { src: '/assets/img/ProductImage2.jpg'},
+        Image4: { src: '/assets/img/SliderImage.jpg'},
+        Image5: { src: '/assets/img/GalleryImage.png'}
+      },
+      Labels = {
+        Label1: "Teezeremonie",
+        Label2: "Ursprung",
+        Label3: "Matcha",
+        Label4: "Bio Anbau",
+        Label5: "Porzellan"},
+      HeadingContent = "TWO LEAF<br>ART GALLERY", ParagraphContent = "JOURNY OF DISCOVERY") }}
+
     {{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage.jpg', Position = 'bottom', HeadingContent = 'VOM FELD BIS IN DEINE TASSE', BannerButton = true) }}
     {{ Footer () }}
 </div>

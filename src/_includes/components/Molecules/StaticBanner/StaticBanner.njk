@@ -1,6 +1,5 @@
 {%- from "../../Atoms/Heading/Heading.njk" import Heading -%}
 {%- from "../../Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
-{%- from "../../Atoms/Image/Image.njk" import Image -%}
 {%- from "../../Atoms/Button/Button.njk" import Button -%}
 
 {% macro StaticBanner (BannerImage, BannerButton=false, ButtonContent, Position, HeadingContent, ParagraphContent)%}
@@ -9,8 +8,7 @@
         {% set Position = null %}
     {% endif %}
 
-    <div class="StaticBanner">
-        {{ Image (BannerImage, 'Static Banner Image', 'FullScreen', 'cover', figcaption=false, loadinglazy=true, borderradius=false) }}
+    <div class="StaticBanner" style="background-image: url('{{ BannerImage | url }}');">
         <div class="StaticBanner_ContentWrapper StaticBanner_ContentWrapper-{{ Position }}">
             <div class="StaticBanner_Content">
                 {{ Heading ('h2', '-sizeXXL', 'bold', 'white', HeadingContent) }}

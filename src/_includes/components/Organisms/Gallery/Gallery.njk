@@ -1,25 +1,35 @@
-{%- from "../../Atoms/Image/Image.njk" import Image %}
 {%- from "../../Atoms/Heading/Heading.njk" import Heading %}
 {%- from "../../Atoms/Paragraph/Paragraph.njk" import Paragraph %}
+{%- from "../../Atoms/Image/Image.njk" import Image %}
 
-{% macro Gallery(HeadingContent, ParagraphContent, Images = {}) %}
+{% macro Gallery(HeadingContent, ParagraphContent, Images = {}, Labels = {}) %}
     {#  Images = {Image(Nummer) src, alt, fit, label}  #}
     <div class="Gallery">
         <div class="Gallery_HeadingWrapper">
             {{ Paragraph ('-sizeL', 'regular', ParagraphContent)}}
             {{ Heading ('h2', '-sizeXXL', 'bold', 'black', HeadingContent )}}
         </div>
-        <div class="Gallery_Container">{{ Image (Images.Image1.src, Images.Image1.alt, 'GalleryImage-horizontal', Images.Image1.fit or 'cover', figcaption=true, Images.Image1.label, loadinglazy=true) }}</div>
+        <div class="Gallery_Container" style="background-image: url('{{ Images.Image1.src | url }}')">
+            <span class="GalleryGrid_Label -sizeL bold">{{ Labels.Label1 }}</span>
+        </div>
         <div class="Gallery_Container">
             <div class="Gallery_innerContainer">
                 <div class="Gallery-left">
-                    <div>{{ Image (Images.Image2.src, Images.Image2.alt, 'GalleryImage', Images.Image2.fit or 'cover', figcaption=true, Images.Image2.label, loadinglazy=true) }}</div>
-                    <div>{{ Image (Images.Image3.src, Images.Image3.alt, 'GalleryImage', Images.Image3.fit or 'cover', figcaption=true, Images.Image3.label, loadinglazy=true) }}</div>
+                    <div style="background-image: url('{{ Images.Image2.src | url }}')">
+                        <span class="GalleryGrid_Label -sizeL bold">{{ Labels.Label2 }}</span>
+                    </div>
+                    <div style="background-image: url('{{ Images.Image3.src | url }}')">
+                        <span class="GalleryGrid_Label -sizeL bold">{{ Labels.Label3 }}</span>
+                    </div>
                 </div>
-                <div class="Gallery-right">{{ Image (Images.Image4.src, Images.Image4.alt, 'GalleryImage-vertical', Images.Image4.fit or 'cover', figcaption=true, Images.Image4.label, loadinglazy=true) }}</div>
+                <div class="Gallery-right" style="background-image: url('{{ Images.Image4.src | url }}')">
+                    <span class="GalleryGrid_Label -sizeL bold">{{ Labels.Label4 }}</span>
+                </div>
             </div>
         </div>
-        <div class="Gallery_Container">{{ Image (Images.Image5.src, Images.Image5.alt, 'GalleryImage-horizontal', Images.Image5.fit or 'cover', figcaption=true, Images.Image5.label, loadinglazy=true) }}</div>
+        <div class="Gallery_Container" style="background-image: url('{{ Images.Image5.src | url }}')">
+            <span class="GalleryGrid_Label -sizeL bold">{{ Labels.Label5 }}</span>
+        </div>
     </div>
 {% endmacro %}
 

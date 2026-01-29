@@ -1,6 +1,12 @@
 .StaticBanner {
   display: flex;
   position: relative;
+  width: 100vw;
+  height: calc(100vh - 168px);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &_Image {
     width: 100%;
