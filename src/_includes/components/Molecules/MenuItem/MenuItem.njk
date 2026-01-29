@@ -4,7 +4,7 @@
 {% macro MenuItem(Items)%}
     <div class="MenuItem">
         {% for Item in Items.Settings %}
-            <a href="{{ Item.href }}" class="MenuItem_Container medium">
+            <a href="{{ Item.href | url }}" class="MenuItem_Container medium">
                 {{ TextIcon(Item.Text, Item.Icon, Item.Size, Item.Weight) }}
                 <span class="MenuItem_IconDefault">{{ IconEmbedded('Chevron-right') }}</span>
                 <span class="MenuItem_IconHover">{{ IconEmbedded('Chevrons-right') }}</span>

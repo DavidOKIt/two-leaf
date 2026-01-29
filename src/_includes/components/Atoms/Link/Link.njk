@@ -2,7 +2,7 @@
 
 {% macro UtilityLink(Label = 'Link Label', Style = 'secondary', Size = '-sizeS', Weight = 'medium', showIconLeft = false, IconContentLeft = null, showIconRight = true, IconContentRight = 'Chevron-right', href = "#") %}
 
-    <a href="{{ href }}" class="UtilityLink UtilityLink-{{ Style }} {{ Size }} {{ Weight }}" >
+    <a href="{{ href | url }}" class="UtilityLink UtilityLink-{{ Style }} {{ Size }} {{ Weight }}" >
 
         {% if showIconLeft %}
             {{ IconEmbedded(IconContentLeft)}}
@@ -18,7 +18,7 @@
 {% endmacro %}
 
 {% macro InlineLink(Label = 'Link Label', Style = 'secondary', Size = '-sizeS', Weight = 'medium', href = "#") %}
-    <a href="{{ href }}" class="InlineLink InlineLink-{{ Style }} {{ Size }} {{ Weight }}" >
+    <a href="{{ href | url }}" class="InlineLink InlineLink-{{ Style }} {{ Size }} {{ Weight }}" >
         {{ Label }}
     </a>
 {% endmacro %}

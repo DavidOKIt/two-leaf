@@ -14,7 +14,7 @@
     {% endset %}
 
     {% if href %}
-        <a href="{{ href }}" class="{{ classes }}" {% if target %}target="{{ target }}"{% endif %} {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %}>
+        <a href="{{ href | url }}" class="{{ classes }}" {% if target %}target="{{ target }}"{% endif %} {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %}>
     {% else %}
         <button type="button" class="{{ classes }}" {% if disabled %}disabled{% endif %}>
     {% endif %}
