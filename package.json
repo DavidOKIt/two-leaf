@@ -4,7 +4,8 @@
   "description": "Two Leaf - Premium tea shop web app built with Eleventy and Nunjucks.",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --watch --serve"
+    "start": "eleventy --watch --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
