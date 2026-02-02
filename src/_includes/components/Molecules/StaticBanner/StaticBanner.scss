@@ -4,6 +4,10 @@
   width: 100vw;
   height: calc(100vh - 168px);
 
+  &-maxwidth {
+    width: auto;
+  }
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

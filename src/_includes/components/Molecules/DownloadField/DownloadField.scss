@@ -8,6 +8,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: var(--space-4);
   }
 
   &_ContentContainer {

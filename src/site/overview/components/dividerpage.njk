@@ -1,0 +1,18 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/dividerpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Divider
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Divider/Divider.njk" import Divider %}
+
+{{ Heading( Tag = "h1", Content = "Divider", Weight="medium", Size = "-sizeL") }}
+{{ Divider( color = "primary") }}
+{{ Divider( color = "secondary") }}
+{{ Divider( color = "tertiary") }}

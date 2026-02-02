@@ -2,13 +2,13 @@
 {%- from "../../Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
 {%- from "../../Atoms/Button/Button.njk" import Button -%}
 
-{% macro StaticBanner (BannerImage, BannerButton=false, ButtonContent, Position, HeadingContent, ParagraphContent)%}
+{% macro StaticBanner (BannerImage, BannerButton=false, ButtonContent, Position, HeadingContent, ParagraphContent, MaxWidth=false)%}
 
     {% if BannerButton %}
         {% set Position = null %}
     {% endif %}
 
-    <div class="StaticBanner" style="background-image: url('{{ BannerImage | url }}');">
+    <div class="StaticBanner {% if MaxWidth %}StaticBanner-maxwidth{% endif %}" style="background-image: url('{{ BannerImage | url }}');">
         <div class="StaticBanner_ContentWrapper StaticBanner_ContentWrapper-{{ Position }}">
             <div class="StaticBanner_Content">
                 {{ Heading ('h2', '-sizeXXL', 'bold', 'white', HeadingContent) }}

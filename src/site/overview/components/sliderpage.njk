@@ -1,0 +1,37 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/sliderpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Slider
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/StaticBanner/StaticBanner.njk" import StaticBanner %}
+{%- from "../../../_includes/components/Organisms/Slider/Slider.njk" import Slider %}
+{{ Heading( Tag = "h1", Content = "Slider", Weight="medium", Size = "-sizeL") }}
+
+{% set HeroSlide1 %}
+{{ StaticBanner ( BannerImage = '/assets/img/SliderImage1.png', Position = 'center', HeadingContent = 'LEADING TEAS <br> OF THE WORLD', ParagraphContent = 'Mehr als 600 Premium Tees & Matcha <br> von den weltbesten Bio-Teegärten.') }}
+{% endset %}
+
+{% set HeroSlide2 %}
+{{ StaticBanner ( BannerImage = '/assets/img/SliderImage4.jpg', Position = 'center', HeadingContent = 'TWO LEAF SPIRIT', ParagraphContent = 'Mit Achtsamkeit auf dem inneren Teeweg.') }}
+{% endset %}
+
+{% set HeroSlide3 %}
+{{ StaticBanner ( BannerImage = '/assets/img/SliderImage3.jpg', Position = 'center', HeadingContent = 'FINEST TEA <br> CERAMICS', ParagraphContent = 'Feinste Teekeramik und Zubehör <br> von renommierten Künstlern und Studios.') }}
+{% endset %}
+
+{% set HeroSlide4 %}
+{{ StaticBanner ( BannerImage = '/assets/img/SliderImage.jpg', Position = 'center', HeadingContent = 'LEADING TEA GARDENS OF THE WORLD', ParagraphContent = 'Mehr als 120 Einzellagen. <br> Über 100 Terroirs in mehr als 20 Ländern.') }}
+{% endset %}
+
+{% set HeroSlide5 %}
+{{ StaticBanner ( BannerImage = '/assets/img/SliderImage2.jpg', Position = 'center', HeadingContent = 'TWO LEAF <br> OUR STORY', ParagraphContent = 'Die Geschichte zweier Tee Liebhaberinnen.') }}
+{% endset %}
+
+{{ Slider ( SliderType = 'HeroSlider', HeroSlides = [HeroSlide1, HeroSlide2, HeroSlide3, HeroSlide4, HeroSlide5]) }}

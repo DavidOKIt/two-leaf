@@ -1,0 +1,16 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/contactblockpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Contact Block
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/ContactBlock/ContactBlock.njk" import ContactBlock %}
+
+{{ Heading( Tag = "h1", Content = "Contact Block", Weight="medium", Size = "-sizeL") }}
+{{ ContactBlock() }}

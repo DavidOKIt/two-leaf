@@ -1,0 +1,21 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/menuitempage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Menuitem
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/MenuItem/MenuItem.njk" import MenuItem %}
+
+{{ Heading( Tag = "h1", Content = "Menu Items", Weight="medium", Size = "-sizeL") }}
+{{ MenuItem ( { Settings: [
+        { Text: 'Favoriten', Icon: 'Stars', Weight: 'medium', href: '#' },
+        { Text: 'Wunschliste', Icon: 'Heart', Weight: 'medium', href: '#' },
+        { Text: 'Meine Bewertungen', Icon: 'Star', Weight: 'medium', href: '#' },
+        { Text: 'Zahlungsart', Icon: 'Payment', Weight: 'medium', href: '#' }
+    ]})}}

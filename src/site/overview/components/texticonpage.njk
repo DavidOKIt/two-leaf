@@ -1,0 +1,18 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/texticonpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: TextIcon
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/TextIcon/TextIcon.njk" import TextIcon %}
+
+{{ Heading( Tag = "h1", Content = "TextIcon", Weight="medium", Size = "-sizeL") }}
+{{ TextIcon ( Text = "Label", Icon = "Info", Size = "-sizeM", Weight = "medium") }}
+{{ TextIcon ( Text = "Label", Icon = "Help", Size = "-sizeM", Weight = "medium") }}
+{{ TextIcon ( Text = "Label", Icon = "Home", Size = "-sizeM", Weight = "medium") }}

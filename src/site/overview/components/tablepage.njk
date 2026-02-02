@@ -1,0 +1,38 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/tablepage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Table
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/Table/Table.njk" import StaticTable, Table %}
+
+{{ Heading( Tag = "h1", Content = "Table", Weight="medium", Size = "-sizeL") }}
+{{ Table (
+        HeadRows = [
+            { Cells: [ 'Label', 'Label', 'Label', 'Label' ] }
+        ],
+        BodyRows = [
+            { Cells: [ 'Label', 'Label', { Type: 'Link', Label: 'Label', Style: 'secondary'}, 'Label'] },
+            { Cells: [ 'Label', 'Label', 'Label', 'Label' ] },
+            { Cells: [ 'Label', 'Label', { Type: 'Link', Label: 'Label', Style: 'secondary'}, 'Label' ] },
+            { Cells: [ 'Label', 'Label', 'Label', 'Label' ] }
+        ]
+    ) }}
+
+<br>
+{{ Heading( Tag = "h1", Content = "StaticTable", Weight="medium", Size = "-sizeL") }}
+
+{{ StaticTable (
+        TableRows = [
+            { Head: 'Label:', Paragraph: 'Label' },
+            { Head: 'Label:', Paragraph: 'Label' },
+            { Head: 'Label:', Paragraph: 'Label' },
+            { Head: 'Label:', Paragraph: 'Label' }
+        ]
+    ) }}

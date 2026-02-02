@@ -1,0 +1,28 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/inputfieldpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Inputfield
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Inputfield/Inputfield.njk" import Inputfield %}
+
+{{ Heading( Tag = "h1", Content = "Inputfield", Weight="medium", Size = "-sizeL") }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder") }}
+<br>
+{{ Heading( Tag = "h1", Content = "Inputfield with extra label", Weight="medium", Size = "-sizeL") }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", LabelTop = true, LabelTopContent = "Label") }}
+<br>
+{{ Heading( Tag = "h1", Content = "Inputfield with Icon", Weight="medium", Size = "-sizeL") }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", IconRight = true, IconRightContent = "Globe") }}
+<br>
+{{ Heading( Tag = "h1", Content = "Inputfield with Validation", Weight="medium", Size = "-sizeL") }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", IconRight = true, hasValidation = true, ValidationContent = { type:"Info", label:"Label"}) }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", IconRight = true, hasValidation = true, ValidationContent = { type:"Success", label:"Label"}) }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", IconRight = true, hasValidation = true, ValidationContent = { type:"Warning", label:"Label"}) }}
+{{ Inputfield( Type="textarea", Placeholder="Placeholder", IconRight = true, hasValidation = true, ValidationContent = { type:"Error", label:"Label"}) }}

@@ -1,0 +1,19 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/textareapage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Textarea
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Textarea/Textarea.njk" import Textarea %}
+
+{{ Heading( Tag = "h1", Content = "Textarea", Weight="medium", Size = "-sizeL") }}
+{{ Textarea( Placeholder="Placeholder") }}
+<br>
+{{ Heading( Tag = "h1", Content = "Textarea with extra label", Weight="medium", Size = "-sizeL") }}
+{{ Textarea( Placeholder="Placeholder", LabelTop = true, LabelTopContent = "Label") }}

@@ -1,0 +1,17 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/rangerpage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Ranger
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Ranger/Ranger.njk" import Ranger %}
+
+{{ Heading( Tag = "h1", Content = "Ranger", Weight="medium", Size = "-sizeL") }}
+{{ Ranger(ID = "ranger1", Value = "50", Min = "1", Max = "100", LabelLeft = "Ranger Label", Unit = "%") }}
+{{ Ranger(ID = "ranger2", Value = "5", Min = "1", Max = "10", LabelLeft = "Ranger Label", Unit = "Stars") }}

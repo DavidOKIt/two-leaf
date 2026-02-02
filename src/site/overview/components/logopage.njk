@@ -1,0 +1,22 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/logopage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Logo
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Logo/Logo.njk" import Logo %}
+
+{{ Heading( Tag = "h1", Content = "Logo - small", Weight="medium", Size = "-sizeL") }}
+{{ Logo( Size = "small") }}
+<br>
+{{ Heading( Tag = "h1", Content = "Logo - regular", Weight="medium", Size = "-sizeL") }}
+{{ Logo() }}
+<br>
+{{ Heading( Tag = "h1", Content = "Logo - large", Weight="medium", Size = "-sizeL") }}
+{{ Logo( Size = "large") }}

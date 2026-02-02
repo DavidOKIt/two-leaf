@@ -1,0 +1,16 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/producttilepage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Product Tile
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/ProductTile/ProductTile.njk" import ProductTile %}
+
+{{ Heading( Tag = "h1", Content = "Product Tile", Weight="medium", Size = "-sizeL") }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage2.jpg'}, TileButton = {href: '/shop-pdp/'}) }}

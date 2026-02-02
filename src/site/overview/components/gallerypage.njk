@@ -1,0 +1,28 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/gallerypage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview/
+    - Label: Gallery
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Organisms/Gallery/Gallery.njk" import Gallery %}
+{{ Heading( Tag = "h1", Content = "Gallery", Weight="medium", Size = "-sizeL") }}
+{{ Gallery(Images = {
+        Image1: { src: '/assets/img/GalleryImage2.png'},
+        Image2: { src: '/assets/img/ProductImage1.jpg'},
+        Image3: { src: '/assets/img/ProductImage2.jpg'},
+        Image4: { src: '/assets/img/SliderImage.jpg'},
+        Image5: { src: '/assets/img/GalleryImage.png'}
+      },
+      Labels = {
+        Label1: "Teezeremonie",
+        Label2: "Ursprung",
+        Label3: "Matcha",
+        Label4: "Bio Anbau",
+        Label5: "Porzellan"},
+      HeadingContent = "TWO LEAF<br>ART GALLERY", ParagraphContent = "JOURNY OF DISCOVERY") }}
