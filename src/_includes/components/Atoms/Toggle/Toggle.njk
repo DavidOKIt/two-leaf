@@ -1,6 +1,6 @@
-{% macro Toggle (ID, Name, Value, Label)%}
+{% macro Toggle (ID, Name, Value, Label, Error = false)%}
     <div class="ToggleContainer">
-        <label class="Toggle">
+        <label class="{% if Error %} ToggleError {% else %} Toggle {% endif %}">
             <input type="checkbox" id="{{ ID }}" name="{{ Name }}" value="{{ Value }}">
             <span class="slider"></span>
         </label>

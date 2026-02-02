@@ -1,0 +1,41 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/chippage.html
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Chip/Chip.njk" import Chip %}
+{%- from "../../../_includes/components/Molecules/ButtonGroup/ButtonGroup.njk" import ButtonGroup %}
+
+{{ Heading( Tag = "h1", Content = "Chip primary", Weight="medium", Size = "-sizeL") }}
+{% call ButtonGroup() %}
+{{ Chip( Style = "primary", Label = "Chip Label") }}
+{{ Chip( Style = "primary", Label = "Chip Label", IconRight = true, IconContentRight = "Chevrons-right") }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Chip secondary", Weight="medium", Size = "-sizeL") }}
+{% call ButtonGroup() %}
+{{ Chip( Style = "secondary", Label = "Chip Label") }}
+{{ Chip( Style = "secondary", Label = "Chip Label", IconRight = true, IconContentRight = "Chevrons-right") }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Chip tertiary", Weight="medium", Size = "-sizeL") }}
+{% call ButtonGroup() %}
+{{ Chip( Style = "tertiary", Label = "Chip Label") }}
+{{ Chip( Style = "tertiary", Label = "Chip Label", IconRight = true, IconContentRight = "Chevrons-right") }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Chip Heart", Weight="medium", Size = "-sizeL") }}
+{% call ButtonGroup() %}
+{{ Chip( Style = "primary", Label = "Chip Label", IconHeart = true) }}
+{{ Chip( Style = "secondary", Label = "Chip Label", IconHeart = true) }}
+{{ Chip( Style = "tertiary", Label = "Chip Label", IconHeart = true) }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Chip Check", Weight="medium", Size = "-sizeL") }}
+{% call ButtonGroup() %}
+{{ Chip( Style = "primary", Label = "Chip Label", IconCheck = true) }}
+{{ Chip( Style = "secondary", Label = "Chip Label", IconCheck = true) }}
+{{ Chip( Style = "tertiary", Label = "Chip Label", IconCheck = true) }}
+{% endcall %}

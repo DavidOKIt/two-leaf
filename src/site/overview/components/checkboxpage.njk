@@ -1,0 +1,47 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/checkboxpage.html
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Checkbox/Checkbox.njk" import Checkbox %}
+{%- from "../../../_includes/components/Atoms/Radio/Radio.njk" import Radio %}
+{%- from "../../../_includes/components/Atoms/Toggle/Toggle.njk" import Toggle %}
+{%- from "../../../_includes/components/Molecules/ButtonGroup/ButtonGroup.njk" import ButtonGroup %}
+
+{{ Heading( Tag = "h1", Content = "Checkbox", Weight="medium", Size = "-sizeL") }}
+
+{% call ButtonGroup() %}
+{{ Checkbox( ID="checkbox1", Name="checkbox1", Value="value1") }}
+{{ Checkbox( Label = "Label", ID="checkbox2", Name="checkbox2", Value="value2") }}
+{% endcall %}
+
+{% call ButtonGroup() %}
+{{ Checkbox( ID="checkboxerror1", Name="checkboxerror1", Value="valueerror1", Error = true) }}
+{{ Checkbox( Label = "Label", ID="checkboxerror2", Name="checkboxerror2", Value="valueerror2", Error = true) }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Radio", Weight="medium", Size = "-sizeL") }}
+
+{% call ButtonGroup() %}
+{{ Radio( ID="radio1", Name="radioGroup", Value="value1") }}
+{{ Radio( Label = "Label", ID="radio1", Name="radioGroup", Value="value1") }}
+{% endcall %}
+
+{% call ButtonGroup() %}
+{{ Radio( ID="radio1", Name="radioGrouperror", Value="value1", Error = true) }}
+{{ Radio( Label = "Label", ID="radio1", Name="radioGrouperror", Value="value1", Error = true) }}
+{% endcall %}
+
+{{ Heading( Tag = "h1", Content = "Toggle", Weight="medium", Size = "-sizeL") }}
+
+{% call ButtonGroup() %}
+{{ Toggle( ID="checkbox1", Name="checkbox1", Value="value1") }}
+{{ Toggle( Label = "Label", ID="checkbox2", Name="checkbox2", Value="value2") }}
+{% endcall %}
+
+{% call ButtonGroup() %}
+{{ Toggle( ID="checkboxerror1", Name="checkboxerror1", Value="valueerror1", Error = true) }}
+{{ Toggle( Label = "Label", ID="checkboxerror2", Name="checkboxerror2", Value="valueerror2", Error = true) }}
+{% endcall %}

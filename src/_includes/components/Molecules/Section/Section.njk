@@ -1,0 +1,5 @@
+{% macro Section(size) %}
+    <div class="Section Section-{{ size }}">
+        {{ caller() }}
+    </div>
+{% endmacro %}

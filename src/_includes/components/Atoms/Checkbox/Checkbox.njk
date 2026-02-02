@@ -1,6 +1,6 @@
-{% macro Checkbox (ID, Name, Value, Label)%}
+{% macro Checkbox (ID, Name, Value, Label, Error = false)%}
     <div class="CheckboxContainer">
-        <label class="Checkbox">
+        <label class="{% if Error%} CheckboxError{% else %}Checkbox{% endif %}">
             <input type="checkbox" id="{{ ID }}" name="{{ Name }}" value="{{ Value }}">
             <span class="checkmark"></span>
         </label>

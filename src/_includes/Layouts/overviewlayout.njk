@@ -20,7 +20,11 @@
         <div class="responsive-viewport">
             {{ Header(Nav=showBreadcrumbs, Items=breadcrumbs) }}
             <main>
-                {{ content | safe }}
+                <section class="overview">
+                    <div class="content-container">
+                        {{ content | safe }}
+                    </div>
+                </section>
             </main>
         </div>
         {# Externe Scripts #}

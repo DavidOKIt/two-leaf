@@ -1,0 +1,20 @@
+.Section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 168px);
+
+  &-halfheight {
+    height: calc(100vh - 50vh);
+  }
+
+  &-thirdheight {
+    height: calc(100vh - 66vh);
+  }
+
+  &-none {
+    height: auto;
+  }
+}

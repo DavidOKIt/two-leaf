@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  align-self: flex-start;
   gap: var(--space-4);
 
   &:focus-visible {
@@ -22,10 +23,12 @@
 
     &:hover {
       color: var(--color-matcha-hover);
+      text-decoration: underline;
     }
 
     &:active {
       color: var(--color-matcha-pressed);
+      text-decoration: underline;
     }
   }
 
@@ -34,10 +37,12 @@
 
     &:hover {
       color: var(--color-copper-hover);
+      text-decoration: underline;
     }
 
     &:active {
       color: var(--color-copper-pressed);
+      text-decoration: underline;
     }
   }
 
@@ -46,10 +51,12 @@
 
     &:hover {
       color: var(--color-ash-hover);
+      text-decoration: underline;
     }
 
     &:active {
       color: var(--color-ash-pressed);
+      text-decoration: underline;
     }
   }
 

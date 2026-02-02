@@ -1,0 +1,31 @@
+.Overview {
+  &_ComponentList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  &_Component {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-16);
+    border-radius: var(--border-radius-normal);
+    background-color: var(--color-copper-default-30);
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      background-color: var(--color-copper-hover-30);
+    }
+
+    &:active {
+      background-color: var(--color-copper-pressed-30);
+    }
+  }
+
+  &_ContentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+}

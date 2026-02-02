@@ -9,8 +9,9 @@ noPadding: true
 {%- from './_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
 {%- from './_includes/components/Atoms/Button/Button.njk' import Button %}
 {%- from './_includes/components/Molecules/ProductTile/ProductTile.njk' import ProductTile %}
-{%- from './_includes/components/Organisms/Slider/Slider.njk' import Slider %}
+{%- from './_includes/components/Molecules/Section/Section.njk' import Section %}
 {%- from './_includes/components/Molecules/StaticBanner/StaticBanner.njk' import StaticBanner %}
+{%- from './_includes/components/Organisms/Slider/Slider.njk' import Slider %}
 {%- from './_includes/components/Organisms/Gallery/Gallery.njk' import Gallery %}
 {%- from './_includes/components/Organisms/Footer/Footer.njk' import Footer -%}
 
@@ -58,20 +59,24 @@ noPadding: true
 {{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage2.jpg'}, HeadingContent = 'PU ERH TEE', TileButton = {href: '/shop-pdp/'}) }}
 {% endset %}
 
-<div class="home">
-    {{ Slider ( SliderType = 'HeroSlider', HeroSlides = [HeroSlide1, HeroSlide2, HeroSlide3, HeroSlide4, HeroSlide5]) }}
-    <div class="home-flexbox">
-        {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TWO LEAF')}}
-        {{ Heading( Tag = 'h3', Size = '-sizeL', Weight = 'regular', Content = 'TEE VERBINDET <br> GENERATIONEN')}}
-        {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Gegründet von zwei Freundinnen aus unterschiedlichen Generationen, bringen wir frischen Schwung und jahrzehntelange Erfahrung zusammen, um euch die Welt des Tees näherzubringen. Bei uns findet ihr sorgfältig ausgewählte Teesorten, die nicht nur schmecken, sondern auch mit Respekt für Menschen und Natur produziert werden. Nachhaltigkeit, fairer Handel und ein bewusster Umgang mit Ressourcen sind für uns nicht nur Werte, sondern Selbstverständnis. <br> <br> Entdeckt euren Lieblings-Tee, erfahrt mehr über unsere Philosophie und erlebt, wie Two Leaves Tradition und moderne Teekultur miteinander verbindet – jederzeit online und direkt über unsere App.')}}
-    </div>
-    {{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage1.jpg', Position = 'top', HeadingContent = 'EINKLANG ZWISCHEN TRADITION UND MODERNE', BannerButton = true) }}
-    <div class="home-flexbox">
-        {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TRENDING TEAS')}}
-        {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Entdecke die beliebtesten Teesorten des Monats! Von klassischen Favoriten bis hin zu spannenden Neuheiten – diese Tees begeistern unsere Community und bringen frischen Geschmack in jede Tasse.')}}
-    </div>
-    {{ Slider ( SliderType = 'ProductSlider', ProductSlides = [ProductSlide1, ProductSlide2, ProductSlide3, ProductSlide4, ProductSlide5]) }}
-    {{ Gallery(Images = {
+{{ Slider ( SliderType = 'HeroSlider', HeroSlides = [HeroSlide1, HeroSlide2, HeroSlide3, HeroSlide4, HeroSlide5]) }}
+{% call Section() %}
+<div class="home-flexbox">
+    {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TWO LEAF')}}
+    {{ Heading( Tag = 'h3', Size = '-sizeL', Weight = 'regular', Content = 'TEE VERBINDET <br> GENERATIONEN')}}
+    {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Gegründet von zwei Freundinnen aus unterschiedlichen Generationen, bringen wir frischen Schwung und jahrzehntelange Erfahrung zusammen, um euch die Welt des Tees näherzubringen. Bei uns findet ihr sorgfältig ausgewählte Teesorten, die nicht nur schmecken, sondern auch mit Respekt für Menschen und Natur produziert werden. Nachhaltigkeit, fairer Handel und ein bewusster Umgang mit Ressourcen sind für uns nicht nur Werte, sondern Selbstverständnis. <br> <br> Entdeckt euren Lieblings-Tee, erfahrt mehr über unsere Philosophie und erlebt, wie Two Leaves Tradition und moderne Teekultur miteinander verbindet – jederzeit online und direkt über unsere App.')}}
+</div>
+{% endcall %}
+{{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage1.jpg', Position = 'top', HeadingContent = 'EINKLANG ZWISCHEN TRADITION UND MODERNE', BannerButton = true) }}
+{% call Section(size = 'thirdheight') %}
+<div class="home-flexbox">
+    {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TRENDING TEAS')}}
+    {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Entdecke die beliebtesten Teesorten des Monats! Von klassischen Favoriten bis hin zu spannenden Neuheiten – diese Tees begeistern unsere Community und bringen frischen Geschmack in jede Tasse.')}}
+</div>
+{% endcall %}
+{{ Slider ( SliderType = 'ProductSlider', ProductSlides = [ProductSlide1, ProductSlide2, ProductSlide3, ProductSlide4, ProductSlide5]) }}
+{% call Section(size = 'none') %}
+{{ Gallery(Images = {
         Image1: { src: '/assets/img/GalleryImage2.png'},
         Image2: { src: '/assets/img/ProductImage1.jpg'},
         Image3: { src: '/assets/img/ProductImage2.jpg'},
@@ -85,7 +90,6 @@ noPadding: true
         Label4: "Bio Anbau",
         Label5: "Porzellan"},
       HeadingContent = "TWO LEAF<br>ART GALLERY", ParagraphContent = "JOURNY OF DISCOVERY") }}
-
-    {{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage.jpg', Position = 'bottom', HeadingContent = 'VOM FELD BIS IN DEINE TASSE', BannerButton = true) }}
-    {{ Footer () }}
-</div>
+{% endcall %}
+{{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage.jpg', Position = 'bottom', HeadingContent = 'VOM FELD BIS IN DEINE TASSE', BannerButton = true) }}
+{{ Footer () }}

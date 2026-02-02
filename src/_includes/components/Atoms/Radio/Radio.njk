@@ -1,6 +1,6 @@
-{% macro Radio (ID, Name, Value, Label)%}
+{% macro Radio (ID, Name, Value, Label, Error = false)%}
     <div class="RadioContainer">
-        <label class="Radio">
+        <label class="{% if Error %} RadioError {% else %} Radio {% endif %}">
             <input type="radio" id="{{ ID }}" name="{{ Name }}" value="{{ Value }}">
             <span class="checkmark"></span>
         </label>

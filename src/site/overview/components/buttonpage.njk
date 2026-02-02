@@ -1,7 +1,61 @@
 ---
-layout: Layouts/responsive.njk
+layout: Layouts/overviewlayout.njk
 title: Two Leaf 
 permalink: /overview/components/buttonpage.html
 ---
 
-<button>Test</button>
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Button/Button.njk" import Button %}
+{%- from "../../../_includes/components/Molecules/ButtonGroup/ButtonGroup.njk" import ButtonGroup %}
+
+{{ Heading( Tag = "h1", Content = "Button primary", Weight="medium", Size = "-sizeL") }}
+<div class="Overview_ContentWrapper">
+    {% call ButtonGroup() %}
+    {{ Button(Style = "primary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button(Style = "primary", Label = "Button Label") }}
+    {{ Button(Style = "primary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button(Style = "primary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button(Style = "primary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+    {% call ButtonGroup() %}
+    {{ Button( Outline = true, Style = "primary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button( Outline = true, Style = "primary", Label = "Button Label") }}
+    {{ Button( Outline = true, Style = "primary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button( Outline = true, Style = "primary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button( Outline = true, Style = "primary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+</div>
+{{ Heading( Tag = "h1", Content = "Button secondary", Weight="medium", Size = "-sizeL") }}
+<div class="Overview_ContentWrapper">
+    {% call ButtonGroup() %}
+    {{ Button(Style = "secondary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button(Style = "secondary", Label = "Button Label") }}
+    {{ Button(Style = "secondary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button(Style = "secondary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button(Style = "secondary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+    {% call ButtonGroup() %}
+    {{ Button( Outline = true, Style = "secondary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button( Outline = true, Style = "secondary", Label = "Button Label") }}
+    {{ Button( Outline = true, Style = "secondary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button( Outline = true, Style = "secondary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button( Outline = true, Style = "secondary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+</div>
+{{ Heading( Tag = "h1", Content = "Button tertiary", Weight="medium", Size = "-sizeL") }}
+<div class="Overview_ContentWrapper">
+    {% call ButtonGroup() %}
+    {{ Button(Style = "tertiary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button(Style = "tertiary", Label = "Button Label") }}
+    {{ Button(Style = "tertiary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button(Style = "tertiary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button(Style = "tertiary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+    {% call ButtonGroup() %}
+    {{ Button( Outline = true, Style = "tertiary", showIconLeft = true, IconContentLeft = "Home", Label = null) }}
+    {{ Button( Outline = true, Style = "tertiary", Label = "Button Label") }}
+    {{ Button( Outline = true, Style = "tertiary", Label = "Button Label", showIconRight = true, IconContentRight = "Home") }}
+    {{ Button( Outline = true, Style = "tertiary", Label = "Button Label", showIconRight = true, IconContentRight = "Home", showIconLeft = true, IconContentLeft = "Home") }}
+    {{ Button( Outline = true, Style = "tertiary", Label = "Button Label", disabled = true) }}
+    {% endcall %}
+</div>

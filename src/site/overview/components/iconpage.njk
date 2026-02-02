@@ -1,0 +1,133 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/iconpage.html
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Icon/Icon.njk" import IconEmbedded %}
+{%- from "../../../_includes/components/Molecules/IconGroup/IconGroup.njk" import IconGroup %}
+
+{{ Heading( Tag = "h1", Content = "Line and Filled", Weight="medium", Size = "-sizeL") }}
+{% call IconGroup() %}
+<div>
+    {{ IconEmbedded ( Icon = 'Home', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Home-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Search', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Search-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Cart', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Cart-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Profile', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Profile-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Filter', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Filter-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Payment', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Payment-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Heart', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Heart-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Star', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Star-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Stars', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Stars-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'ViewOn', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'ViewOn-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'ViewOff', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'ViewOff-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Accessibility', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Accessibility-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Help', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Help-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Notification', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Notification-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Settings', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Settings-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Chart', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Chart-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Globe', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Globe-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Contact', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Contact-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'File', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'File-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'FileDownload', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'FileDownload-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Info', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Info-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Warning', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Warning-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Success', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Success-filled', Size = "extra-large") }}
+</div>
+<div>
+    {{ IconEmbedded ( Icon = 'Error', Size = "extra-large") }}
+    {{ IconEmbedded ( Icon = 'Error-filled', Size = "extra-large") }}
+</div>
+{% endcall %}
+{{ Heading( Tag = "h1", Content = "Line only", Weight="medium", Size = "-sizeL") }}
+{% call IconGroup() %}
+{{ IconEmbedded ( Icon = 'Chevron-up', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevron-down', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevron-left', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevron-right', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevrons-up', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevrons-down', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevrons-left', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Chevrons-right', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Wifi', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Sign-in', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Sign-out', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Add', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Subtract', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Sun', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Facebook', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Instagram', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Youtube', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Discord', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'TikTok', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Twitch', Size = "extra-large") }}
+{{ IconEmbedded ( Icon = 'Reddit', Size = "extra-large") }}
+{% endcall %}

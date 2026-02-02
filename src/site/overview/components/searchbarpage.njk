@@ -1,0 +1,14 @@
+---
+layout: Layouts/overviewlayout.njk
+title: Two Leaf 
+permalink: /overview/components/searchbarpage.html
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Atoms/Searchbar/Searchbar.njk" import Searchbar %}
+
+{{ Heading( Tag = "h1", Content = "Searchbar", Weight="medium", Size = "-sizeL") }}
+{{ Searchbar ( Placeholder = "Suchen...") }}
+
+{{ Heading( Tag = "h1", Content = "Searchbar with Label", Weight="medium", Size = "-sizeL") }}
+{{ Searchbar ( Placeholder = "Suchen...", LabelTop = true, LabelTopContent = "Label") }}

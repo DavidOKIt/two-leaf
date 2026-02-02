@@ -5,12 +5,14 @@
 
 // Layouts
 @use "../styles/layouts/responsive.scss";
+@use "../styles/layouts/overviewlayout.scss";
 
 // Pages
 @use "../styles/pages/home.scss";
 @use "../styles/pages/shop.scss";
 @use "../styles/pages/cart.scss";
 @use "../styles/pages/profile.scss";
+@use "../styles/pages/overview.scss";
 
 // Atoms
 @use "../../_includes/components/Atoms/Icon/Icon.scss";
@@ -35,6 +37,7 @@
 // Molecules
 @use "../../_includes/components/Molecules/IconGroup/IconGroup.scss";
 @use "../../_includes/components/Molecules/ButtonGroup/ButtonGroup.scss";
+@use "../../_includes/components/Molecules/LinkGroup/LinkGroup.scss";
 @use "../../_includes/components/Molecules/Rating/Rating.scss";
 @use "../../_includes/components/Molecules/TextIcon/TextIcon.scss";
 @use "../../_includes/components/Molecules/MenuItem/MenuItem.scss";
@@ -45,6 +48,7 @@
 @use "../../_includes/components/Molecules/ProductTile/ProductTile.scss";
 @use "../../_includes/components/Molecules/Table/Table.scss";
 @use "../../_includes/components/Molecules/List/List.scss";
+@use "../../_includes/components/Molecules/Section/Section.scss";
 
 // Organisms
 @use "../../_includes/components/Organisms/Slider/Slider.scss";

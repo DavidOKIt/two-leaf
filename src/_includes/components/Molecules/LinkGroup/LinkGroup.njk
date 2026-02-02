@@ -1,0 +1,7 @@
+{%- from "../../Atoms/Link/Link.njk" import UtilityLink, InlineLink -%}
+
+{% macro LinkGroup() %}
+    <div class="LinkGroup">
+        {{ caller() }}
+    </div>
+{% endmacro %}
