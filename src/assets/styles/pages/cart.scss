@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0px var(--space-2);
+    max-width: 800px;
   }
 
   &_item-count {
