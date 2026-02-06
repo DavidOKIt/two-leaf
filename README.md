@@ -4,8 +4,8 @@ A tea-shop web app build with eleventy and nunjucks.
 
 ### Requirements
 
-- **Node.js**: >= 18.0.0 (gebaut mit 24.11.1)
-- **NPM**: >= 9.0.0 (gebaut mit 11.6.2)
+- **Node.js**: >= 18.0.0 (developed with 24.11.1)
+- **NPM**: >= 9.0.0 (developed with 11.6.2)
 - **Git**: <https://git-scm.com>
 
 ## Installation
