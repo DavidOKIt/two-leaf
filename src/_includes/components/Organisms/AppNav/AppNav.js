@@ -4,11 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navButtons.forEach(navElement => {
     const href = navElement.getAttribute('href');
+    let isActive = false;
     
-    // Home braucht exakten Match, andere startsWith
-    const isActive = href === '/' 
-      ? currentUrl === '/' 
-      : currentUrl.startsWith(href);
+    // Home: nur wenn EXAKT auf Home-Seite (nicht bei Unterseiten)
+    if (href === '/Two-Leaf/' || href === '/') {
+      isActive = (currentUrl === '/Two-Leaf/' || currentUrl === '/');
+    } 
+    // Andere Seiten: wenn Keyword in URL vorkommt
+    else {
+      // Extrahiere Keyword aus href (z.B. "Shop" aus "/Two-Leaf/Shop")
+      const keyword = href.split('/').filter(part => part !== '' && part !== 'Two-Leaf').join('');
+      
+      if (keyword) {
+        isActive = currentUrl.includes(keyword);
+      }
+    }
     
     if (isActive) {
       navElement.querySelector('.AppNav_Icon').classList.add('AppNav_Icon-off');

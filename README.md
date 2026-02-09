@@ -32,6 +32,6 @@ A tea-shop web app build with eleventy and nunjucks.
 
 ### Design
 
-https://www.figma.com/design/8rBsZPqRz2sPuORqWXG86V/TeaShop?node-id=649-2773&p=f&t=WPNuWTMS7y9rzjmZ-0
+https://www.figma.com/design/8rBsZPqRz2sPuORqWXG86V/TeaShop?node-id=0-1&p=f&t=UJXIHi3HqVIcIZyG-0
 
 ### End
