@@ -30,8 +30,9 @@
             <main class="{% if noPadding %}no-padding{% endif %}">
                 {{ content | safe }}
             </main>
-            {{ AppNav(TargetHome='/' | url, TargetSearch = '/shop.html' | url, TargetCart = '/cart.html' | url, TargetProfile = '/profile.html' | url) }}
+            {{ AppNav(TargetHome='/' | url, TargetSearch = 'shop.html' | url, TargetCart = 'cart.html' | url, TargetProfile = 'profile.html' | url) }}
         </div>
+
         {# Externe Scripts #}
         <script src="{{ './assets/vendor/swiper/swiper-bundle.min.js' | url }}"></script>
 
