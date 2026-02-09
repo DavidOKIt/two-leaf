@@ -1,5 +1,4 @@
 {%- from '../../_includes/components/Organisms/Header/Header.njk' import Header %}
-{%- from '../../_includes/components/Organisms/AppNav/AppNav.njk' import AppNav %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,33 +7,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Two Leaf - A modern web project">
 
-        {# Open Graph für Link-Vorschau #}
-        <meta property="og:title" content="{{ title | default('Two Leaf') }}">
-        <meta property="og:description" content="Two Leaf - A modern web project">
-        <meta property="og:image" content="https://davidokit.github.io/Two-Leaf/assets/img/og-image.jpg">
-        <meta property="og:url" content="https://davidokit.github.io/Two-Leaf/">
-        <meta property="og:type" content="website">
-
         <title>{{ title | default('Two Leaf') }}</title>
         <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ './assets/img/LogoLeafs.svg' | url }}">
 
         {# Styles #}
-        <link rel="stylesheet" href="{{ './assets/styles/main.css' | url }}">
-        <link rel="preload" href="{{ './assets/fonts/montserrat_variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="{{ '../../assets/styles/main.css' | url }}">
+        <link rel="preload" href="{{ '../../assets/fonts/montserrat_variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
         {# Swiper #}
-        <link rel="stylesheet" href="{{ './assets/vendor/swiper/swiper-bundle.min.css' | url }}">
+        <link rel="stylesheet" href="{{ '../../assets/vendor/swiper/swiper-bundle.min.css' | url }}">
     </head>
     <body>
         <div class="responsive-viewport">
             {{ Header(Nav=showBreadcrumbs, Items=breadcrumbs) }}
-            <main class="{% if noPadding %}no-padding{% endif %}">
-                {{ content | safe }}
+            <main>
+                <section class="overview">
+                    <div class="content-container">
+                        {{ content | safe }}
+                    </div>
+                </section>
             </main>
-            {{ AppNav(TargetHome='/' | url, TargetSearch = '/shop' | url, TargetCart = '/cart' | url, TargetProfile = '/profile' | url) }}
         </div>
-
         {# Externe Scripts #}
-        <script src="{{ './assets/vendor/swiper/swiper-bundle.min.js' | url }}"></script>
+        <script src="{{ '../../assets/vendor/swiper/swiper-bundle.min.js' | url }}"></script>
 
         {# Interne Scripts #}
         <script src="{{ '/_includes/components/Atoms/Ranger/Ranger.js' | url }}"></script>

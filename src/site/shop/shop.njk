@@ -5,7 +5,6 @@ permalink: shop.html
 showBreadcrumbs: true
 breadcrumbs:
     - Label: Shop
-      Target: /shop/
 ---
 
 {%- from '../../_includes/components/Atoms/Button/Button.njk' import Button %}
@@ -16,19 +15,19 @@ breadcrumbs:
     {{ Searchbar() }}
     {{ Button(fullWidth = true, Label = 'FILTER', showIconRight = true, IconContentRight = 'Filter', href = '/shop-filter', disabled = false) }}
     {{ GalleryGrid(items = [
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"},
-    {src: "../assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp/"}
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"},
+    {src: "./assets/img/GalleryItem1zu1.jpg", label: "Label", target: "/shop-pdp"}
 ]) }}
 </div>

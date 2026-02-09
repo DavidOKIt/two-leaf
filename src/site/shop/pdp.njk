@@ -5,7 +5,7 @@ permalink: shop-pdp.html
 showBreadcrumbs: true
 breadcrumbs:
     - Label: Shop
-      Target: /shop/
+      Target: /shop
     - Label: Produkt
 ---
 
@@ -29,7 +29,7 @@ breadcrumbs:
                 {{ Heading ( Tag ="h1", Size = '-sizeXL', Content="Produktname" ) }}
                 {{ Heading ( Tag ="h2", Size = '-sizeXL', Content="11,90 €" ) }}
             </div>
-            {{ Image (src = "../assets/img/ProductImage2.jpg", alt = "Produktbild", size = 'GalleryImage-horizontal', fit = 'cover') }}
+            {{ Image (src = "./assets/img/ProductImage2.jpg", alt = "Produktbild", size = 'GalleryImage-horizontal', fit = 'cover') }}
             <div class="pdp_spacebetween">
                 {{ UneditableRating (FilledStars = '4', Size = 'regular') }}
                 {{ Chip ( Style = 'primary', Label = 'Favorit', IconHeart = true ) }}
@@ -52,7 +52,7 @@ breadcrumbs:
         </div>
         <div class="pdp_buttonwrapper">
             {{ Paragraph (Size = '-sizeXS', Content = 'Lieferung 1 - 3 Werktage') }}
-            {{ Button (fullWidth = true, Label = 'In den Warenkorb', href = '/cart', showIconRight = true, IconContentRight = 'Cart-filled') }}
+            {{ Button (fullWidth = true, Label = 'In den Warenkorb', href = 'cart.html', showIconRight = true, IconContentRight = 'Cart-filled') }}
             {{ Paragraph (Size = '-sizeXS', Content = 'inkl. MwSt., exkl. Versandkosten  |  ID 7386 - 400€ / 1kg ') }}
         </div>
         <div class="pdp_end">

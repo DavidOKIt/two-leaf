@@ -5,13 +5,13 @@ permalink: cart.html
 showBreadcrumbs: true
 breadcrumbs:
     - Label: Warenkorb
-      Target: /cart/
+      Target: /cart
 ---
 
 {%- from '../../_includes/components/Atoms/Button/Button.njk' import Button %}
 {%- from '../../_includes/components/Atoms/Paragraph/Paragraph.njk' import Paragraph %}
 <div class="cart">
-    {{ Button(href = '/cart-checkout/', fullWidth = true, Label = 'CHECKOUT', showIconRight = true, IconContentRight = 'Payment', disabled = false) }}
+    {{ Button(href = '/cart-checkout', fullWidth = true, Label = 'CHECKOUT', showIconRight = true, IconContentRight = 'Payment', disabled = false) }}
     <div class="cart_price">
         {{ Paragraph( Content = 'Zwischensumme', Size = '-sizeS', Weight = 'medium' ) }}
         {{ Paragraph( Content = '0,00€', Size = '-sizeS', Weight = 'medium' ) }}
