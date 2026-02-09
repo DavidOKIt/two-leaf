@@ -41,7 +41,7 @@ module.exports = function(eleventyConfig) {
 
 
 	return {
-		pathPrefix: "/two-leaf/",
+		// pathPrefix: "/two-leaf/",
         dir: {
             input: "src",
             output: "public",
