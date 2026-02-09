@@ -39,5 +39,3 @@ As I progress in my apprenticeship, I will likely return to this project to add 
 ### Design
 
 https://www.figma.com/design/8rBsZPqRz2sPuORqWXG86V/TeaShop?node-id=0-1&p=f&t=UJXIHi3HqVIcIZyG-0
-
-### End
