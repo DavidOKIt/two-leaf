@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --watch --serve",
     "build": "eleventy",
-    "play": "node src/Sandbox/test.js"
+    "play": "node src/Sandbox/conditionals.js"
   },
   "repository": {
     "type": "git",
