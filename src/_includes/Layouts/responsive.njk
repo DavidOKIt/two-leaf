@@ -16,13 +16,13 @@
         <meta property="og:type" content="website">
 
         <title>{{ title | default('Two Leaf') }}</title>
-        <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ '/assets/img/LogoLeafs.svg' | url }}">
+        <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ './assets/img/LogoLeafs.svg' | url }}">
 
         {# Styles #}
         <link rel="stylesheet" href="{{ './assets/styles/main.css' | url }}">
-        <link rel="preload" href="{{ '/assets/fonts/montserrat_variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ './assets/fonts/montserrat_variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
         {# Swiper #}
-        <link rel="stylesheet" href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' | url }}">
+        <link rel="stylesheet" href="{{ './assets/vendor/swiper/swiper-bundle.min.css' | url }}">
     </head>
     <body>
         <div class="responsive-viewport">
@@ -33,7 +33,7 @@
             {{ AppNav(TargetHome='/' | url, TargetSearch = '/shop/' | url, TargetCart = '/cart/' | url, TargetProfile = '/profile/' | url) }}
         </div>
         {# Externe Scripts #}
-        <script src="{{ '/assets/vendor/swiper/swiper-bundle.min.js' | url }}"></script>
+        <script src="{{ './assets/vendor/swiper/swiper-bundle.min.js' | url }}"></script>
 
         {# Interne Scripts #}
         <script src="{{ '/_includes/components/Atoms/Ranger/Ranger.js' | url }}"></script>
