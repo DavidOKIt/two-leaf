@@ -40,38 +40,38 @@ noPadding: true
 {# Product Slider Content #}
 
 {% set ProductSlide1 %}
-{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/SliderImage3.jpg'}, HeadingContent = 'SENCHA', TileButton = {href: '/shop-pdp/'}) }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/SliderImage3.jpg'}, HeadingContent = 'SENCHA', TileButton = {href: '/shop-pdp'}) }}
 {% endset %}
 
 {% set ProductSlide2 %}
-{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage4.jpg'}, HeadingContent = 'OOLONG TEE', TileButton = {href: '/shop-pdp/'}) }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage4.jpg'}, HeadingContent = 'OOLONG TEE', TileButton = {href: '/shop-pdp'}) }}
 {% endset %}
 
 {% set ProductSlide3 %}
-{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage3.jpg'}, HeadingContent = 'WEISSER TEE', TileButton = {href: '/shop-pdp/'}) }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage3.jpg'}, HeadingContent = 'WEISSER TEE', TileButton = {href: '/shop-pdp'}) }}
 {% endset %}
 
 {% set ProductSlide4 %}
-{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage1.jpg'}, HeadingContent = 'KRÄUTERTEE', TileButton = {href: '/shop-pdp/'}) }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage1.jpg'}, HeadingContent = 'KRÄUTERTEE', TileButton = {href: '/shop-pdp'}) }}
 {% endset %}
 
 {% set ProductSlide5 %}
-{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage2.jpg'}, HeadingContent = 'PU ERH TEE', TileButton = {href: '/shop-pdp/'}) }}
+{{ ProductTile ( TileLinkOn = true,  TileImage = {src :'/assets/img/ProductImage2.jpg'}, HeadingContent = 'PU ERH TEE', TileButton = {href: '/shop-pdp'}) }}
 {% endset %}
 
 {{ Slider ( SliderType = 'HeroSlider', HeroSlides = [HeroSlide1, HeroSlide2, HeroSlide3, HeroSlide4, HeroSlide5]) }}
 {% call Section() %}
 <div class="home-flexbox">
-    {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TWO LEAF')}}
-    {{ Heading( Tag = 'h3', Size = '-sizeL', Weight = 'regular', Content = 'TEE VERBINDET <br> GENERATIONEN')}}
-    {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Gegründet von zwei Freundinnen aus unterschiedlichen Generationen, bringen wir frischen Schwung und jahrzehntelange Erfahrung zusammen, um euch die Welt des Tees näherzubringen. Bei uns findet ihr sorgfältig ausgewählte Teesorten, die nicht nur schmecken, sondern auch mit Respekt für Menschen und Natur produziert werden. Nachhaltigkeit, fairer Handel und ein bewusster Umgang mit Ressourcen sind für uns nicht nur Werte, sondern Selbstverständnis. <br> <br> Entdeckt euren Lieblings-Tee, erfahrt mehr über unsere Philosophie und erlebt, wie Two Leaves Tradition und moderne Teekultur miteinander verbindet – jederzeit online und direkt über unsere App.')}}
+  {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TWO LEAF')}}
+  {{ Heading( Tag = 'h3', Size = '-sizeL', Weight = 'regular', Content = 'TEE VERBINDET <br> GENERATIONEN')}}
+  {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Gegründet von zwei Freundinnen aus unterschiedlichen Generationen, bringen wir frischen Schwung und jahrzehntelange Erfahrung zusammen, um euch die Welt des Tees näherzubringen. Bei uns findet ihr sorgfältig ausgewählte Teesorten, die nicht nur schmecken, sondern auch mit Respekt für Menschen und Natur produziert werden. Nachhaltigkeit, fairer Handel und ein bewusster Umgang mit Ressourcen sind für uns nicht nur Werte, sondern Selbstverständnis. <br> <br> Entdeckt euren Lieblings-Tee, erfahrt mehr über unsere Philosophie und erlebt, wie Two Leaves Tradition und moderne Teekultur miteinander verbindet – jederzeit online und direkt über unsere App.')}}
 </div>
 {% endcall %}
 {{ StaticBanner ( BannerImage = '/assets/img/StaticBannerImage1.jpg', Position = 'top', HeadingContent = 'EINKLANG ZWISCHEN TRADITION UND MODERNE', BannerButton = true) }}
 {% call Section(size = 'thirdheight') %}
 <div class="home-flexbox">
-    {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TRENDING TEAS')}}
-    {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Entdecke die beliebtesten Teesorten des Monats! Von klassischen Favoriten bis hin zu spannenden Neuheiten – diese Tees begeistern unsere Community und bringen frischen Geschmack in jede Tasse.')}}
+  {{ Heading( Tag = 'h1', Size = '-sizeXXL', Weight = 'bold', Content = 'TRENDING TEAS')}}
+  {{ Paragraph( Size = '-sizeS', Weight = 'regular', Content = 'Entdecke die beliebtesten Teesorten des Monats! Von klassischen Favoriten bis hin zu spannenden Neuheiten – diese Tees begeistern unsere Community und bringen frischen Geschmack in jede Tasse.')}}
 </div>
 {% endcall %}
 {{ Slider ( SliderType = 'ProductSlider', ProductSlides = [ProductSlide1, ProductSlide2, ProductSlide3, ProductSlide4, ProductSlide5]) }}
