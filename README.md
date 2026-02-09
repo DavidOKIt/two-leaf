@@ -16,14 +16,11 @@ As I progress in my apprenticeship, I will likely return to this project to add 
 
 ### Installation
 
-1. clone repository
-   git clone <repository-url>
+1. clone repository -> git clone <repository-url>
 
-2. navigate to project folder
-   cd two-leaf
+2. navigate to project folder -> cd two-leaf
 
-3. install dependencies
-   npm install
+3. install dependencies -> npm install
 
 ### NPM Scripts
 
