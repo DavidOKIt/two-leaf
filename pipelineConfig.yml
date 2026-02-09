@@ -38,7 +38,7 @@ branchBasedDeployments:
         sourceRegex: ".*"
         hosts:
           - hostname: "legolas"
-            # tmp: "/export/vol1/webdoc/tmp/web-resources/two-leaf.kittelberger.net"
+            tmp: "/export/vol1/webdoc/tmp/two-leaf.kittelberger.net"
             targets:
               - "/export/vol1/webdoc/htdocs/two-leaf.kittelberger.net"
             shellsteps:
