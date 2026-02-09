@@ -1,0 +1,51 @@
+---
+team: od
+build:
+  type: node
+  main:
+    commandSets:
+      - identifier: twoleaf
+        cmds:
+          - type: npm
+            cmd: ci
+          - type: npm
+            cmd: run
+            args: build
+
+  default:
+    cmds:
+      - type: npm
+        cmd: ci
+      - type: npm
+        cmd: run
+        args: build
+# Defines, which branches need deployment. Don't forget to configure the build & deployment for each branch.
+branchesToDeploy:
+  - main
+# Defines all necessary maven command parts and deployment target to use for a specific branch or as default.
+# Deployments need to be defined for specific branches!
+branchBasedDeployments:
+  default:
+    failBuildByXray: false
+  # "default" gets applied to any branch or pull request not defined below
+  main:
+    deploymentType: filesync
+    deployments:
+      - # prd
+        buildReference: twoleaf
+        type: "ssh"
+        source: "public/"
+        sourceRegex: ".*"
+        hosts:
+          - hostname: "legolas"
+            # tmp: "/export/vol1/webdoc/tmp/web-resources/two-leaf.kittelberger.net"
+            targets:
+              - "/export/vol1/webdoc/htdocs/two-leaf.kittelberger.net"
+            shellsteps:
+              - type: purge
+                purge: tmp
+              - type: deploy
+                # delete flag muss auf false stehen, da er sonst die Ressourcen von Bosch TT Alt vom Server löscht. Diese werden aber beide benötigt (SI)
+                delete: false
+
+version: 2
