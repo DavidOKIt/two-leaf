@@ -30,7 +30,7 @@
             <main class="{% if noPadding %}no-padding{% endif %}">
                 {{ content | safe }}
             </main>
-            {{ AppNav(TargetHome='/' | url, TargetSearch = 'shop' | url, TargetCart = '/cart' | url, TargetProfile = '/profile' | url) }}
+            {{ AppNav(TargetHome='/' | url, TargetSearch = 'shop' | url, TargetCart = 'cart' | url, TargetProfile = 'profile' | url) }}
         </div>
 
         {# Externe Scripts #}
