@@ -1,8 +1,8 @@
-# Two Leaf
+### Two Leaf
 
 Two-Leaf is a tea shop web app built with Eleventy and Nunjucks. I built this project as a first-year apprentice at Kittelberger Media Solutions, during the first four months of learning basic HTML and CSS.
 
-Initially the project was intended to be designed for mobile view (360×800px), but towards the end of the project I also made other viewports usable. Some pages, like the homepage, are more or less responsive. Throughout the project you'll find components that are responsive and others that are not. A breakdown of all components and different layouts can be found under https://davidokit.github.io/Two-Leaf/overview/ .
+Initially the project was intended to be designed for mobile view (360×800px), but towards the end of the project I also made other viewports usable. Some pages, like the homepage, are more or less responsive. Throughout the project you'll find components that are responsive and others that are not. A breakdown of all components and different layouts can be found under `/Two-Leaf/overview`.
 
 The main goal of the project was not to create a finished site with filled content, but a modular toolbox of reusable components inspired by atomic design.
 
@@ -14,7 +14,7 @@ As I progress in my apprenticeship, I will likely return to this project to add 
 - **NPM**: >= 9.0.0 (developed with 11.6.2)
 - **Git**: <https://git-scm.com>
 
-## Installation
+### Installation
 
 1. clone repository
    git clone <repository-url>
