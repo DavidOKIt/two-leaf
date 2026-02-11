@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --watch --serve",
-    "build": "eleventy",
-    "play": "node src/Sandbox/conditionals.js"
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -38,6 +37,6 @@
   "homepage": "https://bitbucket.org/kittelberger-media-solutions/two-leaf#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "sass": "^1.94.2"
+    "sass": "^1.97.3"
   }
 }

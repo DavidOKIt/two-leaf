@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.swiper--navigation', {
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper(".swiper--navigation", {
     loop: true,
     autoHeight: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
-  new Swiper('.swiper--pagination', {
+  new Swiper(".swiper--pagination", {
     loop: true,
     autoHeight: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
     slidesPerView: 1,
