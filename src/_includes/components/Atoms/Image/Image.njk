@@ -1,6 +1,6 @@
-{% macro Image(src, alt, size, fit, figcaption = false, label, loadinglazy, borderradius = true) %}
+{% macro Image(src, alt, size, fit, figcaption = false, label, loadinglazy, borderradius = true, zoom = false) %}
   <figure class="ImageContainer">
-    <img src="{{ src | url }}" alt="{{ alt }}" class="Image Image-{{ size }} Image-{{ fit }} {% if borderradius %}Image-borderRadius{% endif %}"{% if loadinglazy %}loading="lazy"{% endif %}/>
+    <img src="{{ src | url }}" alt="{{ alt }}" class="Image Image-{{ size }} Image-{{ fit }} {% if borderradius %}Image-borderRadius{% endif %} {% if zoom %}Image-Zoom{% endif %}"{% if loadinglazy %}loading="lazy"{% endif %}/>
     {% if figcaption%}
       <figcaption class="Image_Label -sizeXL bold">{{ label }}</figcaption>
     {% endif %}
