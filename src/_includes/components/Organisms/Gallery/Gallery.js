@@ -1,5 +1,4 @@
 const GalleryItem = (content) => {
-  console.log('test');
   const markup = `
   <a href="${content.href}" class="GalleryGrid_Link">
     <div class="GalleryGrid_Item">
@@ -23,6 +22,10 @@ const fetchData = (component, url) => {
       if (component === 'GalleryItem') {
         renderGallery(data);
       }
+    })
+    .catch((error) => {
+      console.error('Error beim fetchen der Daten', error);
+      document.querySelector('.GalleryGrid').innerHTML = '<p>Keine Daten verfügbar</p>';
     });
 };
 

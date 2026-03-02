@@ -3,120 +3,140 @@
     "productname": "GreenTea",
     "src": "assets/img/GalleryItemImage1.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "GreenTea"
+    "alt": "GreenTea",
+    "id": "greentea-01"
   },
   {
     "productname": "Earl Grey",
     "src": "assets/img/GalleryItemImage2.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Earl Grey"
+    "alt": "Earl Grey",
+    "id": "earlgrey-01"
   },
   {
     "productname": "Jasmine Tea",
     "src": "assets/img/GalleryItemImage3.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Jasmine Tea"
+    "alt": "Jasmine Tea",
+    "id": "jasminetea-01"
   },
   {
     "productname": "Chamomile",
     "src": "assets/img/GalleryItemImage4.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Chamomile"
+    "alt": "Chamomile",
+    "id": "chamomile-01"
   },
   {
     "productname": "Peppermint Tea",
     "src": "assets/img/GalleryItemImage5.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Peppermint Tea"
+    "alt": "Peppermint Tea",
+    "id": "pepperminttea-01"
   },
   {
     "productname": "Matcha",
     "src": "assets/img/GalleryItemImage6.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Matcha"
+    "alt": "Matcha",
+    "id": "matcha-01"
   },
   {
     "productname": "Rooibos",
     "src": "assets/img/GalleryItemImage7.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Rooibos"
+    "alt": "Rooibos",
+    "id": "rooibos-01"
   },
   {
     "productname": "Oolong Tea",
     "src": "assets/img/GalleryItemImage8.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Oolong Tea"
+    "alt": "Oolong Tea",
+    "id": "oolongtea-01"
   },
   {
     "productname": "White Tea",
     "src": "assets/img/GalleryItemImage9.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "White Tea"
+    "alt": "White Tea",
+    "id": "whitetea-01"
   },
   {
     "productname": "Darjeeling",
     "src": "assets/img/GalleryItemImage10.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Darjeeling"
+    "alt": "Darjeeling",
+    "id": "darjeeling-01"
   },
   {
     "productname": "Sencha",
     "src": "assets/img/GalleryItemImage11.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Sencha"
+    "alt": "Sencha",
+    "id": "sencha-01"
   },
   {
     "productname": "Chai Tea",
     "src": "assets/img/GalleryItemImage12.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Chai Tea"
+    "alt": "Chai Tea",
+    "id": "chaitea-01"
   },
   {
     "productname": "Hibiscus Tea",
     "src": "assets/img/GalleryItemImage13.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Hibiscus Tea"
+    "alt": "Hibiscus Tea",
+    "id": "hibiscustea-01"
   },
   {
     "productname": "Ginger Tea",
     "src": "assets/img/GalleryItemImage14.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Ginger Tea"
+    "alt": "Ginger Tea",
+    "id": "gingertea-01"
   },
   {
     "productname": "Lemon Tea",
     "src": "assets/img/GalleryItemImage15.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Lemon Tea"
+    "alt": "Lemon Tea",
+    "id": "lemontea-01"
   },
   {
     "productname": "Pu-erh Tea",
     "src": "assets/img/GalleryItemImage16.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Pu-erh Tea"
+    "alt": "Pu-erh Tea",
+    "id": "puerhtea-01"
   },
   {
     "productname": "Black Tea",
     "src": "assets/img/GalleryItemImage17.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Black Tea"
+    "alt": "Black Tea",
+    "id": "blacktea-01"
   },
   {
     "productname": "Lavender Tea",
     "src": "assets/img/GalleryItemImage18.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Lavender Tea"
+    "alt": "Lavender Tea",
+    "id": "lavendertea-01"
   },
   {
     "productname": "Turmeric Tea",
     "src": "assets/img/GalleryItemImage19.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Turmeric Tea"
+    "alt": "Turmeric Tea",
+    "id": "turmerictea-01"
   },
   {
     "productname": "Lapsang Souchong",
     "src": "assets/img/GalleryItemImage20.webp",
     "href": "/two-leaf/shop-pdp",
-    "alt": "Lapsang Souchong"
+    "alt": "Lapsang Souchong",
+    "id": "lapsansouchong-01"
   }
 ]

@@ -24,6 +24,40 @@ breadcrumbs:
 <div class="pdp">
     <div class="pdp_content">
         <div class="pdp_block">
+            <div class="pdp_spacebetween">
+                {{ Heading ( Tag ="h1", Size = '-sizeXL', Content="Produktname" ) }}
+                {{ Heading ( Tag ="h2", Size = '-sizeXL', Content="11,90 €" ) }}
+            </div>
+            {{ Image (src = "./assets/img/ProductImage2.jpg", alt = "Produktbild", size = 'GalleryImage-horizontal', fit = 'cover') }}
+            <div class="pdp_spacebetween">
+                {{ UneditableRating (FilledStars = '4', Size = 'regular') }}
+                {{ Chip ( Style = 'primary', Label = 'Favorit', IconHeart = true ) }}
+            </div>
+            {{ Paragraph( Content = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.') }}
+        </div>
+        {{ StaticTable ( TableRows = [  
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'}
+        ]) }}
+        <div class="pdp_block">
+            {{ UtilityLink(Weight = 'bold') }}
+        </div>
+        <div class="pdp_buttonwrapper">
+            {{ Button (fullWidth = true, Label = 'In den Warenkorb', href = 'cart.html', showIconRight = true, IconContentRight = 'Cart-filled') }}
+        </div>
+        <div class="pdp_end">
+            {{ DownloadField (Title = 'Tea Sheet - Product Name', Details = 'PDF, 4.5MB') }}
+        </div>
+    </div>
+</div>
+
+{# Ehemlaige "überfüllte" PDP #}
+
+{# <div class="pdp">
+    <div class="pdp_content">
+        <div class="pdp_block">
             {{ Paragraph ( Size = '-sizeS', Content= 'Label' ) }}
             <div class="pdp_spacebetween">
                 {{ Heading ( Tag ="h1", Size = '-sizeXL', Content="Produktname" ) }}
@@ -59,4 +93,4 @@ breadcrumbs:
             {{ DownloadField (Title = 'Tea Sheet - Product Name', Details = 'PDF, 4.5MB') }}
         </div>
     </div>
-</div>
+</div> #}
