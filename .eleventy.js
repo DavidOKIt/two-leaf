@@ -1,16 +1,17 @@
-const path = require("node:path");
-const sass = require("sass");
+const path = require('node:path');
+const sass = require('sass');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addTemplateFormats("scss");
-  eleventyConfig.addWatchTarget("./src/_includes/components/**/**/*");
-  eleventyConfig.addPassthroughCopy("src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("src/assets/img");
-  eleventyConfig.addPassthroughCopy("src/assets/vendor");
+  eleventyConfig.addTemplateFormats('scss');
+  eleventyConfig.addWatchTarget('./src/_includes/components/**/**/*');
+  eleventyConfig.addPassthroughCopy('src/assets/fonts');
+  eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/vendor');
+  eleventyConfig.addPassthroughCopy('src/assets/data');
 
-  eleventyConfig.addPassthroughCopy("src/_includes/components/**/*.js");
-  eleventyConfig.addExtension("scss", {
-    outputFileExtension: "css",
+  eleventyConfig.addPassthroughCopy('src/_includes/components/**/*.js');
+  eleventyConfig.addExtension('scss', {
+    outputFileExtension: 'css',
 
     // opt-out of Eleventy Layouts
     useLayouts: false,
@@ -18,12 +19,12 @@ module.exports = function (eleventyConfig) {
     compile: async function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
       // Don’t compile file names that start with an underscore
-      if (parsed.name.startsWith("_")) {
+      if (parsed.name.startsWith('_')) {
         return;
       }
 
       let result = sass.compileString(inputContent, {
-        loadPaths: [parsed.dir || ".", this.config.dir.includes],
+        loadPaths: [parsed.dir || '.', this.config.dir.includes],
       });
 
       // Map dependencies for incremental builds
@@ -36,11 +37,11 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/two-leaf/",
+    pathPrefix: '/two-leaf/',
     dir: {
-      input: "src",
-      output: "public",
-      includes: "_includes",
+      input: 'src',
+      output: 'public',
+      includes: '_includes',
     },
   };
 };

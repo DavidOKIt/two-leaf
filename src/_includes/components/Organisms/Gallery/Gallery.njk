@@ -34,11 +34,15 @@
 {% endmacro %}
 
 {% macro GalleryGrid(items) %}
-    <div class="GalleryGrid">
-        {% for item in items %}
-            <a href="{{ item.target | url }}" class="GalleryGrid_Link">
-                <div class="GalleryGrid_Item">
-                    {{ Image(
+    <div class="GalleryGrid"></div>
+{% endmacro %}
+
+{# Ehemaliges GalleryItem #}
+
+{# {% for item in items %}
+    <a href="{{ item.target | url }}" class="GalleryGrid_Link">
+        <div class="GalleryGrid_Item">
+            {{ Image(
           src = item.src,
           alt = item.alt,
           size = 'GalleryGrid_Image',
@@ -49,9 +53,7 @@
           borderradius = true,
           zoom = item.zoom
         ) }}
-                    <span class="GalleryGrid_Label -sizeL bold">{{ item.label }}</span>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
-{% endmacro %}
+            <span class="GalleryGrid_Label -sizeL bold">{{ item.label }}</span>
+        </div>
+    </a>
+{% endfor %} #}

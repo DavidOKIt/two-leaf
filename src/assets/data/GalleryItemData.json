@@ -1,0 +1,122 @@
+[
+  {
+    "productname": "GreenTea",
+    "src": "assets/img/GalleryItemImage1.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "GreenTea"
+  },
+  {
+    "productname": "Earl Grey",
+    "src": "assets/img/GalleryItemImage2.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Earl Grey"
+  },
+  {
+    "productname": "Jasmine Tea",
+    "src": "assets/img/GalleryItemImage3.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Jasmine Tea"
+  },
+  {
+    "productname": "Chamomile",
+    "src": "assets/img/GalleryItemImage4.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Chamomile"
+  },
+  {
+    "productname": "Peppermint Tea",
+    "src": "assets/img/GalleryItemImage5.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Peppermint Tea"
+  },
+  {
+    "productname": "Matcha",
+    "src": "assets/img/GalleryItemImage6.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Matcha"
+  },
+  {
+    "productname": "Rooibos",
+    "src": "assets/img/GalleryItemImage7.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Rooibos"
+  },
+  {
+    "productname": "Oolong Tea",
+    "src": "assets/img/GalleryItemImage8.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Oolong Tea"
+  },
+  {
+    "productname": "White Tea",
+    "src": "assets/img/GalleryItemImage9.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "White Tea"
+  },
+  {
+    "productname": "Darjeeling",
+    "src": "assets/img/GalleryItemImage10.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Darjeeling"
+  },
+  {
+    "productname": "Sencha",
+    "src": "assets/img/GalleryItemImage11.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Sencha"
+  },
+  {
+    "productname": "Chai Tea",
+    "src": "assets/img/GalleryItemImage12.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Chai Tea"
+  },
+  {
+    "productname": "Hibiscus Tea",
+    "src": "assets/img/GalleryItemImage13.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Hibiscus Tea"
+  },
+  {
+    "productname": "Ginger Tea",
+    "src": "assets/img/GalleryItemImage14.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Ginger Tea"
+  },
+  {
+    "productname": "Lemon Tea",
+    "src": "assets/img/GalleryItemImage15.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Lemon Tea"
+  },
+  {
+    "productname": "Pu-erh Tea",
+    "src": "assets/img/GalleryItemImage16.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Pu-erh Tea"
+  },
+  {
+    "productname": "Black Tea",
+    "src": "assets/img/GalleryItemImage17.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Black Tea"
+  },
+  {
+    "productname": "Lavender Tea",
+    "src": "assets/img/GalleryItemImage18.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Lavender Tea"
+  },
+  {
+    "productname": "Turmeric Tea",
+    "src": "assets/img/GalleryItemImage19.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Turmeric Tea"
+  },
+  {
+    "productname": "Lapsang Souchong",
+    "src": "assets/img/GalleryItemImage20.webp",
+    "href": "/two-leaf/shop-pdp",
+    "alt": "Lapsang Souchong"
+  }
+]
