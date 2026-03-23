@@ -2,7 +2,7 @@ const galleryGrid = document.querySelector('.GalleryGrid');
 
 const GalleryItem = (content) => {
   const markup = `
-  <a href="/two-leaf/shop-pdp/" class="GalleryGrid_Link">
+  <a href="/two-leaf/shop-pdp.html" class="GalleryGrid_Link">
     <div class="GalleryGrid_Item">
       <figure class="ImageContainer">
         <img
