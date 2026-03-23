@@ -1,0 +1,227 @@
+[
+  {
+    "productname": "GreenTea",
+    "src": "assets/img/GalleryItemImage1.webp",
+    "alt": "GreenTea",
+    "id": "greentea-01",
+    "rating": "4",
+    "price": "9,99€",
+    "description": "Grüner Tee ist die vor allem in Ostasien am Weitesten verbreiteste Teesorte (Camellia sinensis). Die Teeblätter werden unmittelbar nach der Ernte gedämpft oder in Pfannen erhitzt, um die enzymatische Oxidation des Blatts zu stoppen und so die ursprünglichen, frischen Aromen, die grüne Farbe der Teepflanze, sowie die vielen wertvollen Inhaltsstoffe des Tees bestmöglich zu erhalten.",
+    "teasheet": "assets/downloads/GreenTea.pdf",
+    "table": [
+      {
+        "category": "Charakter",
+        "description": "Mild, aromatisch, leichte Süsse und Umami, sanfte, angenehme Edelbitterkeit, leicht mineralisch basisch, milde Würze, etwas fruchtig, erfrischend"
+      },
+      {
+        "category": "Teefarm",
+        "description": "Nuruki Seicha, renommierte Bio Teefarm im beliebten Terroir Chiran"
+      },
+      {
+        "category": "Terroir",
+        "description": "Chiran (Reg.) + Kirishima (Reg.), Kagoshima (Präf.), Japan"
+      },
+      {
+        "category": "Ernte",
+        "description": "1. Ernte (Ichibancha) Mitte April bis Anfang Mai, 2025"
+      },
+      {
+        "category": "Cultivar",
+        "description": "Blend vor allem aus Yabukita und Okumidori sowie weiterer südlicher Cultivare"
+      }
+    ]
+  },
+  {
+    "productname": "Earl Grey",
+    "src": "assets/img/GalleryItemImage2.webp",
+    "alt": "Earl Grey",
+    "id": "earlgrey-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Jasmine Tea",
+    "src": "assets/img/GalleryItemImage3.webp",
+    "alt": "Jasmine Tea",
+    "id": "jasminetea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Chamomile",
+    "src": "assets/img/GalleryItemImage4.webp",
+    "alt": "Chamomile",
+    "id": "chamomile-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Peppermint Tea",
+    "src": "assets/img/GalleryItemImage5.webp",
+    "alt": "Peppermint Tea",
+    "id": "pepperminttea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Matcha",
+    "src": "assets/img/GalleryItemImage6.webp",
+    "alt": "Matcha",
+    "id": "matcha-01",
+    "rating": "",
+    "price": "",
+    "description": "",
+    "table": [
+      {
+        "category": "Charakter",
+        "description": "Tiefgrünes Aroma, warm, Saemidori-Umami, vollmundige Basis mit leichtem Schaum, Edelbitter"
+      },
+      {
+        "category": "Teefarm",
+        "description": "Eine der führenden Teefarmen der Stadt Satsuma, gegründet in den 60ern"
+      },
+      {
+        "category": "Terroir",
+        "description": "Satsuma (Reg.), Kagoshima (Präf.), Japan"
+      },
+      {
+        "category": "Ernte",
+        "description": "1. Ernte (Ichibancha), April 2024"
+      },
+      {
+        "category": "Cultivar",
+        "description": "Saemidori"
+      }
+    ]
+  },
+  {
+    "productname": "Rooibos",
+    "src": "assets/img/GalleryItemImage7.webp",
+    "alt": "Rooibos",
+    "id": "rooibos-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Oolong Tea",
+    "src": "assets/img/GalleryItemImage8.webp",
+    "alt": "Oolong Tea",
+    "id": "oolongtea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "White Tea",
+    "src": "assets/img/GalleryItemImage9.webp",
+    "alt": "White Tea",
+    "id": "whitetea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Darjeeling",
+    "src": "assets/img/GalleryItemImage10.webp",
+    "alt": "Darjeeling",
+    "id": "darjeeling-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Sencha",
+    "src": "assets/img/GalleryItemImage11.webp",
+    "alt": "Sencha",
+    "id": "sencha-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Chai Tea",
+    "src": "assets/img/GalleryItemImage12.webp",
+    "alt": "Chai Tea",
+    "id": "chaitea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Hibiscus Tea",
+    "src": "assets/img/GalleryItemImage13.webp",
+    "alt": "Hibiscus Tea",
+    "id": "hibiscustea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Ginger Tea",
+    "src": "assets/img/GalleryItemImage14.webp",
+    "alt": "Ginger Tea",
+    "id": "gingertea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Lemon Tea",
+    "src": "assets/img/GalleryItemImage15.webp",
+    "alt": "Lemon Tea",
+    "id": "lemontea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Pu-erh Tea",
+    "src": "assets/img/GalleryItemImage16.webp",
+    "alt": "Pu-erh Tea",
+    "id": "puerhtea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Black Tea",
+    "src": "assets/img/GalleryItemImage17.webp",
+    "alt": "Black Tea",
+    "id": "blacktea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Lavender Tea",
+    "src": "assets/img/GalleryItemImage18.webp",
+    "alt": "Lavender Tea",
+    "id": "lavendertea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Turmeric Tea",
+    "src": "assets/img/GalleryItemImage19.webp",
+    "alt": "Turmeric Tea",
+    "id": "turmerictea-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  },
+  {
+    "productname": "Lapsang Souchong",
+    "src": "assets/img/GalleryItemImage20.webp",
+    "alt": "Lapsang Souchong",
+    "id": "lapsansouchong-01",
+    "rating": "",
+    "price": "",
+    "description": ""
+  }
+]

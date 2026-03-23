@@ -35,6 +35,15 @@
 
   &-GalleryImage {
     aspect-ratio: 1 / 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 60%);
+    }
   }
 
   &-GalleryImage-vertical {

@@ -1,6 +1,6 @@
 {%- from "../Icon/Icon.njk" import IconEmbedded -%}
 
-{% macro Button(Label = 'Label', Size = 'regular', Style = 'secondary', Outline = false, showIconLeft = false, IconContentLeft = null, showIconRight = false, IconContentRight = null, fullWidth = false, disabled = false, href = null, target = null) %}
+{% macro Button(Label = 'Label', Size = 'regular', Style = 'secondary', Outline = false, showIconLeft = false, IconContentLeft = null, showIconRight = false, IconContentRight = null, fullWidth = false, disabled = false, href = null, target = null, download = false) %}
 
     {% set IconOnly = showIconLeft and not Label and not showIconRight %}
 
@@ -14,7 +14,7 @@
     {% endset %}
 
     {% if href %}
-        <a href="{{ href | url }}" class="{{ classes }}" {% if target %}target="{{ target }}"{% endif %} {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %}>
+        <a href="{{ href | url }}" class="{{ classes }}" {% if target %}target="{{ target }}"{% endif %} {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %} {% if download %}download{% endif %}>
     {% else %}
         <button type="button" class="{{ classes }}" {% if disabled %}disabled{% endif %}>
     {% endif %}

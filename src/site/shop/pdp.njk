@@ -24,23 +24,63 @@ breadcrumbs:
 <div class="pdp">
     <div class="pdp_content">
         <div class="pdp_block">
-            <div class="pdp_spacebetween">
-                {{ Heading ( Tag ="h1", Size = '-sizeXL', Content="Produktname" ) }}
-                {{ Heading ( Tag ="h2", Size = '-sizeXL', Content="11,90 €" ) }}
-            </div>
-            {{ Image (src = "./assets/img/ProductImage2.jpg", alt = "Produktbild", size = 'GalleryImage-horizontal', fit = 'cover') }}
+            <div class="pdp_spacebetween pdp_heading"></div>
+            <div class="pdp_image"></div>
             <div class="pdp_spacebetween">
                 {{ UneditableRating (FilledStars = '4', Size = 'regular') }}
                 {{ Chip ( Style = 'primary', Label = 'Favorit', IconHeart = true ) }}
             </div>
-            {{ Paragraph( Content = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.') }}
+            <div class="pdp_paragraph"></div>
         </div>
-        {{ StaticTable ( TableRows = [  
+        <table class="StaticTable">
+            <tbody class="pdp_table"></tbody>
+        </table>
+        {# <div class="pdp_table">
+            {{ StaticTable ( TableRows = [  
         {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
         {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
         {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
         {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'}
         ]) }}
+        </div> #}
+        <div class="pdp_block">
+            {{ UtilityLink(Weight = 'bold') }}
+        </div>
+        <div class="pdp_buttonwrapper">
+            {{ Button (fullWidth = true, Label = 'In den Warenkorb', href = 'cart.html', showIconRight = true, IconContentRight = 'Cart-filled') }}
+        </div>
+        <div class="pdp_end"></div>
+    </div>
+</div>
+
+{# Stand vor JS Implementierung  #}
+
+{# <div class="pdp">
+    <div class="pdp_content">
+        <div class="pdp_block">
+            <div class="pdp_spacebetween pdp_heading">
+                {{ Heading ( Tag ="h1", Size = '-sizeXL', Content="Produktname" ) }}
+                {{ Heading ( Tag ="h2", Size = '-sizeXL', Content="11,90 €" ) }}
+            </div>
+            <div class = "pdp_image">
+                {{ Image (src = "./assets/img/ProductImage2.jpg", alt = "Produktbild", size = 'GalleryImage-horizontal', fit = 'cover') }}
+            </div>
+            <div class="pdp_spacebetween">
+                {{ UneditableRating (FilledStars = '4', Size = 'regular') }}
+                {{ Chip ( Style = 'primary', Label = 'Favorit', IconHeart = true ) }}
+            </div>
+            <div class = "pdp_paragraph">
+                {{ Paragraph(Content = 'Grüner Tee ist die vor allem in Ostasien am Weitesten verbreiteste Teesorte (Camellia sinensis). Die Teeblätter werden unmittelbar nach der Ernte gedämpft oder in Pfannen erhitzt, um die enzymatische Oxidation des Blatts zu stoppen und so die ursprünglichen, frischen Aromen, die grüne Farbe der Teepflanze, sowie die vielen wertvollen Inhaltsstoffe des Tees bestmöglich zu erhalten.') }}
+            </div>
+        </div>
+        <div class="pdp_table">
+            {{ StaticTable ( TableRows = [  
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'},
+        {Head: 'Teefarm', Paragraph: 'At vero eos et accusam duo.'}
+        ]) }}
+        </div>
         <div class="pdp_block">
             {{ UtilityLink(Weight = 'bold') }}
         </div>
@@ -48,10 +88,10 @@ breadcrumbs:
             {{ Button (fullWidth = true, Label = 'In den Warenkorb', href = 'cart.html', showIconRight = true, IconContentRight = 'Cart-filled') }}
         </div>
         <div class="pdp_end">
-            {{ DownloadField (Title = 'Tea Sheet - Product Name', Details = 'PDF, 4.5MB') }}
+            {{ DownloadField (Title = 'Tea Sheet - Product Name', Details = 'PDF, 4.5MB', Link = "/assets/downloads/GreenTea.pdf") }}
         </div>
     </div>
-</div>
+</div> #}
 
 {# Ehemlaige "überfüllte" PDP #}
 

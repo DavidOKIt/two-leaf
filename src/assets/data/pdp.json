@@ -1,0 +1,34 @@
+[
+  {
+    "productname": "GreenTea",
+    "src": "assets/img/GalleryItemImage1.webp",
+    "alt": "GreenTea",
+    "id": "greentea-01",
+    "rating": "4",
+    "price": "9,99€",
+    "description": "Grüner Tee ist die vor allem in Ostasien am Weitesten verbreiteste Teesorte (Camellia sinensis). Die Teeblätter werden unmittelbar nach der Ernte gedämpft oder in Pfannen erhitzt, um die enzymatische Oxidation des Blatts zu stoppen und so die ursprünglichen, frischen Aromen, die grüne Farbe der Teepflanze, sowie die vielen wertvollen Inhaltsstoffe des Tees bestmöglich zu erhalten.",
+    "teasheet": "assets/downloads/GreenTea.pdf",
+    "table": [
+      {
+        "category": "Charakter",
+        "description": "Mild, aromatisch, leichte Süsse und Umami, sanfte, angenehme Edelbitterkeit, leicht mineralisch basisch, milde Würze, etwas fruchtig, erfrischend"
+      },
+      {
+        "category": "Teefarm",
+        "description": "Nuruki Seicha, renommierte Bio Teefarm im beliebten Terroir Chiran"
+      },
+      {
+        "category": "Terroir",
+        "description": "Chiran (Reg.) + Kirishima (Reg.), Kagoshima (Präf.), Japan"
+      },
+      {
+        "category": "Ernte",
+        "description": "1. Ernte (Ichibancha) Mitte April bis Anfang Mai, 2025"
+      },
+      {
+        "category": "Cultivar",
+        "description": "Blend vor allem aus Yabukita und Okumidori sowie weiterer südlicher Cultivare"
+      }
+    ]
+  }
+]

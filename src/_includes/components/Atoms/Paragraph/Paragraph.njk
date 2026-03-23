@@ -1,4 +1,4 @@
-{% macro Paragraph( Size = '-sizeS', Weight = 'regular', Content = null) %}
+{% macro Paragraph( Size = '-sizeS', Weight = 'regular', Content = null, Classname = '') %}
 
     <p class="Paragraph {{ Size }} {{ Weight }}">
         {% if Content %}

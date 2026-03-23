@@ -1,6 +1,8 @@
+const galleryGrid = document.querySelector('.GalleryGrid');
+
 const GalleryItem = (content) => {
   const markup = `
-  <a href="${content.href}" class="GalleryGrid_Link">
+  <a href="/two-leaf/shop-pdp/" class="GalleryGrid_Link">
     <div class="GalleryGrid_Item">
       <figure class="ImageContainer">
         <img
@@ -12,7 +14,13 @@ const GalleryItem = (content) => {
       <span class="GalleryGrid_Label -sizeL bold">${content.productname}</span>
     </div>
   </a>`;
-  document.querySelector('.GalleryGrid').insertAdjacentHTML('beforeend', markup);
+  galleryGrid.insertAdjacentHTML('beforeend', markup);
+};
+
+const renderGallery = (data) => {
+  data.forEach((object) => {
+    GalleryItem(object);
+  });
 };
 
 const fetchData = (component, url) => {
@@ -25,14 +33,10 @@ const fetchData = (component, url) => {
     })
     .catch((error) => {
       console.error('Error beim fetchen der Daten', error);
-      document.querySelector('.GalleryGrid').innerHTML = '<p>Keine Daten verfügbar</p>';
+      galleryGrid.innerHTML = '<p>Keine Daten verfügbar</p>';
     });
 };
 
-const renderGallery = (data) => {
-  data.forEach((object) => {
-    GalleryItem(object);
-  });
-};
-
-fetchData('GalleryItem', 'GalleryItemData');
+if (galleryGrid) {
+  fetchData('GalleryItem', 'GalleryItemData');
+}
