@@ -33,7 +33,7 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
@@ -57,6 +57,7 @@
 
       &:hover {
         border-color: var(--color-matcha-hover);
+        background-color: var(--color-matcha-default-transparent);
         color: var(--color-matcha-hover);
       }
       &:active {
@@ -84,6 +85,7 @@
 
       &:hover {
         border-color: var(--color-copper-hover);
+        background-color: var(--color-copper-default-transparent);
         color: var(--color-copper-hover);
       }
       &:active {
@@ -111,6 +113,7 @@
 
       &:hover {
         border-color: var(--color-ash-hover);
+        background-color: var(--color-ash-default-transparent);
         color: var(--color-ash-hover);
       }
       &:active {
