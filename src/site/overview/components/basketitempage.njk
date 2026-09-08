@@ -1,0 +1,18 @@
+---
+layout: Layouts/componentlayout.njk
+title: Two Leaf 
+permalink: /overview/components/basketitempage.html
+showBreadcrumbs: true
+breadcrumbs:
+    - Label: Overview
+      Target: /overview
+    - Label: Basket Item
+---
+
+{%- from "../../../_includes/components/Atoms/Heading/Heading.njk" import Heading %}
+{%- from "../../../_includes/components/Molecules/BasketItem/BasketItem.njk" import BasketItem %}
+
+{{ Heading( Tag = "h1", Content = "Basket Item", Weight="medium", Size = "-sizeL") }}
+{{ BasketItem ( ProductId = 'matcha-ceremonial', ItemImage = { src: '/assets/img/ProductImage2.jpg' } ) }}
+{{ BasketItem ( ProductId = 'sencha-bio', ItemImage = { src: '/assets/img/ProductImage3.jpg' }, Quantity = 2, Price = '23,80 €' ) }}
+{{ BasketItem ( ProductId = 'genmaicha', ItemImage = { src: '/assets/img/ProductImage4.jpg' }, ShowDivider = false ) }}

@@ -1,0 +1,50 @@
+{%- from "../../Atoms/Image/Image.njk" import Image -%}
+{%- from "../../Atoms/Heading/Heading.njk" import Heading -%}
+{%- from "../../Atoms/Paragraph/Paragraph.njk" import Paragraph -%}
+{%- from "../../Atoms/Icon/Icon.njk" import IconEmbedded -%}
+{%- from "../../Atoms/Divider/Divider.njk" import Divider -%}
+
+{% macro BasketItem(ProductId = 'product-1', Name = 'PRODUCT NAME', ItemImage = {}, Amount = '30g', BasePrice = '115,00€ / 1kg', Description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.', Price = '11,90 €', UnitPrice = 11.90, Quantity = 1, MaxQuantity = 10, ShowDivider = true) %}
+    <article class="BasketItem" data-basket-item data-product-id="{{ ProductId }}" data-unit-price="{{ UnitPrice }}">
+        {{ Heading (
+            Tag = 'h3',
+            Size = '-sizeXL',
+            Weight = 'bold',
+            Color = 'black',
+            Content = Name
+        ) }}
+        <div class="BasketItem_Content">
+            <div class="BasketItem_Image">
+                {{ Image (
+                    src = ItemImage.src or '/assets/img/ProductImage2.jpg',
+                    alt = ItemImage.alt or Name,
+                    size = 'BasketItem',
+                    fit = ItemImage.fit or 'cover',
+                    loadinglazy = true
+                ) }}
+            </div>
+            <div class="BasketItem_Info">
+                <div class="BasketItem_Meta">
+                    <span class="-sizeXS medium">{{ Amount }}</span>
+                    <span class="-sizeXS medium BasketItem_BasePrice">{{ BasePrice }}</span>
+                </div>
+                {{ Paragraph ( Size = '-sizeS', Weight = 'regular', Content = Description ) }}
+            </div>
+        </div>
+        <div class="BasketItem_Footer">
+            <div class="BasketItem_Quantity">
+                <label class="BasketItem_QuantityLabel" for="quantity-{{ ProductId }}">Menge</label>
+                <select class="BasketItem_QuantitySelect" id="quantity-{{ ProductId }}" name="quantity-{{ ProductId }}" data-basket-quantity>
+                    {% for Option in range(1, MaxQuantity + 1) %}
+                        <option value="{{ Option }}" {% if Option == Quantity %}selected{% endif %}>{{ Option }}</option>
+                    {% endfor %}
+                </select>
+                <span class="BasketItem_QuantityIcon">{{ IconEmbedded ( Icon = 'Chevron-down', Size = 'small' ) }}</span>
+            </div>
+            <span class="BasketItem_Price -sizeL bold" data-basket-price>{{ Price }}</span>
+        </div>
+        {% if ShowDivider %}
+            {{ Divider ( color = 'secondary' ) }}
+        {% endif %}
+    </article>
+{% endmacro %}
