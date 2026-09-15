@@ -1,0 +1,103 @@
+.BasketItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  width: 100%;
+
+  &_Content {
+    display: flex;
+    gap: var(--space-12);
+  }
+
+  &_Image {
+    flex: 0 0 88px;
+
+    .Image-BasketItem {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &_Info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+  }
+
+  &_Meta {
+    display: flex;
+    gap: var(--space-8);
+  }
+
+  &_BasePrice {
+    color: var(--color-grey-hover);
+  }
+
+  &_Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-16);
+  }
+
+  &_Quantity {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &_QuantityLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  &_QuantitySelect {
+    appearance: none;
+    width: 56px;
+    height: 32px;
+    padding: 0 var(--space-20) 0 var(--space-8);
+    font-family: inherit;
+    font-size: var(--font-size-14);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: var(--border-normal) solid var(--color-copper-default);
+    border-radius: var(--border-radius-normal);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-copper-hover-30);
+    }
+
+    &:active {
+      background-color: var(--color-copper-pressed-30);
+    }
+
+    &:focus-visible {
+      outline: var(--border-focus) solid var(--color-focus);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &_QuantityIcon {
+    position: absolute;
+    right: var(--space-4);
+    display: flex;
+    pointer-events: none;
+  }
+
+  &_Price {
+    white-space: nowrap;
+  }
+
+  .Divider {
+    margin: var(--space-8) 0 0;
+  }
+}

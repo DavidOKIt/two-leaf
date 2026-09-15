@@ -1,11 +1,13 @@
 :root {
   // Brand Colors
   --color-matcha-default: #70892e;
+  --color-matcha-default-transparent: rgba(112, 137, 46, 0.2);
   --color-matcha-hover: #537213;
   --color-matcha-pressed: #2d531a;
 
   --color-copper-active: #f4deb6;
   --color-copper-default: #a67134;
+  --color-copper-default-transparent: rgba(166, 113, 52, 0.2);
   --color-copper-default-30: #e5d5c3;
   --color-copper-hover: #865a26;
   --color-copper-hover-30: #dbcebe;
@@ -13,6 +15,7 @@
   --color-copper-pressed-30: #cec5bb;
 
   --color-ash-default: #484848;
+  --color-ash-default-transparent: rgba(72, 72, 72, 0.2);
   --color-ash-hover: #212121;
   --color-ash-pressed: #101010;
 
